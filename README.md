@@ -1,6 +1,6 @@
 # princess_game
 
-Controles
+Controls
   movement: w,a,s,d
   action1: j
   jump: k
@@ -11,7 +11,7 @@ Controles
   fullscreen: f11
   reset: f12
 
-Controles can be remaped by pressing select at the title screen.
+Controls can be remapped by pressing select at the title screen.
 
 Level select is tuned on at the title screen to help with level testing.
-Will be removed later or keeped as a "cheat code".
+Will be removed later or kept as a "cheat code".
