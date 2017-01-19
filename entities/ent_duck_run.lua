@@ -38,7 +38,7 @@ function e:check_edge ()
   w = ((self.size.x/2)+1)*self.direction.x
   h = (self.size.y/2)+1
   x = cx+w
-  y = cy+h
+  y = cy+h 
   return world_check_point(x,y,'solid') or world_check_point(x,y,'passable')
 end
 

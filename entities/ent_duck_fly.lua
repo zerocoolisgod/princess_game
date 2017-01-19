@@ -38,8 +38,7 @@ function e:fly(dt)
   local tgs_y = 0
   --self.pos.y = self.start_y + math.cos(self.pos.x/16)*15
 
-
-  if self:check_face() then
+  if self:check_face() or self:check_face("passable") then
 	self.direction.x = self.direction.x * -1
   end
 

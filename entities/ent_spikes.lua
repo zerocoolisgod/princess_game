@@ -8,7 +8,7 @@ local h = Class('spikes', Entity)
 function h:initialize (x,y,w,h)
   Entity.initialize(self,x,y,w,h,'spikes')
   self.group = 'hazard'
-  self.damage = 1000
+  self.damage = 1
   self.solid = true
 end
 return h
