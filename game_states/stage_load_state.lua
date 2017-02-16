@@ -18,6 +18,7 @@ function SLS:on_enter ()
   self.delay_end = self.delay + G.gametime
   love.graphics.setBackgroundColor(0, 0, 0)
   G.camera:set_pos(0,0)
+  G.clear_coins()
 end
 
 function SLS:update(dt)

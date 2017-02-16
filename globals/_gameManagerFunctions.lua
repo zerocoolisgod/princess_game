@@ -15,13 +15,10 @@ end
 function G.load_next_stage()
   G.current_stage_number = G.current_stage_number + 1
   if G.current_stage_number <= #G.stage then
-    print("we good")
     local map = G.stage[G.current_stage_number]
     G.reset_player_spawn ( )
     G.load_stage(map)
   else
-    print("load_first_stage :(")
-    print("current_stage_number "..G.current_stage_number .." G.stage len ".. #G.stage)
     G.load_first_stage()
   end
 end
@@ -41,6 +38,14 @@ end
 
 function G.coin_collected ()
   G.coins = G.coins+1
+end
+
+function G.clear_coins ()
+  G.coins = 0
+end
+
+function G.get_coins ()
+  return G.coins or 0
 end
 
 function G.add_object (o)

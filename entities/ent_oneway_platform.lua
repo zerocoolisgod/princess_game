@@ -1,6 +1,8 @@
 local Class = require 'lib.middleclass'
 local Entity = require "class.entity_class"
 
+-- FIX THIS DUMB SHIT!!
+
 local lgd = love.graphics.draw
 
 local owp = Class('one_way_platform', Entity)
@@ -18,7 +20,7 @@ function owp:on_update_first (dt)
   local px,py = G.player:get_true_pos()
   local sx,sy = self:get_true_pos()
   local g = "passable"
-
+  
   if py <= (sy - ph) then
     g = "solid"
   end

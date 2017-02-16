@@ -56,7 +56,7 @@ end
 
 
 function AREA:draw ()
-
+  if self.on_draw then self:on_draw() end
 end
 
 function AREA:off_screen_update (dt)

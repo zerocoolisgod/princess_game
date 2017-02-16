@@ -67,7 +67,7 @@ function GUI:draw_coins ()
   text_y = 6
   lgsc(255,255,255,255)
   lgd(self.coin_img, icon_x, icon_y)
-  lgp('x'..G.coins, text_x, text_y)
+  lgp('x'..G.get_coins(), text_x, text_y)
 end
 
 function GUI:draw_bp()
