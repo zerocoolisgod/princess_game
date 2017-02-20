@@ -44,6 +44,7 @@ function Object_Layer:load(objects)
       end
       G.player = obj
     end
+    print(obj.id)
     t_insert(self.objects, obj)
     if obj.solid and self.parent then
       self.parent.world:add(obj, obj.pos.x, obj.pos.y, obj.size.x, obj.size.y)

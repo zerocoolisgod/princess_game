@@ -61,7 +61,7 @@ function Player:initialize (x,y)
   self:set_collision_filter('bullet','cross')
   self:set_collision_filter('hazard','slide')
   self:set_collision_filter('pickup','cross')
-
+  self:set_collision_filter('onewayplatform','onewayplatformSlide')
   self.damage = 1
 
   self.timers.hit = 0
@@ -85,7 +85,8 @@ end
 
 function Player:on_update_first (dt)
   if self.velocity.y > 0 then
-    self.on_ground = self:check_ground('solid') or self:check_ground('hazard')
+    
+    self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
   end
 
   if act_1:pressed() and self.current_state ~= 'death' then

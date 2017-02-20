@@ -9,7 +9,7 @@ local owp = Class('one_way_platform', Entity)
 
 function owp:initialize (x,y,w,h,q)
   Entity.initialize(self,x,y,w,h,'one_way_platform')
-  self.group = 'passable'
+  self.group = 'onewayplatform'
   self.solid = true
   self.is_passable = true
   self:set_collision_filter('player','cross')

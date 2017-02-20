@@ -136,6 +136,11 @@ function Tile_Layer:add_tiles (map,layer)
           if G.show_solid_tiles then self.tiles[y][x] = obj end
           self.parent.world:add(obj, obj.pos.x, obj.pos.y, obj.size.x, obj.size.y)
           table.insert(self.solid,obj)
+        elseif layer_name =='owp' then
+          local obj = G.resource_manager:get_new_object("ent_oneway_platform",xpos, ypos, 8, 4, q)
+          if G.show_solid_tiles then self.tiles[y][x] = obj end
+          self.parent.world:add(obj, obj.pos.x, obj.pos.y, obj.size.x, obj.size.y)
+          table.insert(self.solid,obj)
         else
           self.tiles[y][x] = make_tile(xpos, ypos, tile_width, tile_height, q)
         end

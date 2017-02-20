@@ -51,3 +51,9 @@ function G.debug_off()
   G.debug = false
   G.game_manager.debug = false
 end
+
+function iif(c,a,b)
+  local rtn=b
+  if c then rtn=a end
+  return rtn
+end

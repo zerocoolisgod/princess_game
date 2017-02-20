@@ -11,11 +11,11 @@ local lgsc = love.graphics.setColor
 local A = Class('Stage_Change', Area)
 
 function A:initialize (x,y)
-  Area.initialize (self,x,y,16,16,'Stage_Change')
+  Area.initialize (self,x,y,8,8,'Stage_Change')
   self.group = 'area'
   self.solid = true
   
-  self.sprite = Sprite:new('door sprite','door',16,16)--,2,8)
+  self.sprite = Sprite:new('door sprite','door',16,16,0,4)
   self.sprite:add_animation('closed',{1},1)
   self.sprite:add_animation('open',{2},1)
   self.sprite:set_animation("closed")

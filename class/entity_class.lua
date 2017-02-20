@@ -237,11 +237,11 @@ function ENT.col_filter(self, other)
   elseif other.isSpring then return 'bounce'
   end
   --]]
-
+  local og=other.group
   if self.collision_types.all then
     return self.collision_types.all
   else
-    return self.collision_types[other.group]
+    return self.collision_types[og]
   end
 end
 
@@ -282,11 +282,13 @@ end
 function ENT:check_ground(group)
   local g = group or 'solid'
   -- Check for Ground
-  local l,t,w,h
+  local l,t,w,h,rtn
   l = self.pos.x
-  t = self.pos.y + 1
+  --t = self.pos.y + 1
+  t = self.pos.y + self.size.y
   w = self.size.x
-  h = self.size.y
+  --h = self.size.y
+  h = 1
 
   return G.world_check_area(l,t,w,h,g)
 end

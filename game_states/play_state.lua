@@ -34,6 +34,7 @@ function mm:load_map (mapname, m_type)
   love.graphics.setBackgroundColor(self.bgc)
   self.layers = {}
   self.world = bump.newWorld(32)
+  self:add_owp_response()
   self.gui = nil
   if m_type=="stage" then self.gui = Gui:new() end
   
@@ -94,6 +95,23 @@ function mm:add_object (obj)
       layer:add(obj)
     end
   end
+end
+
+function mm:add_owp_response()
+  local slide, cross = bump.responses.slide, bump.responses.cross
+
+  local onewayplatformSlide = function(world, col, x, y, w, h, goalX, goalY, filter)
+  if G.inputs.down:down() and G.inputs.jump:pressed() then
+    return cross(world, col, x, y, w, h, goalX, goalY, filter)
+  elseif col.normal.y < 0 and not col.overlaps then
+    col.didTouch = true
+    return slide(world, col, x, y, w, h, goalX, goalY, filter)
+  else
+    return cross(world, col, x, y, w, h, goalX, goalY, filter)
+  end
+  end
+
+  self.world:addResponse('onewayplatformSlide', onewayplatformSlide)
 end
 
 return mm

@@ -27,10 +27,6 @@ function AREA:initialize (x,y,w,h,id)
   self.timers = {}
   self.remove = false
   self.debug = false
-
-  -- signal listeners
-  --G.signal.register('debug_on', function() self.debug = true end)
-  --G.signal.register('debug_off', function() self.debug = false end)
 end
 
 ---
