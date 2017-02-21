@@ -38,8 +38,8 @@ function e:check_edge ()
   w = ((self.size.x/2)+1)*self.direction.x
   h = (self.size.y/2)+1
   x = cx+w
-  y = cy+h 
-  return world_check_point(x,y,'solid') or world_check_point(x,y,'passable')
+  y = cy+h
+  return world_check_point(x,y,'solid') or world_check_point(x,y,'onewayplatform')
 end
 
 
@@ -62,7 +62,7 @@ end
 function e:walk(dt)
   local tgs_x = self.speed.x * self.direction.x
   local tgs_y = self.gravity or 0
-  local grounded = self:check_ground('solid')
+  local grounded = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
   local turn = self:check_face() or not self:check_edge()
 
   if not grounded then
@@ -90,7 +90,7 @@ function e:fall (dt)
   tgs_y = 600
   tgs_x = 60 * self.direction.x
   self:move(tgs_x, tgs_y, dt)
-  if self:check_ground('solid') then
+  if self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform') then
     self:set_state('walk')
   end
 end

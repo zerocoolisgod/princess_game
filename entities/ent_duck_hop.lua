@@ -33,9 +33,8 @@ function e:initialize (x,y)
 end
 
 function e:on_update_first (dt)
-  self.on_ground = self:check_ground('solid') or self:check_ground('passable')
+  self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
 end
-
 
 
 --------------------------------------------------------------------------

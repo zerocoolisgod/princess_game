@@ -49,7 +49,7 @@ end
 
 function ENT:update (dt)
   if self.on_update_first then self:on_update_first(dt) end
-
+  
   if self.has_states then self:update_states(dt) end
   if self.sprite then self.sprite:update(dt) end
   if self.timers then self:update_timers(dt) end

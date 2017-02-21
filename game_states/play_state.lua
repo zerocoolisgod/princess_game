@@ -26,7 +26,6 @@ function mm:initialize ()
 end
 
 function mm:load_map (mapname, m_type)
-  --print(mapname)
   local map = require("maps/"..mapname)
   local ts_data = map.tilesets[1]
   local tile_seize = {x = ts_data.tilewidth, y = ts_data.tileheight}
@@ -101,9 +100,7 @@ function mm:add_owp_response()
   local slide, cross = bump.responses.slide, bump.responses.cross
 
   local onewayplatformSlide = function(world, col, x, y, w, h, goalX, goalY, filter)
-  if G.inputs.down:down() and G.inputs.jump:pressed() then
-    return cross(world, col, x, y, w, h, goalX, goalY, filter)
-  elseif col.normal.y < 0 and not col.overlaps then
+  if col.normal.y < 0 and not col.overlaps then
     col.didTouch = true
     return slide(world, col, x, y, w, h, goalX, goalY, filter)
   else

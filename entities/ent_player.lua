@@ -85,9 +85,14 @@ end
 
 function Player:on_update_first (dt)
   if self.velocity.y > 0 then
-    
     self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
   end
+  
+  local filt='onewayplatformSlide'
+  if G.inputs.down:down() and G.inputs.jump:pressed() then
+    filt='cross'
+  end
+  self:set_collision_filter('onewayplatform',filt)
 
   if act_1:pressed() and self.current_state ~= 'death' then
     self:shoot_bubble()

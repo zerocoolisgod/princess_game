@@ -3,6 +3,7 @@
 if not G then G = {} end
 
 G.stage = {
-  {name="Stage 1-1", file="stage_1_1", type="stage", music="song_00"},
+  {name="Stage 1-1 The Plains", file="stage_1_1", type="stage", music="song_00"},
+  {name="Stage 2-1 The Woods", file="stage_2_1", type="stage", music="song_00"},
   {name="Arena", file="arena", type="stage", music="song_00"},
 }

@@ -20,7 +20,7 @@ function love.load(arg)
   -- Volume
   love.audio.setVolume(volume)
 
-  require "globals.all"
+  require "globals.ALL"
   require "lib.game_math"
 
   -- Debug Manager

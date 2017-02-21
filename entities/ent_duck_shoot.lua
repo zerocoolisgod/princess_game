@@ -8,7 +8,7 @@ local e = Class('duck_shoot',Duck)
 
 function e:initialize (x,y)
   -- init super class
-  Duck.initialize(self,x,y,16,16,'shoot_duck')
+  Duck.initialize(self,x,y,16,16,'duck_shoot')
 
   self.sprite = Sprite:new('duck shoot sprite','duck_shoot_sheet',16,16,0,0)
   self.sprite:add_animation('shoot',{1,2},6)
@@ -31,6 +31,12 @@ end
 -- SHOOT --
 --------------------------------------------------------------------------
 function e:shoot(dt)
+  local grounded = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
+  if not grounded then
+    self:set_state('fall')
+  end
+
+  self:move(0, 60, dt)
   if self.timers.shoot <= 0 then
     local my_center_x, my_center_y = self:get_pos()
     local x,y
@@ -42,6 +48,15 @@ function e:shoot(dt)
     b:owner_init(ent, self.direction.x, 1)
     G.add_object(b)
     self.timers.shoot = 2
+  end
+end
+
+function e:fall (dt)
+  tgs_y = 200
+  tgs_x = 0
+  self:move(tgs_x, tgs_y, dt)
+  if self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform') then
+    self:set_state('shoot')
   end
 end
 
