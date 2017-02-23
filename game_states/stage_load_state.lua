@@ -7,7 +7,7 @@ local SLS = Class('stage_load_state',State)
 
 function SLS:initialize()
   State.initialize(self,'stage_load_state')
-  self.delay = .5
+  self.delay = 3
   self.delay_end = self.delay + G.gametime
 end
 
