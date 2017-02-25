@@ -21,7 +21,7 @@ function e:initialize (x,y)
   self:set_state('idle')
 
   self.direction.x = -1
-  self.health = 2
+  self.health = 3
   self.gravity = 600
   self.accel.x = .09
   self.accel.y = .02

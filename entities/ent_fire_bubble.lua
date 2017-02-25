@@ -19,10 +19,13 @@ function bbl:initialize (x,y,ttl)
   self:set_pos(x,y)
   self.group = 'bubble'
   self.parent = nil
-  self.accel.x = .07
+  self.accel.x = .04
   self.accel.y = .07
+  self.speed.x = 200
+  self.speed.y = -200
+  self.grav = 200
 
-  self.damage = 2
+  self.damage = 1
   self.solid = true
 
   self.sprite = Sprite:new('Fire Bubble sprite','fire_bubble_sheet',16,16,0,4)
@@ -40,8 +43,8 @@ end
 
 function bbl:owner_init (parent,dx,dy)
   self:set_direction(dx,dy)
-  self.velocity.x = 250 * dx
-  self.velocity.y = -300
+  self.velocity.x = self.speed.x * dx
+  self.velocity.y = self.speed.y
   self.parent = parent or self
 end
 
@@ -93,8 +96,6 @@ end
 --------------------------------------------------------------------------
 function bbl:init_state (s)
   if s == "pop" then
-    --self.damage = 0
-    --G.remove_hitbox(self)
     self.timers.pop = .5
     self:remove_bubble ()
     self.sprite:set_animation("pop")
@@ -106,8 +107,8 @@ end
 -- EMPTY --
 --------------------------------------------------------------------------
 function bbl:empty (dt)
-  local mov_x = 100 * self.direction.x
-  self:move(mov_x, 200, dt)
+  --local mov_x = 0 * self.direction.x
+  self:move(0, self.grav, dt)
 end
 
 

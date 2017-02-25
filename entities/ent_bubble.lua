@@ -20,6 +20,8 @@ function bbl:initialize (x,y,ttl)
   self.group = 'bubble'
   self.parent = nil
   self.accel.x = .07
+  self.speed.x = 150
+  self.speed.y = -10
 
   self.damage = 1
   self.solid = true
@@ -39,7 +41,7 @@ end
 
 function bbl:owner_init (parent,dx,dy)
   self:set_direction(dx,dy)
-  self.velocity.x = 250 * dx
+  self.velocity.x = self.speed.x * dx
   self.parent = parent or self
 end
 
@@ -108,7 +110,7 @@ function bbl:empty (dt)
   if m_abs(self.velocity.x) <=0 then
     self:set_state("pop")
   end
-  self:move(0,-10,dt)
+  self:move(0,self.speed.y,dt)
 end
 
 
