@@ -284,10 +284,10 @@ function ENT:check_ground(group)
   -- Check for Ground
   local l,t,w,h,rtn
   l = self.pos.x
-  --t = self.pos.y + 1
+  
   t = self.pos.y + self.size.y
   w = self.size.x
-  --h = self.size.y
+  
   h = 1
 
   return G.world_check_area(l,t,w,h,g)

@@ -42,6 +42,7 @@ function Player:initialize (x,y)
 
   self.on_ground = false
 
+
   self.sprite = Sprite:new('player sprite','beth_purple_strip',16,16,0,1)
   self.sprite:add_animation('stand',{1,1,1,1,1,1,1,1,1,1,1,1,6,1},4)
   self.sprite:add_animation('walk',{3,1,2,1},6)
@@ -75,7 +76,9 @@ function Player:initialize (x,y)
   self.bubble_types={"normal","fire"}
   self.current_bubble_type = 1
 
-  self.can_stomp=false
+  self.can_stomp = false
+  self.timers.can_jump = 0
+  self.can_jump = false
 
   if G.checkpoint then self.pos = G.checkpoint end
   G.set_player_health(G.get_player_health_max())
@@ -86,8 +89,13 @@ end
 function Player:on_update_first (dt)
   if self.velocity.y > 0 then
     self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
+
   end
   
+  if self.on_ground then self.timers.can_jump = .12 end
+  self.can_jump = false
+  if self.timers.can_jump > 0 then self.can_jump = true end
+
   local filt='onewayplatformSlide'
   if G.inputs.down:down() and G.inputs.jump:pressed() then
     filt='cross'
@@ -268,6 +276,7 @@ function Player:init_state (s)
   if s == 'stand' or s == 'walk' then
     self.velocity.y = 60
   elseif s == 'jump' then
+    self.timers.can_jump=0
     self.on_ground = false
     self.velocity.y = -jump_force
     G.resource_manager:play_sound('jump')
@@ -440,6 +449,10 @@ function Player:fall(dt)
   if self.on_ground then
     self:set_state('walk')
   end
+
+
+  
+  if self.can_jump and jump:pressed() then self:set_state('jump') end
 end
 
 
