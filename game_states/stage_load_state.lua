@@ -15,7 +15,7 @@ function SLS:on_enter ()
   G.resource_manager:play_music('song_03', .5)
   self.font = love.graphics.getFont()
   self.text = love.graphics.newText(self.font, G.current_map.name)
-  self.delay_end = self.delay + G.gametime
+  self.delay_end = G.current_map.delay + G.gametime
   love.graphics.setBackgroundColor(0, 0, 0)
   G.camera:set_pos(0,0)
   G.clear_coins()

@@ -4,6 +4,8 @@ local Sprite    = require 'class.sprite_class'
 
 --[[
 localized framework calls
+
+shorten flame up animation and remove damage to enemies while flaming up
 ]]
 
 local m_abs = math.abs
@@ -30,7 +32,7 @@ function bbl:initialize (x,y,ttl)
 
   self.sprite = Sprite:new('Fire Bubble sprite','fire_bubble_sheet',16,16,0,4)
   self.sprite:add_animation('empty',{1,2,3},10)
-  self.sprite:add_animation('pop',{4,5},10)
+  self.sprite:add_animation('pop',{4,5,6},15)
   self.sprite:set_animation('empty')
 
   self:set_state("empty")
@@ -96,7 +98,8 @@ end
 --------------------------------------------------------------------------
 function bbl:init_state (s)
   if s == "pop" then
-    self.timers.pop = .5
+    self.damage = 0
+    self.timers.pop = .2
     self:remove_bubble ()
     self.sprite:set_animation("pop")
   end

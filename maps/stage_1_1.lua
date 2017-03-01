@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "0.18.0",
+  tiledversion = "0.18.2",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 40,
@@ -236,7 +236,7 @@ return {
       y = 0,
       width = 40,
       height = 22,
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
