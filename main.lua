@@ -42,6 +42,9 @@ function love.load(arg)
       G.change_state("play_state")
     end
   end
+  for i=0,1000 do
+    love.math.random(i)
+  end
 end
 
 

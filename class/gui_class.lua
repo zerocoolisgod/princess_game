@@ -21,7 +21,7 @@ function GUI:initialize()
   self.game_time = {m=0,s=0,ms=0}
   self.ph_img = G.resource_manager:get_image('hud_health_sheet')
   self.ph_quads = G.cut_quads(self.ph_img, {x=8,y=8},2,1)
-  self.coin_img = G.resource_manager:get_image('hud_coin_sheet')
+  self.coin_img = G.resource_manager:get_image('hud_key_sheet')
   self.bp_img = G.resource_manager:get_image('hud_bp_sheet')
   self.bp_quads = G.cut_quads(self.bp_img, {x=8,y=8})
   self.bp_color = {{0, 97, 255},{149, 0, 0}}

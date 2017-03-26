@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "0.18.0",
+  tiledversion = "0.18.2",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 40,
@@ -121,7 +121,7 @@ return {
       objects = {
         {
           id = 21,
-          name = "at_stage_change",
+          name = "at_door",
           type = "",
           shape = "rectangle",
           x = 272,

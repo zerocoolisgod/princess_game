@@ -121,7 +121,7 @@ return {
       objects = {
         {
           id = 21,
-          name = "at_stage_change",
+          name = "at_door",
           type = "",
           shape = "rectangle",
           x = 272,
