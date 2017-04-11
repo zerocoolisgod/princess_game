@@ -1,5 +1,6 @@
 -- Stage Table
 -- change this to a key=value tabel to load stages by name
+-- One Screen = 40 x 22 tiles in Tiled
 if not G then G = {} end
 
 

@@ -23,7 +23,7 @@ function e:initialize (x,y)
   self.accel.y = .01
   self.speed.x = 40
 
-  self.health = 2
+  self.health = 1
   self.damage = 1
 end
 

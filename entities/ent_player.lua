@@ -31,7 +31,7 @@ function Player:initialize (x,y)
 
   self.camera_focus = true
 
-  self.speed.x = 75
+  self.speed.x = 90
   self.accel.x = .09
   self.accel.y = .02
 
