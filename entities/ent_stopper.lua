@@ -11,8 +11,10 @@ local stopper = Class('stopper', Entity)
 ]]
 
 
-function stopper:initialize (x,y)
-  Entity.initialize(self,x,y,8,8,'stopper')
+function stopper:initialize (x,y,w,h)
+  w = w or 8
+  h = h or 8
+  Entity.initialize(self,x,y,w,h,'stopper')
   self.group = 'stopper'
   self.solid = true
   -- self:set_collision_filter('all',nil)

@@ -127,6 +127,7 @@ function Player:on_update_last(dt)
   if bp > bpm then bp = bpm end
 
   self.bubble_power = bp
+  G.track_player(self.pos.x,self.pos.y)
 end
 
 function Player:off_screen_update(dt)

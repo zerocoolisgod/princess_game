@@ -82,6 +82,16 @@ function G.get_player_spawn(x,y)
 end
 
 
-function G.set_player_position(x,y)
-  -- Pass for now
+function G.track_player(x,y)
+  -- This is a fucntion for the player object register its position with
+  G.player_position.x=x
+  G.player_position.y=y
+end
+
+function G.get_player_position()
+  -- The x and y returned may not be accurate as it is self reported by
+  -- the player object which may have moved inbetween its last update and this
+  -- functionas call. Do not use it for mission critical math. used more for 
+  -- pointing enimies vagly in the direction of the player.
+  return G.player_position.x,G.player_position.y
 end

@@ -5,9 +5,9 @@ if not G then G = {} end
 
 
 G.stage = {
-  {name="Act 1 The Plains", file="stage_1_1", type="stage", music="song_00", delay=3},
+  {name="Act 1 The Plains", file="stage_1_1", type="stage", music="song_00", delay=4},
   {name="Ducks Hate Bubbles.", file="stage_1_2", type="stage", music="song_00", delay=4},
-  {name="Try Select (Tab).", file="stage_1_3", type="stage", music="song_00", delay=4},
+  {name="", file="stage_1_3", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_4", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_5", type="stage", music="song_00", delay=.5},
   {name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},

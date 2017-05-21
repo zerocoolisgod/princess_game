@@ -38,8 +38,7 @@ function love.load(arg)
       local map_name = file:sub(0,ext-1)
 
       print("loading: "..map_name)
-      G.load_stage(map_name)
-      G.change_state("play_state")
+      if G.load_stage_from_cl(map_name) then G.change_state("play_state") end
     end
   end
   for i=0,1000 do

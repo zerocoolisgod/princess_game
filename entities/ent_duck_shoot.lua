@@ -11,7 +11,7 @@ function e:initialize (x,y)
   Duck.initialize(self,x,y,16,16,'duck_shoot')
 
   self.sprite = Sprite:new('duck shoot sprite','duck_shoot_sheet',16,16,0,0)
-  self.sprite:add_animation('shoot',{1,2},6)
+  self.sprite:add_animation('shoot',{1,2},3)
   self.sprite:add_animation('death',{4,5},15)
   self.sprite:set_animation('shoot')
 
@@ -19,11 +19,16 @@ function e:initialize (x,y)
 
   self.direction.x = -1
   self.timers.shoot = 2
-  self.health = 5
+  self.health = 2
   self.damage = 1
 end
 
-
+function e:on_update_first (dt)
+  local x,y = G.get_player_position()
+  local dx = -1
+  if x>self.pos.x then dx = 1 end
+  self.direction.x = dx
+end
 --------------------------------------------------------------------------
 -- STATES --
 --------------------------------------------------------------------------

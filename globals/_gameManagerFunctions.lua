@@ -5,35 +5,45 @@ function G.change_state(state)
   G.game_manager.next_state = state
 end
 
-function G.load_stage(map)
+
+function G.load_stage_from_cl(map_name)
+  local map_i
+  for i=1,#G.stage do
+    local st_map=G.stage[i]
+    if st_map.file == map_name then map_i=i end
+  end
+  
+  if map_i then
+    G.load_stage(map_i)
+    return true
+  else
+    print("Map file: "..map_name.." not found.")
+  end  
+end
+
+
+function G.load_stage(map_i)
+  if map_i then G.current_stage_number = map_i end
   G.current_map = G.stage[G.current_stage_number]
   G.game_manager.states.play_state:load_map(G.current_map.file,G.current_map.type)
   G.change_state("stage_load_state")
   G.coins = 0
 end
 
-function G.load_next_stage()
-  G.current_stage_number = G.current_stage_number + 1
-  if G.current_stage_number <= #G.stage then
-    local map = G.stage[G.current_stage_number]
-    G.reset_player_spawn ( )
-    G.load_stage(map)
-  else
-    G.load_first_stage()
-  end
-end
 
-function G.load_first_stage()
-  G.current_stage_number = 1
-  local map = G.stage[G.current_stage_number]
+function G.load_next_stage()
+  local csn = G.current_stage_number + 1
+  if csn > #G.stage then csn=1 end
+  
+  G.current_stage_number = csn
   G.reset_player_spawn ( )
-  G.load_stage(map)
+  G.load_stage()
 end
 
 function G.restart_stage()
   -- respawn player and return to the current
   -- map in the same state
-  G.load_stage(G.current_map.file)
+  G.load_stage()
 end
 
 function G.coin_collected ()

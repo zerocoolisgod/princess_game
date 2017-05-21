@@ -16,7 +16,6 @@ function Coin:initialize (x,y)
   self.sprite:set_animation('idle')
 
   local f = love.math.random(7)
-  print(f)
   self.sprite:set_frame(f)
 end
 

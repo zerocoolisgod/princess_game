@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 60,
+  nextobjectid = 62,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -662,6 +662,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 49,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 60,
+          name = "ent_heart",
+          type = "",
+          shape = "rectangle",
+          x = 1162,
+          y = 112,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 50,
           visible = true,
           properties = {}
         }

@@ -28,7 +28,7 @@ function Object_Layer:load(objects)
   for o = 1, #objects do
     local map_obj = objects[o]
 
-    -- Tiled is wierd and sets objects oragin to bottom left
+    -- Tiled is wierd and sets objects origin to bottom left
     local x,y = map_obj.x, map_obj.y - map_obj.height
     local w,h = map_obj.width, map_obj.height
     local obj = G.resource_manager:get_new_object(map_obj.name,x,y,w,h)
