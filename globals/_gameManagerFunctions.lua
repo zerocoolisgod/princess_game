@@ -33,7 +33,7 @@ end
 
 function G.load_next_stage()
   local csn = G.current_stage_number + 1
-  if csn > #G.stage then csn=1 end
+  if csn > #G.stage-1 then csn=1 end
   
   G.current_stage_number = csn
   G.reset_player_spawn ( )

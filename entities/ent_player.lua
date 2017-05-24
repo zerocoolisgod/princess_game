@@ -67,15 +67,6 @@ function Player:initialize (x,y)
 
   self.timers.hit = 0
 
-  self.bubble_power = 0
-  self.bubble_power_max = 30
-  self.bubble_power_cost = {10,20}
-  self.bubble_power_recharge_rate = 25
-  self.bubble_power_recharge_delay = .5
-  self.timers.bubble_power = 0
-  self.bubble_types={"normal","fire"}
-  self.current_bubble_type = 1
-
   self.can_stomp = false
   self.timers.can_jump = 0
   self.can_jump = false
@@ -87,12 +78,13 @@ end
 
 
 function Player:on_update_first (dt)
+  G.bubble_recharging(dt)
   if self.velocity.y > 0 then
     self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
-
   end
   
   if self.on_ground then self.timers.can_jump = .12 end
+  
   self.can_jump = false
   if self.timers.can_jump > 0 then self.can_jump = true end
 
@@ -103,30 +95,17 @@ function Player:on_update_first (dt)
   self:set_collision_filter('onewayplatform',filt)
 
   if act_1:pressed() and self.current_state ~= 'death' then
-    self:shoot_bubble()
+    G.shoot_bubble(self)
   end
 
-  if select:pressed() then self:change_bubble_type() end
+  if select:pressed() then G.change_bubble_type() end
 
   self:db_update(self.debug,dt)
 end
 
 function Player:on_update_last(dt)
-  local bp, bpt, bpm, recharge_rate
-
   -- stop form dieing if you jump out the top of the screen
   if self.pos.y < 0 then self.pos.y = 0 end
-
-  -- handel bubble recharging
-  bp = self.bubble_power
-  bpm = self.bubble_power_max
-  bpt = self.timers.bubble_power
-  recharge_rate = self.bubble_power_recharge_rate
-
-  if bpt <= 0 then bp = bp + (dt * recharge_rate) end
-  if bp > bpm then bp = bpm end
-
-  self.bubble_power = bp
   G.track_player(self.pos.x,self.pos.y)
 end
 
@@ -199,22 +178,12 @@ end
 function Player:collide_pickup (other)
   if other.heal then G.player_heal(other.heal) end
   if other.id == 'coin' then G.coin_collected() end
-  if other.id == 'bubble jar' then self:add_bubble_power(other:pickup()) end
+  if other.id == 'bubble jar' then G.add_sub_power(other:pickup()) end
 
   other.remove = true
   G.resource_manager:play_sound('ge_pickup')
 end
 
-function Player:add_bubble_power (amount)
-  self.bubble_power_max = self.bubble_power_max + amount
-end
-
-function Player:change_bubble_type( )
-  self.current_bubble_type = self.current_bubble_type + 1
-  if self.current_bubble_type > #self.bubble_types then
-    self.current_bubble_type = 1
-  end
-end
 
 
 function Player:head_bonce (other)
@@ -460,16 +429,7 @@ end
 --------------------------------------------------------------------------
 -- SHOOT --
 --------------------------------------------------------------------------
-function Player:shoot_bubble()
-  local bpc = self.bubble_power_cost[self.current_bubble_type]
-  if self.bubble_power >= bpc then
-    local t = self.bubble_types[self.current_bubble_type]
-    G.blow_bubble(self, t)
-    self.bubble_power = self.bubble_power - bpc
-    if self.bubble_power < 0 then self.bubble_power = 0 end
-    self.timers.bubble_power = self.bubble_power_recharge_delay
-  end
-end
+
 
 
 --------------------------------------------------------------------------

@@ -10,7 +10,7 @@ local lgd   = love.graphics.draw
 local lgr   = love.graphics.rectangle
 local lgp   = love.graphics.print
 local lgsc  = love.graphics.setColor
-
+local bptypes = {normal=1,fire=2}
 
 
 
@@ -74,17 +74,21 @@ function GUI:draw_bp()
   local text_x, text_y = 8,16
   local r1_x,r1_y,r1_w,r1_h
   local r2_x,r2_y,r2_w,r2_h
-  local qn = G.player.current_bubble_type
+  local qn = bptypes[G.bubble_type]
   local q = self.bp_quads[qn]
+  local bp = "sub"
+  if G.bubble_type == "normal" then bp = "normal" end
+  
   -- outline
   r1_x = 8
   r1_y = 15
-  r1_w = G.player.bubble_power_max + 11
+  r1_w = G.bubble_power_max + 11
+  if bp == "sub" then r1_w = G.sub_power_max + 11 end
   r1_h = 10
   --status bar
   r2_x = r1_x + 10
   r2_y = r1_y + 1
-  r2_w = G.player.bubble_power
+  r2_w = G.get_bubble_power(bp)
   r2_h = 8
   lgsc(0,0,0)
   lgr('fill',r1_x,r1_y,r1_w,r1_h)

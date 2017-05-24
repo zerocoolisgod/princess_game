@@ -52,9 +52,7 @@ function be:off_screen_update (dt)
 end
 
 
-function be:remove_bubble()
-  G.remove_bubble()
-end
+
 
 
 function be:on_collision(cols, len)
@@ -92,7 +90,7 @@ function be:init_state (s)
     self.damage = 0
     G.remove_hitbox(self)
     self.timers.pop = .75
-    self:remove_bubble ()
+    G.spawn_random_pickup (self)
   elseif s == "full" then
     self.timers.pop = 2
   end
@@ -106,11 +104,6 @@ end
 function be:full (dt)
   if self.timers.pop <= 0 then
     self:set_state("pop")
-    if self.respawn ~= "" then 
-      local x,y = self:get_true_pos()
-      local o = G.resource_manager:get_new_object(self.respawn,x,y)
-      G.add_object(o)
-    end
   end
   self:move(0,-25,dt)
 end

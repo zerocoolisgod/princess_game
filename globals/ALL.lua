@@ -32,6 +32,7 @@ require "globals._worldFunctions"
 require "globals._utilityFunctions"
 require "globals._playerFunctions"
 require "globals._gameManagerFunctions"
+require "globals._bubbleModual"
 
 function G.cl_switch ()
   --pass

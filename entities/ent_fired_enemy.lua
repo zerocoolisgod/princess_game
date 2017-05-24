@@ -52,8 +52,14 @@ function be:off_screen_update (dt)
 end
 
 
-function be:remove_bubble()
-  G.remove_bubble()
+function be:spawn_item()
+  local obj_typs={"ent_bubble_jar","ent_heart"}
+  local d = love.math.random(4)
+  if d < 3 then
+    local x,y = self:get_true_pos()
+    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
+    G.add_object(o)
+  end
 end
 
 
@@ -90,9 +96,9 @@ end
 function be:init_state (s)
   if s == "pop" then
     self.damage = 0
-    G.remove_hitbox(self)
     self.timers.pop = .75
-    self:remove_bubble ()
+    G.remove_hitbox(self)
+    G.spawn_random_pickup (self)
   elseif s == "full" then
     self.timers.pop = 2
   end

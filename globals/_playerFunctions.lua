@@ -47,23 +47,6 @@ function G.get_player_health_max ()
 end
 
 
-function G.blow_bubble(shooter, type)
-  local b
-  
-  local x, y = shooter:get_pos()
-  x = x + (shooter.size.x*shooter.direction.x)
-  
-  if type == "normal" then 
-    b = G.resource_manager:get_new_object('ent_bubble', x, y)
-  elseif type == "fire" then
-    b = G.resource_manager:get_new_object('ent_fire_bubble', x, y)
-  end
-  b:owner_init(shooter, shooter.direction.x, 1)
-  G.add_object(b)
-  G.resource_manager:play_sound('shoot')
-end
-
-
 function G.remove_bubble()
   -- G.active_bubbles = G.active_bubbles - 1
   -- if G.active_bubbles < 0 then G.active_bubbles = 0 end
@@ -95,3 +78,4 @@ function G.get_player_position()
   -- pointing enimies vagly in the direction of the player.
   return G.player_position.x,G.player_position.y
 end
+

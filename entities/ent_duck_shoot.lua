@@ -42,6 +42,7 @@ function e:shoot(dt)
   end
 
   self:move(0, 60, dt)
+  
   if self.timers.shoot <= 0 then
     local my_center_x, my_center_y = self:get_pos()
     local x,y

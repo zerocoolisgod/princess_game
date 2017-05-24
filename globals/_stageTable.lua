@@ -13,6 +13,7 @@ G.stage = {
   {name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},
   {name="Act 3 The Caves", file="stage_3_1", type="stage", music="song_00", delay=2},
   {name="Act 4 The Tower", file="stage_4_1", type="stage", music="song_00", delay=2},
+  {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1},
 }
 
 function G.load_stage_list (l)
