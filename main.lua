@@ -1,6 +1,5 @@
 -- Do I Have To Be The Princess?
--- we doing GIT now, seeing as i will not beable to work from a
--- USB pen anymore :(
+-- First Linux commit
 
 -- Localized
 local volume = 0
