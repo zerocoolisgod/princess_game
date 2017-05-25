@@ -43,6 +43,7 @@ end
 function G.restart_stage()
   -- respawn player and return to the current
   -- map in the same state
+  G.clear_subweapon()
   G.load_stage()
 end
 
@@ -66,6 +67,17 @@ function G.remove_hitbox (o)
   local obj_exists = G.game_manager.states.play_state.world:hasItem(o)
   if obj_exists then
     G.game_manager.states.play_state.world:remove (o)
+  end
+end
+
+function G.spawn_random_pickup (spawner)
+  local obj_typs={"ent_heart","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar",}
+  local d = love.math.random(16)
+  print(d)
+  if d <= #obj_typs then
+    local x,y = spawner:get_true_pos()
+    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
+    G.add_object(o)
   end
 end
 

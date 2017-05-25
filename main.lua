@@ -30,10 +30,12 @@ function love.load(arg)
   if arg[2] then
     local a = arg[2]
     print("cmd arg: "..a)
-    print(type(a))
+     print("file arg: "..arg[3])
     if a == "-load_map" then
       local map_path = arg[3]
+     
       local dir, file = map_path:match'(.*/)(.*)'
+      if not file then dir, file = map_path:match'(.*\\)(.*)' end
       local ext = file:find(".tmx")
       local map_name = file:sub(0,ext-1)
 

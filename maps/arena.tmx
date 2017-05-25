@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="256" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="109">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="256" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="110">
  <tileset firstgid="1" name="nes_map_tiles_buffered" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="192" columns="12">
   <image source="../res/img/nes_map_tiles_buffered.png" width="120" height="160"/>
  </tileset>
@@ -72,6 +72,7 @@
   <object id="106" name="ent_duck_run" gid="196" x="162" y="132" width="8" height="8"/>
   <object id="107" name="ent_duck_run" gid="196" x="206" y="140" width="8" height="8"/>
   <object id="108" name="ent_duck_run" gid="196" x="116" y="128" width="8" height="8"/>
+  <object id="109" name="ent_sub_fire" gid="34" x="66" y="100" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="256" height="22">
   <data encoding="csv">

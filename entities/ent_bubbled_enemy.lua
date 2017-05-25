@@ -48,7 +48,7 @@ end
 
 function be:off_screen_update (dt)
   self.remove=true
-  self:remove_bubble()
+  G.spawn_random_pickup (self)
 end
 
 

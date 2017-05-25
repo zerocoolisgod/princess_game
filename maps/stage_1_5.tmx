@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="44" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="53">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="44" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="54">
  <tileset firstgid="1" name="tilesheet_forest" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_forest.png" width="120" height="50"/>
  </tileset>
@@ -121,6 +121,7 @@
   <object id="49" name="ent_coin" gid="63" x="442" y="242" width="8" height="8"/>
   <object id="50" name="ent_coin" gid="63" x="20" y="60" width="8" height="8"/>
   <object id="52" name="ent_heart" gid="75" x="192" y="120" width="8" height="8"/>
+  <object id="53" name="ent_sub_fire" gid="80" x="192" y="216" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="60" height="44">
   <data encoding="csv">

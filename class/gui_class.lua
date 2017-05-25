@@ -12,9 +12,6 @@ local lgp   = love.graphics.print
 local lgsc  = love.graphics.setColor
 local bptypes = {normal=1,fire=2}
 
-
-
-
 local GUI = Class('GUI')
 
 function GUI:initialize()
@@ -24,7 +21,7 @@ function GUI:initialize()
   self.coin_img = G.resource_manager:get_image('hud_key_sheet')
   self.bp_img = G.resource_manager:get_image('hud_bp_sheet')
   self.bp_quads = G.cut_quads(self.bp_img, {x=8,y=8})
-  self.bp_color = {{0, 97, 255},{149, 0, 0}}
+  --self.bp_color = {{0, 97, 255},{149, 0, 0}}
 end
 
 
@@ -36,7 +33,9 @@ end
 function GUI:draw ()
   self:draw_player_health()
   self:draw_coins()
+  
   self:draw_bp()
+  self:draw_sub()
 end
 
 function GUI:draw_player_health ()
@@ -71,31 +70,46 @@ function GUI:draw_coins ()
 end
 
 function GUI:draw_bp()
-  local text_x, text_y = 8,16
-  local r1_x,r1_y,r1_w,r1_h
-  local r2_x,r2_y,r2_w,r2_h
-  local qn = bptypes[G.bubble_type]
-  local q = self.bp_quads[qn]
-  local bp = "sub"
-  if G.bubble_type == "normal" then bp = "normal" end
-  
-  -- outline
-  r1_x = 8
-  r1_y = 15
-  r1_w = G.bubble_power_max + 11
-  if bp == "sub" then r1_w = G.sub_power_max + 11 end
-  r1_h = 10
+  local quad_index = 9
+  local full = G.bubble_power_max
+  local mid = full * .66
+  local low = full * .33
+  local bubble_power = G.get_bubble_power("normal")
+  if bubble_power < full then quad_index = 10 end
+  if bubble_power < mid then quad_index = 11 end
+  if bubble_power < low then quad_index = 12 end
+  lgd(self.bp_img, self.bp_quads[quad_index], 8, 16)
+  if G.bubble_type == "normal" then lgd(self.bp_img, self.bp_quads[13], 8, 16) end
+end
+
+
+
+function GUI:draw_sub()
   --status bar
-  r2_x = r1_x + 10
-  r2_y = r1_y + 1
-  r2_w = G.get_bubble_power(bp)
-  r2_h = 8
-  lgsc(0,0,0)
-  lgr('fill',r1_x,r1_y,r1_w,r1_h)
-  lgsc(self.bp_color[qn])
-  lgr('fill',r2_x,r2_y,r2_w,r2_h)
-  lgsc(255,255,255,255)
-  lgd(self.bp_img,q,8,16)
+  local sbx,sby = 28,16
+  local w = G.get_bubble_power("sub")
+  lgsc({149, 0, 0})
+  lgr('fill', sbx, sby, w, 8)
+  lgsc(255, 255, 255, 255)
+  
+  -- bottle sprite
+  local sx,sy = 18,16
+  -- outline
+  --lgd(self.bp_img, self.bp_quads[8], sx, sy)
+  local q = 8
+  if G.active_subweapon then q = 2 end
+  lgd(self.bp_img, self.bp_quads[q], sx, sy)
+  --draw selector
+  if G.bubble_type ~= "normal" then lgd(self.bp_img, self.bp_quads[13], sx, sy) end
+
+  -- bar sprite
+  local bsx,bsy = 28,16
+  lgd(self.bp_img, self.bp_quads[5], bsx, bsy)
+  for i=1,8 do
+    lgd(self.bp_img, self.bp_quads[6], bsx+8*i, bsy)
+  end
+  lgd(self.bp_img, self.bp_quads[7], bsx+8*9, bsy)
+  
 end
 
 return GUI

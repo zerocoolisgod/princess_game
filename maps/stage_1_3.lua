@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 62,
+  nextobjectid = 63,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -20,6 +20,25 @@ return {
       spacing = 2,
       margin = 1,
       image = "../res/img/tilesheet_plains.png",
+      imagewidth = 120,
+      imageheight = 50,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 60,
+      tiles = {}
+    },
+    {
+      name = "objects",
+      firstgid = 61,
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 2,
+      margin = 1,
+      image = "../res/img/tilesheet_objects.png",
       imagewidth = 120,
       imageheight = 50,
       tileoffset = {
@@ -676,6 +695,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 50,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 62,
+          name = "ent_sub_fire",
+          type = "",
+          shape = "rectangle",
+          x = 856,
+          y = 96,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 80,
           visible = true,
           properties = {}
         }

@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 30,
+  nextobjectid = 31,
   backgroundcolor = { 0, 138, 149 },
   properties = {},
   tilesets = {
@@ -20,6 +20,25 @@ return {
       spacing = 2,
       margin = 1,
       image = "../res/img/tilesheet_forest.png",
+      imagewidth = 120,
+      imageheight = 50,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 60,
+      tiles = {}
+    },
+    {
+      name = "objects",
+      firstgid = 61,
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 2,
+      margin = 1,
+      image = "../res/img/tilesheet_objects.png",
       imagewidth = 120,
       imageheight = 50,
       tileoffset = {
@@ -292,7 +311,7 @@ return {
           name = "ent_duck_shoot",
           type = "",
           shape = "rectangle",
-          x = 864,
+          x = 880,
           y = 64,
           width = 8,
           height = 8,
@@ -452,6 +471,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 50,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 30,
+          name = "ent_sub_fire",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 144,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 80,
           visible = true,
           properties = {}
         }

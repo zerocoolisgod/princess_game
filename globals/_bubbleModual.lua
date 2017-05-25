@@ -8,8 +8,8 @@ if not G then G = {} end
 
 -- Global
 --G.bubble_power = 0
-G.bubble_power_max = 30
-G.sub_power_max = 60
+G.bubble_power_max = 32
+G.sub_power_max = 80
 G.bubble_type = "normal"
 
 -- Local
@@ -24,16 +24,18 @@ G.bubble_power_cost = {
 }
 
 local bubble_power = {
-  normal = 30,
-  sub = 50
+  normal = G.bubble_power_max,
+  sub = G.sub_power_max
 }
 
-G.active_subweapon = "fire"
+G.active_subweapon = nil
 G.subweapon_bottles = 0
 
 
 
 function G.clear_subweapon()
+  bubble_power.sub = G.sub_power_max
+  G.bubble_type = "normal"
   G.active_subweapon = nil
 end
 
@@ -62,7 +64,6 @@ function G.change_bubble_type( )
   if G.bubble_type == "normal" then 
     if subWeapon then nextWeapon = subWeapon end
   end
-  print(nextWeapon)
   G.bubble_type = nextWeapon
 end
 
@@ -118,12 +119,3 @@ function G.shoot_bubble(shooter)
   end
 end
 
-function G.spawn_random_pickup (spawner)
-  local obj_typs={"ent_bubble_jar","ent_heart"}
-  local d = love.math.random(4)
-  if d < 3 then
-    local x,y = spawner:get_true_pos()
-    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
-    G.add_object(o)
-  end
-end

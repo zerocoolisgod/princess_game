@@ -8,7 +8,7 @@ return {
   height = 44,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 53,
+  nextobjectid = 54,
   backgroundcolor = { 0, 138, 149 },
   properties = {},
   tilesets = {
@@ -430,6 +430,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 75,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 53,
+          name = "ent_sub_fire",
+          type = "",
+          shape = "rectangle",
+          x = 192,
+          y = 216,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 80,
           visible = true,
           properties = {}
         }

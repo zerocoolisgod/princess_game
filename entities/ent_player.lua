@@ -179,6 +179,7 @@ function Player:collide_pickup (other)
   if other.heal then G.player_heal(other.heal) end
   if other.id == 'coin' then G.coin_collected() end
   if other.id == 'bubble jar' then G.add_sub_power(other:pickup()) end
+  if other.id == 'sub fire' then G.set_subweapon("fire") end
 
   other.remove = true
   G.resource_manager:play_sound('ge_pickup')
