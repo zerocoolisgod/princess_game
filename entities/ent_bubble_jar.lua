@@ -12,15 +12,23 @@ function b:initialize (x,y)
   self.add = 10
   self.start_y = y
   self.solid = true
+  self.spd = 50
   self.sprite = Sprite:new("bubble jar sprite",'bubble_jar_sheet',8,8,0,0,1)
   self.sprite:add_animation('idle', {1,2,3,4}, 6)
   self.sprite:set_animation('idle')
+  self:set_collision_filter('solid','slide')
 end
 
 function b:on_update_first (dt)
   local frequency = 6
   local pitch = 5
+  self.start_y=self.start_y+self.spd*dt
   self.pos.y = self.start_y + math.cos(G.gametime*frequency)*pitch
+end
+
+function b:on_collision()
+  self.start_y=self.pos.y-4
+  self.spd = 0
 end
 
 function b:pickup ()
