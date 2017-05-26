@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="256" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="112">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="256" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="139">
  <tileset firstgid="1" name="nes_map_tiles_buffered" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="192" columns="12">
   <image source="../res/img/nes_map_tiles_buffered.png" width="120" height="160"/>
  </tileset>
@@ -72,9 +72,24 @@
   <object id="106" name="ent_duck_run" gid="196" x="418" y="134" width="8" height="8"/>
   <object id="107" name="ent_duck_run" gid="196" x="462" y="142" width="8" height="8"/>
   <object id="108" name="ent_duck_run" gid="196" x="372" y="130" width="8" height="8"/>
-  <object id="109" name="ent_sub_fire" gid="34" x="66" y="100" width="8" height="8"/>
-  <object id="110" name="ent_bubble_jar" gid="205" x="160" y="56" width="8" height="8"/>
-  <object id="111" name="ent_heart" gid="207" x="182" y="56" width="8" height="8"/>
+  <object id="112" name="ent_dfly" gid="200" x="152" y="120" width="8" height="8"/>
+  <object id="113" name="ent_dfly" gid="200" x="200" y="120" width="8" height="8"/>
+  <object id="114" name="ent_dfly" gid="200" x="248" y="120" width="8" height="8"/>
+  <object id="115" name="ent_dfly" gid="200" x="184" y="120" width="8" height="8"/>
+  <object id="116" name="ent_dfly" gid="200" x="136" y="120" width="8" height="8"/>
+  <object id="117" name="ent_dfly" gid="200" x="216" y="120" width="8" height="8"/>
+  <object id="121" name="ent_dfly" gid="200" x="232" y="120" width="8" height="8"/>
+  <object id="122" name="ent_dfly" gid="200" x="168" y="120" width="8" height="8"/>
+  <object id="123" name="ent_dfly" gid="200" x="270" y="120" width="8" height="8"/>
+  <object id="130" name="ent_dfly" gid="200" x="422" y="120" width="8" height="8"/>
+  <object id="131" name="ent_dfly" gid="200" x="320" y="120" width="8" height="8"/>
+  <object id="132" name="ent_dfly" gid="200" x="368" y="120" width="8" height="8"/>
+  <object id="133" name="ent_dfly" gid="200" x="352" y="120" width="8" height="8"/>
+  <object id="134" name="ent_dfly" gid="200" x="288" y="120" width="8" height="8"/>
+  <object id="135" name="ent_dfly" gid="200" x="336" y="120" width="8" height="8"/>
+  <object id="136" name="ent_dfly" gid="200" x="304" y="120" width="8" height="8"/>
+  <object id="137" name="ent_dfly" gid="200" x="400" y="120" width="8" height="8"/>
+  <object id="138" name="ent_dfly" gid="200" x="384" y="120" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="256" height="22">
   <data encoding="csv">

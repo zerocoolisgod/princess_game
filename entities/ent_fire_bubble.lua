@@ -39,6 +39,7 @@ function bbl:initialize (x,y,ttl)
 
   self:set_collision_filter('solid', 'cross')
   self:set_collision_filter('bullet', 'cross')
+  self:set_collision_filter('decoration', 'cross')
   --self:set_collision_filter('onewayplatform','onewayplatformSlide')
 end
 

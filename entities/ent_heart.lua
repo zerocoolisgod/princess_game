@@ -11,11 +11,12 @@ function p:initialize (x,y)
   self.group = 'pickup'
   self.heal = 25
   self.solid = true
-  self.spd=40
+  self.spd = 30
   self.sprite = Sprite:new("heart sprite",'pickup_sheet',16,16,0,0)
   self.sprite:add_animation('idle',{1,2,2,3,3,3,2,2,1,4,4,5,5,5,4,4},16)
   self.sprite:set_animation('idle')
   self:set_collision_filter('solid','slide')
+  self:set_collision_filter('onewayplatform','slide')
 end
 
 function p:on_update_first (dt)
