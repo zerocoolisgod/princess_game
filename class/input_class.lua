@@ -26,7 +26,16 @@ function input:initialize (id, key, button, joystick)
   self.gp.id = button or 1000
   self.gp.last_state = false
   self.gp.current_state = false
-  
+end
+
+function input:get_key_id()
+  return self.kb.id
+end
+
+function input:get_button_id()
+  local id = self.gp.id
+  if id == 1000 then id = "None set" end
+  return id
 end
 
 function input:up ()

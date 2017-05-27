@@ -84,13 +84,10 @@ local function add_random_pickup(bottle, health, subwaepon, nothing, x, y)
   gen_itms("ent_sub_fire", subwaepon)
   gen_itms("", nothing)
 
-  print("tbl len: "..#obj_table)
   local roll = love.math.random(100)
-  print("rand: "..roll)
   local obj_type = obj_table[roll]
   
   if obj_type ~= "" then 
-    print(obj_type)
     local o = G.resource_manager:get_new_object(obj_type, x, y)
     G.add_object(o)
   end

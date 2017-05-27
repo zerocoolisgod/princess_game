@@ -15,13 +15,15 @@ function love.load(arg)
   -- load font
   local font = love.graphics.newFont('res/font/font_3.ttf', 8)
   love.graphics.setFont(font)
+  
 
   -- Volume
   love.audio.setVolume(volume)
 
   require "globals.ALL"
   require "lib.game_math"
-
+  love.graphics.setBackgroundColor(0, 0, 0, 254)
+  
   -- Debug Manager
   G.debug_manager:load()
 
@@ -45,6 +47,7 @@ function love.load(arg)
   for i=0,1000 do
     love.math.random(i)
   end
+  
 end
 
 

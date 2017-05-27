@@ -60,7 +60,6 @@
  </layer>
  <objectgroup name="obj">
   <object id="21" name="at_door" gid="51" x="272" y="152" width="8" height="8"/>
-  <object id="22" name="ent_sub_fire" gid="80" x="248" y="150" width="8" height="8"/>
   <object id="23" name="ent_coin" gid="63" x="104" y="128" width="8" height="8"/>
   <object id="24" name="ent_coin" gid="63" x="160" y="112" width="8" height="8"/>
   <object id="25" name="ent_coin" gid="63" x="218" y="128" width="8" height="8"/>

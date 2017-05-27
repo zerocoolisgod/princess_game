@@ -10,7 +10,9 @@ local OSS = Class('option_screen_state',State)
 function OSS:initialize()
   State.initialize(self,'option_screen_state')
   self.input_labels = {'up','down','left','right','jump','act_1','select','start'}
+  self.default_input_labels = {'W','S','A','D','K','J','Tab','Space'}
   self.current_ip = ''
+  self.current_default = ''
   self.waiting = false
   self.counter = 0
   self.prev_ax_ip = {a,d}
@@ -35,6 +37,7 @@ function OSS:update(dt)
   if not self.waiting and not done then
     self.counter = self.counter + 1
     self.current_ip = self.input_labels[self.counter]
+    self.current_default = self.default_input_labels[self.counter]
     self.waiting = true
   end
 end
@@ -42,7 +45,8 @@ end
 function OSS:draw()
   
   local ip = self.current_ip or 'done'
-  local msg = 'Press a key for '..ip
+  local df = self.current_default or 'done'
+  local msg = 'Press a key for '..ip.." ("..df..")"
   love.graphics.print(msg,64,64)
 end
 

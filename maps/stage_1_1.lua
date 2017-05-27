@@ -153,20 +153,6 @@ return {
           properties = {}
         },
         {
-          id = 22,
-          name = "ent_sub_fire",
-          type = "",
-          shape = "rectangle",
-          x = 248,
-          y = 150,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 80,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 23,
           name = "ent_coin",
           type = "",

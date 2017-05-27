@@ -25,7 +25,16 @@ function input:initialize (id, key, axis, dir, joystick)
   self.gp.dir = dir or 0
   self.gp.last_state = 0
   self.gp.current_state = 0
-  
+end
+
+function input:get_key_id()
+  return self.kb.id
+end
+
+function input:get_button_id()
+  local id = self.gp.axis
+  if id == 0 then id = self.gp.dir end
+  return id
 end
 
 
