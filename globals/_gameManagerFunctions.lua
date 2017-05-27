@@ -70,16 +70,63 @@ function G.remove_hitbox (o)
   end
 end
 
-function G.spawn_random_pickup (spawner)
-  local obj_typs={"ent_heart","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar",}
-  local d = love.math.random(16)
-  print(d)
-  if d <= #obj_typs then
-    local x,y = spawner:get_true_pos()
-    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
+
+local function add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+ local obj_table={}
+ local function gen_itms(itm,num)
+    for i = 1,num do
+      table.insert(obj_table,itm)
+    end
+  end
+
+  gen_itms("ent_bubble_jar", bottle)
+  gen_itms("ent_heart", health)
+  gen_itms("ent_sub_fire", subwaepon)
+  gen_itms("", nothing)
+
+  print("tbl len: "..#obj_table)
+  local roll = love.math.random(100)
+  print("rand: "..roll)
+  local obj_type = obj_table[roll]
+  
+  if obj_type ~= "" then 
+    print(obj_type)
+    local o = G.resource_manager:get_new_object(obj_type, x, y)
     G.add_object(o)
   end
 end
+
+
+function G.spawn_enemy_pickup (x, y)
+  local bottle, health, subwaepon, nothing = 10,10,1,0
+  local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
+  local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
+  local no_sub =  G.get_subweapon() == nil
+  
+  if low_health then health = 20 end
+  if low_sub_enrg then bottle = 30 end
+  if no_sub then subwaepon = 6 end
+  
+  nothing = 100 - (bottle+subwaepon+health)
+
+  add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+end
+
+
+function G.spawn_random_pickup (x, y)
+  local bottle, health, subwaepon, nothing = 0,10,5,0
+  local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
+  local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
+  local no_sub =  G.get_subweapon() == nil
+    
+  if low_health then health = 30 end
+  if no_sub then subwaepon = 25 end
+  
+  bottle = 100 - (health + subwaepon + nothing)
+
+  add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+end
+
 
 function G.cheats()
   local up = G.inputs.up:pressed()

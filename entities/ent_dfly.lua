@@ -21,16 +21,8 @@ end
 
 
 function p:on_collision()
-  local obj_typs={"ent_sub_fire","ent_heart","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar","ent_bubble_jar",}
-  local d = love.math.random(#obj_typs)
-  print(d)
-  if d <= #obj_typs then
-    local x,y = self:get_true_pos()
-    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
-    G.add_object(o)
-  end
+  G.spawn_random_pickup (self:get_true_pos())
   self.remove=true
-
 end
 
 return p

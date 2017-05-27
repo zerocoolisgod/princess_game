@@ -48,7 +48,7 @@ end
 
 function be:off_screen_update (dt)
   self.remove=true
-  G.spawn_random_pickup (self)
+  G.spawn_enemy_pickup(self:get_true_pos())
 end
 
 
@@ -90,7 +90,7 @@ function be:init_state (s)
     self.damage = 0
     G.remove_hitbox(self)
     self.timers.pop = .75
-    G.spawn_random_pickup (self)
+    G.spawn_enemy_pickup(self:get_true_pos())
   elseif s == "full" then
     self.timers.pop = 2
   end

@@ -51,6 +51,10 @@ function G.get_bubble_power(type)
   return bubble_power[type]
 end
 
+function G.get_bubble_power_max(type)
+  return G.sub_power_max
+end
+
 function G.add_sub_power(amount)
   local newAmount = bubble_power.sub + amount
   if newAmount > G.sub_power_max then newAmount = G.sub_power_max end

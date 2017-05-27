@@ -13,5 +13,5 @@ G.current_stage_number = 0
 G.player = {}
 G.player_position = {x=0,y=0}
 G.player_health = 0
-G.player_health_max = 2
+G.player_health_max = 3
 G.coins = 0

@@ -42,8 +42,8 @@ function Player:initialize (x,y)
 
   self.on_ground = false
 
-
-  self.sprite = Sprite:new('player sprite','beth_purple_strip',16,16,0,1)
+  local sprt = "beth_blue_strip"
+  self.sprite = Sprite:new('player sprite',sprt,16,16,0,1)
   self.sprite:add_animation('stand',{1,1,1,1,1,1,1,1,1,1,1,1,6,1},4)
   self.sprite:add_animation('walk',{3,1,2,1},6)
   self.sprite:add_animation('step',{1},1)

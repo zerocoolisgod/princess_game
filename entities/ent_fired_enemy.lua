@@ -48,18 +48,7 @@ end
 
 function be:off_screen_update (dt)
   self.remove=true
-  G.spawn_random_pickup (self)
-end
-
-
-function be:spawn_item()
-  local obj_typs={"ent_bubble_jar","ent_heart"}
-  local d = love.math.random(4)
-  if d < 3 then
-    local x,y = self:get_true_pos()
-    local o = G.resource_manager:get_new_object(obj_typs[d],x,y)
-    G.add_object(o)
-  end
+  G.spawn_enemy_pickup(self:get_true_pos())
 end
 
 
@@ -98,7 +87,7 @@ function be:init_state (s)
     self.damage = 0
     self.timers.pop = .75
     G.remove_hitbox(self)
-    G.spawn_random_pickup (self)
+    G.spawn_enemy_pickup(self:get_true_pos())
   elseif s == "full" then
     self.timers.pop = 2
   end
