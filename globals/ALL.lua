@@ -1,6 +1,8 @@
 -- Global
 -- Pay attention to the load order
 
+require "lib.game_math"
+
 local GameManager = require "class.game_manager_class"
 
 -- G is the only global value

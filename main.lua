@@ -20,7 +20,6 @@ function love.load(arg)
   -- Volume
   love.audio.setVolume(volume)
 
-  require "lib.game_math"
   require "globals.ALL"
   
   love.graphics.setBackgroundColor(0, 0, 0, 254)
