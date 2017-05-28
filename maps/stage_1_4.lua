@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 53,
+  nextobjectid = 54,
   backgroundcolor = { 0, 138, 149 },
   properties = {},
   tilesets = {
@@ -233,20 +233,6 @@ return {
           height = 166,
           rotation = 0,
           gid = 49,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 1,
-          name = "ent_player",
-          type = "",
-          shape = "rectangle",
-          x = 24,
-          y = 144,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 50,
           visible = true,
           properties = {}
         },
@@ -554,6 +540,20 @@ return {
           width = 472,
           height = 4,
           rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 53,
+          name = "ent_player",
+          type = "",
+          shape = "rectangle",
+          x = 24,
+          y = 136,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 61,
           visible = true,
           properties = {}
         }

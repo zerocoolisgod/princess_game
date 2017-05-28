@@ -5,14 +5,14 @@ if not G then G = {} end
 
 
 G.stage = {
-  {name="Act 1 The Plains", file="stage_1_1", type="stage", music="song_00", delay=4},
-  {name="Ducks Hate Bubbles.", file="stage_1_2", type="stage", music="song_00", delay=4},
+  {name="Act 1 The Plains", file="stage_1_1", type="stage", music="song_00", delay=2},
+  {name="Ducks Hate Bubbles.", file="stage_1_2", type="stage", music="song_00", delay=2},
   {name="", file="stage_1_3", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_4", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_5", type="stage", music="song_00", delay=.5},
-  {name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},
-  {name="Act 3 The Caves", file="stage_3_1", type="stage", music="song_00", delay=2},
-  {name="Act 4 The Tower", file="stage_4_1", type="stage", music="song_00", delay=2},
+  --{name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},
+  --{name="Act 3 The Caves", file="stage_3_1", type="stage", music="song_00", delay=2},
+  --{name="Act 4 The Tower", file="stage_4_1", type="stage", music="song_00", delay=2},
   {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1},
 }
 

@@ -26,7 +26,7 @@ end
 function e:on_update_first (dt)
   local x,y = G.get_player_position()
   local dx = -1
-  if x > self.pos.x then dx = 1 end
+  if x>self.pos.x then dx = 1 end
   self.direction.x = dx
 end
 --------------------------------------------------------------------------
@@ -35,12 +35,8 @@ end
 --------------------------------------------------------------------------
 -- SHOOT --
 --------------------------------------------------------------------------
-
-
 function e:shoot(dt)
-  
   local grounded = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
-  
   if not grounded then
     self:set_state('fall')
   end
@@ -56,7 +52,7 @@ function e:shoot(dt)
     --b.group = 'enemy'
     b.speed.x=150
     local dx,dy = G.direction_to_player(self)
-    b:owner_init(self, self.direction.x, 0, 200)
+    b:owner_init(self, dx, dy)
     G.add_object(b)
     self.timers.shoot = 2
   end

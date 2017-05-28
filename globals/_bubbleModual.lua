@@ -25,7 +25,7 @@ G.bubble_power_cost = {
 
 local bubble_power = {
   normal = G.bubble_power_max,
-  sub = G.sub_power_max
+  sub = 0 --G.sub_power_max
 }
 
 G.active_subweapon = nil

@@ -1,5 +1,8 @@
 if not G then G = {} end
 
+local abs = math.abs
+local sign = math.sign
+
 -------------------------------------------------------------------------------
 -- Global Player Functions
 -------------------------------------------------------------------------------
@@ -79,3 +82,20 @@ function G.get_player_position()
   return G.player_position.x,G.player_position.y
 end
 
+function G.direction_to_player(e)
+  --local sign = math.sign
+  local dx,dy = 1, 1 --down to the right
+  local px,py = G.get_player_position()
+  local sx,sy = e:get_pos()
+  local lenx = px-sx
+  local leny = py-sy
+  
+  dx = sign(lenx)
+  dy = (abs(leny) / abs(lenx)) * sign(leny)
+  
+  if abs(leny) > abs(lenx) then 
+    dy = sign(leny)
+    dx = (abs(lenx) / abs(leny)) * sign(lenx)
+  end
+  return dx,dy
+end

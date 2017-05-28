@@ -13,6 +13,7 @@ function Bullet:initialize (x,y,ttl)
   self.parent = nil
   self.speed.x = 250
   self.accel.x = 1
+  self.dist_to_move = 99999
 
   self.damage = 1
   self.solid = true
@@ -28,17 +29,19 @@ end
 
 
 function Bullet:on_update_last(dt)
-  local m = self.speed.x * self.direction.x
-  self:move(m,0,dt)
+  local mx = self.speed.x * self.direction.x
+  local my = self.speed.x * self.direction.y
+  self:move(mx,my,dt)
   local x,y = self:get_pos()
   local x2,y2 = self.parent:get_pos()
   local dist = (x-x2)*self.direction.x
-  if dist>64 then self:remove_bullet() end
+  if dist > self.dist_to_move then self:remove_bullet() end
 end
 
 
-function Bullet:owner_init (parent,dx,dy)
+function Bullet:owner_init (parent, dx, dy, dist)
   self:set_direction(dx,dy)
+  self.dist_to_move = dist or 99999
   self.parent = parent or self
 end
 
@@ -50,7 +53,6 @@ end
 
 function Bullet:remove_bullet()
   self.remove = true
-  --G.remove_bullet()
 end
 
 

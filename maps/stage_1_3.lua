@@ -139,20 +139,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 73,
-          name = "ent_player",
-          type = "",
-          shape = "rectangle",
-          x = 24,
-          y = 144,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 61,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 22,
           name = "ent_duck_run",
           type = "",
@@ -793,6 +779,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 74,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 73,
+          name = "ent_player",
+          type = "",
+          shape = "rectangle",
+          x = 24,
+          y = 144,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 61,
           visible = true,
           properties = {}
         }

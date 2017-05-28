@@ -9,7 +9,7 @@ local p = Class('heart', Entity)
 function p:initialize (x,y)
   Entity.initialize(self,x,y,8,14,'heart')
   self.group = 'pickup'
-  self.heal = 25
+  self.heal = 1
   self.solid = true
   self.spd = 30
   self.sprite = Sprite:new("heart sprite",'pickup_sheet',16,16,0,0)
