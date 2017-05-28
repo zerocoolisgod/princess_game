@@ -3,7 +3,7 @@ if not G then G = {} end
 -------------------------------------------------------------------------------
 -- Global functions
 -------------------------------------------------------------------------------
-function world_check_point (x,y,group)
+function G.world_check_point (x,y,group)
   -- check point for object with same group
   local this_state = G.game_manager.states[G.game_manager.current_state]
   -- make sure current state has a collision world

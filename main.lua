@@ -27,23 +27,7 @@ function love.load(arg)
   -- Debug Manager
   G.debug_manager:load()
 
-  -- Deal with command line switches
-  if arg[2] then
-    local a = arg[2]
-    print("cmd arg: "..a)
-     print("file arg: "..arg[3])
-    if a == "-load_map" then
-      local map_path = arg[3]
-     
-      local dir, file = map_path:match'(.*/)(.*)'
-      if not file then dir, file = map_path:match'(.*\\)(.*)' end
-      local ext = file:find(".tmx")
-      local map_name = file:sub(0,ext-1)
-
-      print("loading: "..map_name)
-      if G.load_stage_from_cl(map_name) then G.change_state("play_state") end
-    end
-  end
+  if arg[2] then G.cl_switch(arg) end
   for i=0,1000 do
     love.math.random(i)
   end

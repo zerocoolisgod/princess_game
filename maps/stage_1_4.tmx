@@ -82,8 +82,8 @@
   <object id="44" name="spn_duck_fly" gid="79" x="1006" y="28" width="8" height="8"/>
   <object id="45" name="spn_duck_fly" gid="79" x="1094" y="64" width="8" height="8"/>
   <object id="46" name="ent_dfly_sub_fire" gid="69" x="646" y="102" width="8" height="8"/>
-  <object id="47" name="ent_dfly" gid="68" x="222" y="128" width="8" height="8"/>
-  <object id="48" name="ent_dfly" gid="68" x="412" y="128" width="8" height="8"/>
+  <object id="47" name="ent_dfly" gid="68" x="224" y="104" width="8" height="8"/>
+  <object id="48" name="ent_dfly" gid="68" x="408" y="104" width="8" height="8"/>
   <object id="49" name="ent_dfly" gid="68" x="774" y="74" width="8" height="8"/>
   <object id="50" name="ent_dfly" gid="68" x="910" y="60" width="8" height="8"/>
   <object id="51" name="ent_dfly" gid="68" x="1064" y="80" width="8" height="8"/>
