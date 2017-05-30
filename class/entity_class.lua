@@ -109,7 +109,7 @@ end
 function ENT:draw_sprite()
   local sx,sy,x,y, alph
   alph = self.alpha or 255
-  sx = self.direction.x
+  sx = math.sign(self.direction.x)
   sy = 1
   x,y = self:get_pos()
   self.sprite:draw(sx,sy,x,y,alph)

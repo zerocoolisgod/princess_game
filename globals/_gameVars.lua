@@ -15,3 +15,5 @@ G.player_position = {x=0,y=0}
 G.player_health = 0
 G.player_health_max = 3
 G.coins = 0
+
+G.boss_health = 0

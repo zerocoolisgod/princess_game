@@ -82,11 +82,11 @@ function G.get_player_position()
   return G.player_position.x,G.player_position.y
 end
 
-function G.direction_to_player(e)
+function G.direction_to_player(sx,sy)
   --local sign = math.sign
   local dx,dy = 1, 1 --down to the right
   local px,py = G.get_player_position()
-  local sx,sy = e:get_pos()
+  --local sx,sy = e:get_pos()
   local lenx = px-sx
   local leny = py-sy
   

@@ -19,11 +19,6 @@ function e:initialize (x,y,type)
   self.timers.respawn = 5
   self.first_spawn = true
   self.ent = nil
-
-  -- self.sprite = Sprite:new(sprite id, sprite sheet name, quad sx, quad sy, offset x, offset y)
-  -- self.sprite:add_animation(animation id, {frames}, delay)
-    
-  -- self:set_collision_filter(group,type) cross,bounce,slide
 end
 
 function e:on_update_first(dt)
@@ -71,6 +66,10 @@ function e:draw_bounding_box()
   lgsc(255, 255, 0,255)
   lgr("line", x, y, w, h)
   lgsc(255, 255, 255,255)
+end
+
+function e:set_spawn_type(type)
+  self.spawn_type = type
 end
 
 return e

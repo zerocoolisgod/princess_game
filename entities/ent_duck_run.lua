@@ -39,7 +39,7 @@ function e:check_edge ()
   h = (self.size.y/2)+1
   x = cx+w
   y = cy+h
-  return G.world_check_point(x,y,'solid') or world_check_point(x,y,'onewayplatform')
+  return G.world_check_point(x,y,'solid') or G.world_check_point(x,y,'onewayplatform')
 end
 
 

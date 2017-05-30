@@ -10,6 +10,7 @@ G.stage = {
   {name="", file="stage_1_3", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_4", type="stage", music="song_00", delay=.5},
   {name="", file="stage_1_5", type="stage", music="song_00", delay=.5},
+  {name="The Duck Wizzard!", file="stage_1_6", type="stage", music="song_00", delay=3},
   --{name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},
   --{name="Act 3 The Caves", file="stage_3_1", type="stage", music="song_00", delay=2},
   --{name="Act 4 The Tower", file="stage_4_1", type="stage", music="song_00", delay=2},

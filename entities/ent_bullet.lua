@@ -32,10 +32,10 @@ function Bullet:on_update_last(dt)
   local mx = self.speed.x * self.direction.x
   local my = self.speed.x * self.direction.y
   self:move(mx,my,dt)
-  local x,y = self:get_pos()
-  local x2,y2 = self.parent:get_pos()
-  local dist = (x-x2)*self.direction.x
-  if dist > self.dist_to_move then self:remove_bullet() end
+  -- local x,y = self:get_pos()
+  -- local x2,y2 = self.parent:get_pos()
+  -- local dist = (x-x2)*self.direction.x
+  -- if dist > self.dist_to_move then self:remove_bullet() end
 end
 
 

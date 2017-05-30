@@ -10,7 +10,7 @@ local e = Class(className, SpawnerClass)
 
 function e:initialize (x,y)
   SpawnerClass.initialize (self,x,y,"ent_duck_shoot")
-  self.group = groupName
+  self.group = nil
   self.solid = false
   self.spawn_delay = 3
 end
