@@ -45,8 +45,7 @@ function e:off_screen_update (dt)
   end
 end
 
-function e:on_draw()
-  
+function e:on_draw_first()
 end
 
 function e:on_collision ()

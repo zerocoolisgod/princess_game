@@ -39,11 +39,13 @@ function e:killed_by_bubble (other)
   self:set_state("death")
   -- self.damage = 0
   -- self.remove = true
+  other:take_damage(self,true)
 end
 
 function e:killed_by_fire (other)
   G.boss_health = G.boss_health -1
   self:set_state("death")
+  other:take_damage(self,true)
 end
 --------------------------------------------------------------------------
 -- STATES --

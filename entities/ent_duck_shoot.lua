@@ -53,9 +53,7 @@ function e:shoot(dt)
     x = my_center_x + (10 * self.direction.x)
     y = my_center_y
     local b = G.resource_manager:get_new_object('ent_bullet',x,y)
-    --b.group = 'enemy'
     b.speed.x=150
-    local dx,dy = G.direction_to_player(self)
     b:owner_init(self, self.direction.x, 0, 200)
     G.add_object(b)
     self.timers.shoot = 2

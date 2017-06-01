@@ -20,7 +20,7 @@ function e:initialize (x,y)
     {x=32,y=96},
     {x=280,y=96}
   }
-  G.boss_health = 2
+  G.boss_health = 6
 end
 
 function e:on_update_last(dt)
@@ -36,6 +36,13 @@ function e:on_update_last(dt)
     self.timers.respawn = self.spawn_delay
     self.ent = G.resource_manager:get_new_object(self.spawn_type, pos.x, pos.y)
     G.add_object(self.ent)
+  end
+end
+
+function e:on_draw_first()
+  local base_x = 200
+  for i=1, G.boss_health do
+    love.graphics.rectangle("fill", base_x+i*10, 8, 8, 8)
   end
 end
 
