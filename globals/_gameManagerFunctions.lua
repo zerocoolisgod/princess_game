@@ -75,7 +75,7 @@ function G.remove_hitbox (o)
 end
 
 
-local function add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+local function add_random_pickup(bottle, health, subweapon, nothing, x, y)
  local obj_table={}
  local function gen_itms(itm,num)
     for i = 1,num do
@@ -85,7 +85,7 @@ local function add_random_pickup(bottle, health, subwaepon, nothing, x, y)
 
   gen_itms("ent_bubble_jar", bottle)
   gen_itms("ent_heart", health)
-  gen_itms("ent_sub_fire", subwaepon)
+  gen_itms("ent_sub_fire", subweapon)
   gen_itms("", nothing)
 
   local roll = love.math.random(100)
@@ -99,33 +99,33 @@ end
 
 
 function G.spawn_enemy_pickup (x, y)
-  local bottle, health, subwaepon, nothing = 10,10,1,0
+  local bottle, health, subweapon, nothing = 10,10,0,0
   local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
   local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
   local no_sub =  G.get_subweapon() == nil
   
   if low_health then health = 20 end
   if low_sub_enrg then bottle = 30 end
-  if no_sub then subwaepon = 6 end
+  if no_sub then subweapon = 6 end
   
-  nothing = 100 - (bottle+subwaepon+health)
+  nothing = 100 - (bottle+subweapon+health)
 
-  add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+  add_random_pickup(bottle, health, subweapon, nothing, x, y)
 end
 
 
 function G.spawn_random_pickup (x, y)
-  local bottle, health, subwaepon, nothing = 0,10,5,0
+  local bottle, health, subweapon, nothing = 0,10,0,0
   local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
   local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
   local no_sub =  G.get_subweapon() == nil
     
   if low_health then health = 30 end
-  if no_sub then subwaepon = 25 end
+  --if no_sub then subweapon = 25 end
   
-  bottle = 100 - (health + subwaepon + nothing)
+  bottle = 100 - (health + subweapon + nothing)
 
-  add_random_pickup(bottle, health, subwaepon, nothing, x, y)
+  add_random_pickup(bottle, health, subweapon, nothing, x, y)
 end
 
 

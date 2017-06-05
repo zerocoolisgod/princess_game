@@ -24,27 +24,39 @@ function e:initialize (x, y)
 end
 
 function e:set_spawn(id, dx, dy)
+  local selfx , selfy = self:get_pos()
+
   self.spawn = {
     id = id, 
-    x = self.pos.x, 
-    y = self.pos.y, 
+    x = selfx, 
+    y = selfy, 
     dx = dx, 
     dy = dy
   }
 end
 
 function e:on_update_first(dt)
-  if self.timers.spawn_delay <= 0 and not self.has_spawned then 
-    self.ent = G.resource_manager:get_new_object(self.spawn.id, self.spawn.x, self.spawn.y)
-    if self.spawn.id == "ent_bullet" then
-      self.ent.speed.x = 150
-      self.ent:owner_init(nil, self.spawn.dx, self.spawn.dy)
+  if self.timers.spawn_delay <= 0 and not self.has_spawned then
+    if self.spawn then
+      self.ent = G.resource_manager:get_new_object(self.spawn.id, self.spawn.x, self.spawn.y)
+      -- center entity on x,y instead of using upper left
+      -- should not be done for entities loaded from the map
+      self.ent:set_pos(self.spawn.x, self.spawn.y)
+      if self.spawn.id == "ent_bullet" then
+        self.ent.speed.x = 150
+        self.ent:owner_init(nil, self.spawn.dx, self.spawn.dy)
+      end
+      
+      G.add_object(self.ent)
     end
-    G.add_object(self.ent)
+
     self.has_spawned = true
     self.sprite:set_animation('done')
   end
   
+  -- this keeps the cloud around untill its spawn is gone
+  -- so that the object that created the cloud will know when the
+  -- bullet or whatever is gone.
   if self.has_spawned and self.ent.remove then 
     self.ent = nil
     self.remove = true

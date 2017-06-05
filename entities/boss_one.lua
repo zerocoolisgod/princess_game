@@ -27,14 +27,19 @@ function e:on_update_last(dt)
   if not self.ent and self.timers.respawn <=0 then
     local pos = self.positions[love.math.random(#self.positions)]
 
-    if G.boss_health < 1 then 
+    if G.boss_health < 1 then
       self:set_spawn_type("at_next_stage")
       pos.x = 160
       pos.y = 104
     end
     
     self.timers.respawn = self.spawn_delay
-    self.ent = G.resource_manager:get_new_object(self.spawn_type, pos.x, pos.y)
+    --self.ent = G.resource_manager:get_new_object(self.spawn_type, pos.x, pos.y)
+    --G.add_object(self.ent)
+
+    self.ent = G.resource_manager:get_new_object('spn_cloud', pos.x, pos.y)
+    self.ent:set_spawn(self.spawn_type, 1, 0)
+    --self.ent:set_spawn("ent_bullet", 1, 0)
     G.add_object(self.ent)
   end
 end

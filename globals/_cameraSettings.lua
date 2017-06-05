@@ -11,6 +11,12 @@ local lgr=love.graphics.rectangle
 -- NES res 256 x 240
 local w = 'w960x540'
 local f = 'w1920x1080'
+
+if _BUILD_FOR_PI then 
+  w = "s1024x768"
+  f = "s1024x768"
+end
+
 C_SIZE = C_RES[w].base
 
 if not G then G = {} end

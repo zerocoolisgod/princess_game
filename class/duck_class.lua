@@ -23,16 +23,16 @@ function e:initialize (x,y,w,h,id)
 end
 
 -- Overide super
-function e:update (dt)
-  if self.on_update_first then self:on_update_first(dt) end
+-- function e:update (dt)
+--   if self.on_update_first then self:on_update_first(dt) end
 
-  if self.has_states then self:update_states(dt) end
-  if self.sprite then self.sprite:update(dt) end
-  if self.timers then self:update_timers(dt) end
-  self:flicker_check(dt)
+--   if self.has_states then self:update_states(dt) end
+--   if self.sprite then self.sprite:update(dt) end
+--   if self.timers then self:update_timers(dt) end
+--   self:flicker_check(dt)
 
-  if self.on_update_last then self:on_update_last(dt) end
-end
+--   if self.on_update_last then self:on_update_last(dt) end
+-- end
 
 
 function e:off_screen_update (dt)
