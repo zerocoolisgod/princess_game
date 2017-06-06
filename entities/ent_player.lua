@@ -43,9 +43,9 @@ function Player:initialize (x,y)
   self.on_ground = false
 
   self.sprite_list = {
-    normal = Sprite:new('player sprite',"beth_blue_strip",16,16,0,1),
-    boot = Sprite:new('player sprite',"beth_purple_strip",16,16,0,1),
-    fire = Sprite:new('player sprite',"beth_red_strip",16,16,0,1)
+    normal = Sprite:new('player sprite',"beth_normal_strip",16,16,0,1),
+    boot = Sprite:new('player sprite',"beth_boot_strip",16,16,0,1),
+    fire = Sprite:new('player sprite',"beth_fire_strip",16,16,0,1)
   }
   
   for id,s in pairs(self.sprite_list) do

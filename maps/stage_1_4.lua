@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 54,
+  nextobjectid = 55,
   backgroundcolor = { 0, 138, 149 },
   properties = {},
   tilesets = {
@@ -554,6 +554,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 61,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 54,
+          name = "ent_dfly_sub_boot",
+          type = "",
+          shape = "rectangle",
+          x = 88,
+          y = 128,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 81,
           visible = true,
           properties = {}
         }
