@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 32,
+  nextobjectid = 34,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -181,20 +181,6 @@ return {
           properties = {}
         },
         {
-          id = 27,
-          name = "ent_dfly_sub_fire",
-          type = "",
-          shape = "rectangle",
-          x = 128,
-          y = 128,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 69,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 28,
           name = "ent_duck_run",
           type = "",
@@ -223,20 +209,6 @@ return {
           properties = {}
         },
         {
-          id = 31,
-          name = "ent_dfly",
-          type = "",
-          shape = "rectangle",
-          x = 176,
-          y = 128,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 68,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 29,
           name = "ent_player",
           type = "",
@@ -247,6 +219,34 @@ return {
           height = 8,
           rotation = 0,
           gid = 61,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "ent_dfly_sub_fire",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 120,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 80,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 33,
+          name = "ent_dfly_sub_boot",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 120,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 81,
           visible = true,
           properties = {}
         }

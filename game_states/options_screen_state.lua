@@ -11,6 +11,12 @@ function OSS:initialize()
   State.initialize(self,'option_screen_state')
   self.input_labels = {'up','down','left','right','jump','act_1','select','start'}
   self.default_input_labels = {'W','S','A','D','K','J','Tab','Space'}
+  
+  if _BUILD_FOR_PI then 
+    self.input_labels = {'jump','act_1','select','start'}
+    self.default_input_labels = {'K','J','Tab','Space'}
+  end
+  
   self.current_ip = ''
   self.current_default = ''
   self.waiting = false

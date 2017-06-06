@@ -12,7 +12,7 @@ function p:initialize (x,y)
   self.heal = 25
   self.solid = true
   self.spd = 30
-  self.sprite = Sprite:new("heart sprite",'pickup_sheet',16,16,0,0)
+  self.sprite = Sprite:new("sub fire",'pickup_sheet',16,16,0,0)
   self.sprite:add_animation('idle',{16},1000)
   self.sprite:set_animation('idle')
 

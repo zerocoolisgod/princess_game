@@ -42,16 +42,23 @@ function Player:initialize (x,y)
 
   self.on_ground = false
 
-  local sprt = "beth_blue_strip"
-  self.sprite = Sprite:new('player sprite',sprt,16,16,0,1)
-  self.sprite:add_animation('stand',{1,1,1,1,1,1,1,1,1,1,1,1,6,1},4)
-  self.sprite:add_animation('walk',{3,1,2,1},6)
-  self.sprite:add_animation('step',{1},1)
-  self.sprite:add_animation('jump',{4},1)
-  self.sprite:add_animation('fall',{5},1)
-  self.sprite:add_animation('hit',{7,8},15)
-  self.sprite:add_animation('death',{7,8},15)
+  self.sprite_list = {
+    normal = Sprite:new('player sprite',"beth_blue_strip",16,16,0,1),
+    boot = Sprite:new('player sprite',"beth_purple_strip",16,16,0,1),
+    fire = Sprite:new('player sprite',"beth_red_strip",16,16,0,1)
+  }
+  
+  for id,s in pairs(self.sprite_list) do
+    s:add_animation('stand',{1,1,1,1,1,1,1,1,1,1,1,1,6,1},4)
+    s:add_animation('walk',{3,1,2,1},6)
+    s:add_animation('step',{1},1)
+    s:add_animation('jump',{4},1)
+    s:add_animation('fall',{5},1)
+    s:add_animation('hit',{7,8},15)
+    s:add_animation('death',{7,8},15)
+  end
 
+  self.sprite = self.sprite_list[G.bubble_type] or self.sprite_list["normal"]
   self.sprite:set_animation('walk')
 
   self.states = true
@@ -73,42 +80,28 @@ function Player:initialize (x,y)
 
   if G.checkpoint then self.pos = G.checkpoint end
   G.set_player_health(G.get_player_health_max())
-  G.set_subweapon("fire")
+  --G.set_subweapon("none")
+  --print(G.get_bubble)
 end
 
-
-
+-------------------------------------------------------------------------------
+-- On_Update Functions
+-------------------------------------------------------------------------------
 function Player:on_update_first (dt)
+  -- Update bubble power
   G.bubble_recharging(dt)
-  if self.velocity.y > 0 then
-    self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
-  end
-  
-  if self.on_ground then self.timers.can_jump = .12 end
-  
-  self.can_jump = false
-  if self.timers.can_jump > 0 then self.can_jump = true end
-
-  local filt='onewayplatformSlide'
-  if G.inputs.down:down() and G.inputs.jump:pressed() then
-    filt='cross'
-  end
-  self:set_collision_filter('onewayplatform',filt)
-
-  if act_1:pressed() and self.current_state ~= 'death' then
-    G.shoot_bubble(self)
-  end
-
-  if select:pressed() then G.change_bubble_type() end
-
+  self:update_ground_system(dt)
+  self:update_weapon_systems(dt)
   self:db_update(self.debug,dt)
 end
+
 
 function Player:on_update_last(dt)
   -- stop form dieing if you jump out the top of the screen
   if self.pos.y < 0 then self.pos.y = 0 end
   G.track_player(self.pos.x,self.pos.y)
 end
+
 
 function Player:off_screen_update(dt)
   if self.timers.death then
@@ -120,9 +113,57 @@ function Player:off_screen_update(dt)
 end
 
 
--------------------------
--- Collision Functions --
--------------------------
+-------------------------------------------------------------------------------
+-- Update Functions
+-------------------------------------------------------------------------------
+function Player:update_weapon_systems(dt)
+  local cost = G.get_bubble_power_cost() or 1
+  local power = G.get_bubble_power("sub")
+  local selected = G.get_weapon_selected()
+
+  -- check for bubble shooting
+  if act_1:pressed() and self.current_state ~= 'death' then
+    G.shoot_bubble(self)
+    --self:change_weapon()
+  end
+
+  -- check for weapon change
+  if select:pressed() then self:change_weapon() end
+  if power < cost and selected ~= "normal" then self:change_weapon("normal") end
+end
+
+
+function Player:update_ground_system(dt)
+  -- cheak ground
+  if self.velocity.y > 0 then
+    self.on_ground = self:check_ground('solid') or self:check_ground('hazard') or self:check_ground('onewayplatform')
+  end
+  
+  if self.on_ground then self.timers.can_jump = .12 end
+  
+  self.can_jump = false
+  if self.timers.can_jump > 0 then self.can_jump = true end
+
+  -- set collision for oneway platforms
+  local filt='onewayplatformSlide'
+  if G.inputs.down:down() and G.inputs.jump:pressed() then
+    filt='cross'
+  end
+  self:set_collision_filter('onewayplatform',filt)
+end
+
+
+function Player:change_weapon(t)
+  G.change_bubble_type(t)
+  local anm = self.sprite:get_current_animation()
+  self.sprite = self.sprite_list[G.bubble_type]
+  self.sprite:set_animation(anm)
+end
+
+
+-------------------------------------------------------------------------------
+-- Collision Functions 
+-------------------------------------------------------------------------------
 function Player:on_collision(cols, len)
   if self.current_state ~= 'death' then
     for i=1,len do
@@ -149,12 +190,13 @@ end
 function Player:collide_enemy (other)
   local ox, oy = other:get_pos()
   local sx, sy = self:get_pos()
-  if sy < (oy-10) and self.can_stomp then -- more than 10 pixles above
+  local has_boot = G.get_weapon_selected() == "boot"
+  
+  if sy < (oy-10) and has_boot then -- more than 10 pixles above
     self:head_bonce(other)
   else
     self:take_damage(other)
   end
-  --self:take_damage(other)
 end
 
 ----------
@@ -181,6 +223,7 @@ function Player:collide_pickup (other)
   if other.id == 'coin' then G.coin_collected() end
   if other.id == 'bubble jar' then G.add_sub_power(other:pickup()) end
   if other.id == 'sub fire' then G.set_subweapon("fire") end
+  if other.id == 'sub boot' then G.set_subweapon("boot") end
 
   other.remove = true
   G.resource_manager:play_sound('ge_pickup')
@@ -189,15 +232,21 @@ end
 
 
 function Player:head_bonce (other)
-  other:take_damage(self)
+  local cost = G.bubble_power_cost[G.bubble_type]
+  local powerPool = G.get_bubble_power("sub")
+  local type = G.bubble_type
+  if powerPool >= cost then
+    other:take_damage(self)
 
-  if jump:down() then
-    self:set_state('jump')
-  else
-    self.on_ground = false
-    self.velocity.y = -(self.jump_force / 2)
-    G.resource_manager:play_sound('jump')
-    self:set_state('fall')
+    if jump:down() then
+      self:set_state('jump')
+    else
+      self.on_ground = false
+      self.velocity.y = -(self.jump_force / 2)
+      G.resource_manager:play_sound('jump')
+      self:set_state('fall')
+    end
+    G.lower_sub_power(3)
   end
 end
 

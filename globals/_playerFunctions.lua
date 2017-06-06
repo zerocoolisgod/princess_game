@@ -59,6 +59,7 @@ end
 function G.set_player_spawn(x,y)
   G.spawn = {x=x,y=y}
 end
+
 function G.reset_player_spawn ( )
   G.spawn = nil
 end
@@ -69,7 +70,7 @@ end
 
 
 function G.track_player(x,y)
-  -- This is a fucntion for the player object register its position with
+  -- This is a fucntion for the player object register its position
   G.player_position.x=x
   G.player_position.y=y
 end

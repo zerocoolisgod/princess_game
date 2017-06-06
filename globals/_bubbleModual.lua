@@ -10,7 +10,7 @@ if not G then G = {} end
 --G.bubble_power = 0
 G.bubble_power_max = 32
 G.sub_power_max = 80
-G.bubble_type = "normal"
+
 
 -- Local
 G.bubble_power_recharge_rate = 250
@@ -18,9 +18,11 @@ G.bubble_power_recharge_delay = .7
 G.bubble_power_timer = 0
 
 
+
 G.bubble_power_cost = {
-  normal=10,
-  fire=5
+  normal = 10,
+  fire = 5,
+  boot = 3
 }
 
 local bubble_power = {
@@ -28,7 +30,12 @@ local bubble_power = {
   sub = 0 --G.sub_power_max
 }
 
-G.active_subweapon = nil
+-- the sub being held
+G.active_subweapon = "none"
+-- the type selected now
+-- if normal, "normal", else "fire", etc.
+G.bubble_type = "normal"
+
 G.subweapon_bottles = 0
 
 
@@ -36,7 +43,7 @@ G.subweapon_bottles = 0
 function G.clear_subweapon()
   bubble_power.sub = G.sub_power_max
   G.bubble_type = "normal"
-  G.active_subweapon = nil
+  G.active_subweapon = "none"
 end
 
 function G.set_subweapon(w)
@@ -47,8 +54,17 @@ function G.get_subweapon()
   return G.active_subweapon
 end
 
+function G.get_weapon_selected()
+  return G.bubble_type
+end
+
 function G.get_bubble_power(type)
   return bubble_power[type]
+end
+
+function G.get_bubble_power_cost(type)
+  local w = type or G.active_subweapon
+  return G.bubble_power_cost[w]
 end
 
 function G.get_bubble_power_max(type)
@@ -61,13 +77,23 @@ function G.add_sub_power(amount)
   bubble_power.sub = newAmount
 end
 
-function G.change_bubble_type( )
+function G.lower_sub_power(amount)
+  local newAmount = bubble_power.sub - amount
+  if newAmount < 0 then newAmount = 0 end
+  bubble_power.sub = newAmount
+end
+
+function G.change_bubble_type(t)
+  if t == G.bubble_type then return end
   local subWeapon = G.get_subweapon()
   local nextWeapon = "normal"
 
   if G.bubble_type == "normal" then 
-    if subWeapon then nextWeapon = subWeapon end
+    if subWeapon ~= "none" then nextWeapon = subWeapon end
   end
+  
+  if t then nextWeapon = t end
+  
   G.bubble_type = nextWeapon
 end
 
@@ -99,9 +125,11 @@ local function add_bubble(shooter, type)
     b = G.resource_manager:get_new_object('ent_fire_bubble', x, y)
   end
 
-  b:owner_init(shooter, shooter.direction.x, 1)
-  G.add_object(b)
-  G.resource_manager:play_sound('shoot')
+  if b then 
+    b:owner_init(shooter, shooter.direction.x, 1)
+    G.add_object(b)
+    G.resource_manager:play_sound('shoot')
+  end
 end
 
 function G.add_bubble_power (amount)
@@ -113,6 +141,7 @@ function G.shoot_bubble(shooter)
   local powerPool = "sub"
   local type = G.bubble_type 
 
+  if type == "boot" then return end
   if type == "normal" then powerPool = "normal" end
 
   if bubble_power[powerPool] >= cost then

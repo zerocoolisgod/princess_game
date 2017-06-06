@@ -76,8 +76,12 @@ end
 
 
 local function add_random_pickup(bottle, health, subweapon, nothing, x, y)
- local obj_table={}
- local function gen_itms(itm,num)
+  -- This is where the actual work gets done.
+  -- spawn_enemy_pickup() and spawn_random_pickup() just set up the 
+  -- probabilities.
+
+  local obj_table={}
+  local function gen_itms(itm,num)
     for i = 1,num do
       table.insert(obj_table,itm)
     end
@@ -99,7 +103,7 @@ end
 
 
 function G.spawn_enemy_pickup (x, y)
-  local bottle, health, subweapon, nothing = 10,10,0,0
+  local bottle, health, subweapon, nothing = 10,10,2,0
   local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
   local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
   local no_sub =  G.get_subweapon() == nil
@@ -115,7 +119,7 @@ end
 
 
 function G.spawn_random_pickup (x, y)
-  local bottle, health, subweapon, nothing = 0,10,0,0
+  local bottle, health, subweapon, nothing = 0,10,5,0
   local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
   local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
   local no_sub =  G.get_subweapon() == nil

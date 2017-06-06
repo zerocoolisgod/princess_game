@@ -21,6 +21,7 @@ function GUI:initialize()
   self.coin_img = G.resource_manager:get_image('hud_key_sheet')
   self.bp_img = G.resource_manager:get_image('hud_bp_sheet')
   self.bp_quads = G.cut_quads(self.bp_img, {x=8,y=8})
+  self.sub_id={none=8,fire=2,boot=3}
   --self.bp_color = {{0, 97, 255},{149, 0, 0}}
 end
 
@@ -94,10 +95,8 @@ function GUI:draw_sub()
   
   -- bottle sprite
   local sx,sy = 18,16
-  -- outline
-  --lgd(self.bp_img, self.bp_quads[8], sx, sy)
-  local q = 8
-  if G.active_subweapon then q = 2 end
+  local q = self.sub_id[G.get_subweapon()]
+  --if G.active_subweapon then q = 2 end
   lgd(self.bp_img, self.bp_quads[q], sx, sy)
   --draw selector
   if G.bubble_type ~= "normal" then lgd(self.bp_img, self.bp_quads[13], sx, sy) end
