@@ -1,7 +1,7 @@
 "sub weapons"
   --"consume fluid"
   --"bubble jars add fluid to sub weapon"
-  "pickup to increass sub fluid max"
+  --"pickup to increass sub fluid max"
   -- "pick up to assign subweapon type"
   -- "active subweapon set to nil on death"
   -- "dragonfly to spawn bottles and what not"
