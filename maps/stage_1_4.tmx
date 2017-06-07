@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="55">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="60">
  <tileset firstgid="1" name="tilesheet_forest" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_forest.png" width="120" height="50"/>
  </tileset>
@@ -90,6 +90,11 @@
   <object id="52" name="ent_spikes" x="728" y="172" width="472" height="4"/>
   <object id="53" name="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
   <object id="54" name="ent_dfly_sub_boot" gid="81" x="88" y="128" width="8" height="8"/>
+  <object id="55" name="ent_bubble_jar" gid="73" x="104" y="80" width="8" height="8"/>
+  <object id="56" name="ent_bubble_jar" gid="73" x="132" y="82" width="8" height="8"/>
+  <object id="57" name="ent_bubble_jar" gid="73" x="136" y="86" width="8" height="8"/>
+  <object id="58" name="ent_bubble_jar" gid="73" x="126" y="104" width="8" height="8"/>
+  <object id="59" name="ent_bubble_jar" gid="73" x="108" y="90" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="160" height="22">
   <data encoding="csv">
