@@ -1,14 +1,14 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "0.18.2",
+  tiledversion = "1.0.0",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 256,
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 149,
+  nextobjectid = 150,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -25,6 +25,11 @@ return {
       tileoffset = {
         x = 0,
         y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
       },
       properties = {},
       terrains = {},
@@ -44,6 +49,11 @@ return {
       tileoffset = {
         x = 0,
         y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
       },
       properties = {},
       terrains = {},
@@ -275,6 +285,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 205,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 149,
+          name = "ent_duck_homing",
+          type = "",
+          shape = "rectangle",
+          x = 126,
+          y = 79.75,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 199,
           visible = true,
           properties = {}
         }

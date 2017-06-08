@@ -6,6 +6,29 @@ function G.change_state(state)
 end
 
 
+
+-------------------------------------------------------------------------------
+-- Deal with command line switches
+-------------------------------------------------------------------------------
+function G.cl_switch (arg)  
+  local a = arg[2]
+  print("cmd arg: "..a)
+  print("file arg: "..arg[3])
+  
+  if a == "-loadmap" then
+    local map_path = arg[3]
+    
+    local dir, file = map_path:match'(.*/)(.*)'
+    if not file then dir, file = map_path:match'(.*\\)(.*)' end
+    local ext = file:find(".tmx")
+    local map_name = file:sub(0,ext-1)
+
+    print("loading: "..map_name)
+    if G.load_stage_from_cl(map_name) then G.change_state("play_state") end
+  end
+end
+
+
 function G.load_stage_from_cl(map_name)
   local map_i
   for i=1,#G.stage do
@@ -22,6 +45,9 @@ function G.load_stage_from_cl(map_name)
 end
 
 
+-------------------------------------------------------------------------------
+-- Map Loading
+-------------------------------------------------------------------------------
 function G.load_stage(map_i)
   if map_i then G.current_stage_number = map_i end
   G.current_map = G.stage[G.current_stage_number]
@@ -51,21 +77,29 @@ function G.restart_stage()
   G.load_stage()
 end
 
+
+-------------------------------------------------------------------------------
+-- Pickups
+-------------------------------------------------------------------------------
 function G.coin_collected ()
   G.coins = G.coins+1
 end
+
 
 function G.clear_coins ()
   G.coins = 0
 end
 
+
 function G.get_coins ()
   return G.coins or 0
 end
 
+
 function G.add_object (o)
   G.game_manager.states.play_state:add_object(o)
 end
+
 
 function G.remove_hitbox (o)
   local obj_exists = G.game_manager.states.play_state.world:hasItem(o)

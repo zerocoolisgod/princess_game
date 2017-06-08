@@ -30,6 +30,7 @@ function love.load(arg)
   G.debug_manager:load()
 
   if arg[2] then G.cl_switch(arg) end
+  
   for i=0,1000 do
     love.math.random(i)
   end

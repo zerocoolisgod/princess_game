@@ -13,7 +13,6 @@ function e:initialize (x,y,w,h,id)
   self.solid = true
 
   self:set_collision_filter('solid','slide')
-  --self:set_collision_filter('passable','slide')
   self:set_collision_filter('onewayplatform','onewayplatformSlide')
   self:set_collision_filter('bubble','cross')
 

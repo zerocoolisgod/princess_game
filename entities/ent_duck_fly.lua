@@ -10,7 +10,7 @@ function e:initialize (x,y)
   --init super class
   Duck.initialize(self,x,y,16,16,'duck_fly')
   self.sprite = Sprite:new('duck fly sprite','duck_fly_sheet',16,16,0,0)
-  self.sprite:add_animation('fly',{1,2,3,2},10)
+  self.sprite:add_animation('fly',{1,2,3,2},16)
   self.sprite:add_animation('death',{4,5},15)
   self.sprite:set_animation('fly')
 
@@ -20,6 +20,11 @@ function e:initialize (x,y)
   self.accel.x = 1
   self.accel.y = .02
   self.speed.x = 75
+  
+  -- sine wave setup
+  self.start_y = y
+  self.frequency = 10
+  self.pitch = 8
 
   self.health = 1
   self.damage = 1
@@ -37,6 +42,7 @@ function e:fly(dt)
   local tgs_x = self.speed.x * self.direction.x
   local tgs_y = 0
   --self.pos.y = self.start_y + math.cos(self.pos.x/16)*15
+  self.pos.y = self.start_y + math.cos(G.gametime * self.frequency) * self.pitch
 
   if self:check_face() or self:check_face("onewayplatform") or self:check_face("stopper") then
 	  self.direction.x = self.direction.x * -1
