@@ -257,7 +257,7 @@ function ENT:move(tgs_x, tgs_y, dt)
     self._move_acum = self._move_acum-tfps
     local cur_speed_x = self.velocity.x
     local cur_speed_y = self.velocity.y
-    local threshold = 4   -- Lower to make more 'floaty'
+    local threshold = 2   -- Lower to make more 'floaty'
     local accel_x = self.accel.x
     local accel_y = self.accel.y
 

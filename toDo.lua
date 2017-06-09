@@ -51,3 +51,216 @@
       "shoots aimed shot"
       "teleports form platform to platform"
       "summons run ducks"
+
+
+
+Act_1 = {
+  Title = "The Plains"
+  Stage_1 = {
+    Tileset = "tilesheet_plains",
+    Style = "keyed",
+    Enemies = {
+      "duck_run", --*
+      "duck_fly"  --*
+    },
+    Hazards = {}
+  },
+
+  Stage_2 = {
+    Tileset = "tilesheet_plains",
+    Style = "keyed",
+    Enemies = {
+      "duck_run",
+      "duck_fly"
+    },
+    Hazards = {}
+  },
+
+  Stage_3 = {
+    Tileset = "tilesheet_plains",
+    Style = "long",
+    Enemies = {
+      "duck_run", 
+      "duck_fly"
+    },
+    Hazards = {pits}
+  }
+}
+
+Act_2 = {
+  Title = "The Forest",
+  Stage_4 = {
+    Tileset = "tilesheet_forest",
+    Style = "long",
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot"  --*
+    },
+    Hazards = {
+      "pits",
+      "spikes"
+    }
+  },
+
+  Stage_5 = {
+    Tileset = "tilesheet_forest",
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot"  --*
+    },
+    Hazards = {
+      "pits",
+      "spikes"
+    }
+  }
+}
+
+Act_3 = {
+  Title = "The Mountains"
+  Stage_6 = {
+    Tileset = tilesheet_plains,
+    Style = long/tall,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop"    --*
+    },
+    Hazards = {}
+  },
+
+  Stage_7 = {
+    Tileset = tilesheet_plains,
+    Style = keyed large,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop"    --*
+    },
+    Hazards = {}
+  }
+}
+
+Act_4 = {
+  Title = "The Caves"
+  Stage_8 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_homing"
+    },
+    Hazards = {}
+  },
+
+  Stage_9 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_homing"
+    },
+    Hazards = {}
+  }
+}
+
+Act_5 = {
+  Title = "The Ocean"
+  Stage_10 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_sine_wave", --*
+      "duck_pit"        --*
+    },
+    Hazards = {}
+  },
+
+  Stage_11 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_sine_wave", --*
+      "duck_pit"        --*
+    },
+    Hazards = {}
+  }
+}
+
+Act_6 = {
+  Title = "The Tower"
+  Stage_12 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_sine_wave",
+      "duck_homing",
+      "duck_pit"
+    },
+    Hazards = {}
+  },
+
+  Stage_13 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_sine_wave",
+      "duck_homing",
+      "duck_pit"
+    },
+    Hazards = {}
+  },
+  Stage_14 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_sine_wave",
+      "duck_homing",
+      "duck_pit"
+    },
+    Hazards = {}
+  },
+
+  Stage_15 = {
+    Tileset = tilesheet_plains,
+    Style = keyed,
+    Enemies = {
+      "duck_run",
+      "duck_fly",
+      "duck_shoot",
+      "duck_hop",
+      "duck_sine_wave",
+      "duck_homing",
+      "duck_pit"
+    },
+    Hazards = {}
+  }
+}

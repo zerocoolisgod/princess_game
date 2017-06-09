@@ -5,15 +5,29 @@ if not G then G = {} end
 
 
 G.stage = {
-  {name="Act 1 The Plains", file="stage_1_1", type="stage", music="song_00", delay=2},
-  {name="Ducks Hate Bubbles.", file="stage_1_2", type="stage", music="song_00", delay=2},
-  {name="", file="stage_1_3", type="stage", music="song_00", delay=.5},
-  {name="", file="stage_1_4", type="stage", music="song_00", delay=.5},
-  {name="", file="stage_1_5", type="stage", music="song_00", delay=.5},
-  {name="The Duck Wizzard!", file="stage_1_6", type="stage", music="song_00", delay=3},
-  --{name="Act 2 The Woods", file="stage_2_1", type="stage", music="song_00", delay=2},
-  --{name="Act 3 The Caves", file="stage_3_1", type="stage", music="song_00", delay=2},
-  --{name="Act 4 The Tower", file="stage_4_1", type="stage", music="song_00", delay=2},
+  {name="Act 1 The Plains", file="stage_1", type="stage", music="song_00", delay=2},
+  {name="Ducks Hate Bubbles.", file="stage_2", type="stage", music="song_00", delay=1},
+  {name="", file="stage_3", type="stage", music="song_00", delay=.5},
+  
+  {name="Act 2 The Forest", file="stage_4", type="stage", music="song_00", delay=2},
+  {name="", file="stage_5", type="stage", music="song_00", delay=.5},
+  
+  {name="Act 3 The Mountains", file="stage_6", type="stage", music="song_00", delay=2},
+  {name="", file="stage_7", type="stage", music="song_00", delay=.5},
+  
+  {name="Act 4 The Caves", file="stage_8", type="stage", music="song_00", delay=2},
+  {name="", file="stage_9", type="stage", music="song_00", delay=.5},
+  
+  {name="Act 5 The Ocean", file="stage_10", type="stage", music="song_00", delay=2},
+  {name="", file="stage_11", type="stage", music="song_00", delay=.5},
+  
+  {name="Act 6 The Tower", file="stage_12", type="stage", music="song_00", delay=2},
+  {name="", file="stage_13", type="stage", music="song_00", delay=.5},
+  {name="", file="stage_14", type="stage", music="song_00", delay=.5},
+  {name="", file="stage_15", type="stage", music="song_00", delay=.5},
+  
+  {name="The Duck Wizzard!", file="boss_dw", type="stage", music="song_00", delay=3},
+  
   {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1},
 }
 
