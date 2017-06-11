@@ -8,8 +8,9 @@ local className = "Duck Run Spawner"
 
 local e = Class(className, SpawnerClass)
 
-function e:initialize (x, y, w, h, ent_id)
-  SpawnerClass.initialize (self, x, y, ent_id)
+function e:initialize (x, y, w, h, props)
+  print(props.other)
+  SpawnerClass.initialize (self, x, y, props.spawn)
   self.group = groupName
   self.solid = false
   self.spawn_delay = 3

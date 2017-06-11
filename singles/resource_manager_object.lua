@@ -109,11 +109,11 @@ function rsm:play_music (id,volume)
   end
 end
 
-function rsm:get_new_object (id,x,y,h,w)
+function rsm:get_new_object (id,x,y,h,w,props)
   -- takes id (str file_name) and position
   -- returnes object at that position
   if self.res.obj[id] then
-    return self.res.obj[id]:new(x,y,h,w)
+    return self.res.obj[id]:new(x,y,h,w,props)
   end
 end
 

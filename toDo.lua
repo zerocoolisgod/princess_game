@@ -28,6 +28,8 @@
     "homing flying duck"
       --"logic"
       "sprite"
+    
+    --MAYBE
     "bombing duck"
       "logic"
       "sprite"
@@ -43,7 +45,8 @@
     "gfx for diffrent sub weapons"
     --"gfx for bubble power bar"
 "Boss fight"
-  "duck wizard"
+  "sprite"
+  "duck wizzard"
     -- "phase one"
       -- "shoots aimed shot"
       -- "teleports form platform to platform"

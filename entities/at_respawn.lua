@@ -4,8 +4,8 @@ local Area      = require "class.area_trigger_class"
 
 local A = Class('Area_Respawn', Area)
 
-function A:initialize (x,y)
-  Area.initialize (self,x,y,16,16,'Area_Respawn')
+function A:initialize (x,y,w,h)
+  Area.initialize (self,x,y,w,h,'Area_Respawn')
   self.group = 'area'
   self.solid = true
   self:set_collision_filter('player','cross')

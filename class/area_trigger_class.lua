@@ -19,7 +19,7 @@ local AREA = Class('Area')
 
 function AREA:initialize (x,y,w,h,id)
   self.pos = {x = x or 0, y = y or 0}
-  self.size = {x = w or 0, y = h or 0}
+  self.size = {x = w or 1, y = h or 1}
   self.id = id or 'no_id_area'
   self.group = 'no_group'
   self.solid = true
@@ -123,6 +123,27 @@ function AREA.col_filter(self, other)
   else
     return self.collision_types[other.group]
   end
+end
+
+
+function AREA:on_draw()
+  if G.debug then self:draw_bounding_box() end
+end
+
+
+function AREA:draw_bounding_box()
+  --draws a yellow box of self.size at self.position
+  local x,y,w,h, vel
+  x = self.pos.x
+  y = self.pos.y
+  w = self.size.x
+  h = self.size.y
+
+  lgsc(255, 64, 156, 128)
+  lgr("fill", x, y, w, h)
+  lgsc(255, 255, 0,255)
+  lgr("line", x, y, w, h)
+  lgsc(255, 255, 255,255)
 end
 
 return AREA

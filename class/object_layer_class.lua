@@ -31,7 +31,8 @@ function Object_Layer:load(objects)
     -- Tiled is wierd and sets objects origin to bottom left
     local x,y = map_obj.x, map_obj.y - map_obj.height
     local w,h = map_obj.width, map_obj.height
-    local obj = G.resource_manager:get_new_object(map_obj.name,x,y,w,h)
+    local props = map_obj.properties
+    local obj = G.resource_manager:get_new_object(map_obj.type, x, y, w, h, props)
     if not obj then G.error(map_obj.name.." is not a valid Entity type.") end
     if obj.load then obj:load() end
     if obj.camera_focus then G.set_camera_focus(obj) end
