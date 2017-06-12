@@ -1,63 +1,54 @@
 local Class     = require 'lib.middleclass'
-local Area      = require "class.area_trigger_class"
+local Entity    = require "class.entity_class"
 local Sprite    = require 'class.sprite_class'
 
-local lg = love.graphics
-local lgd = love.graphics.draw
-local lgr = love.graphics.rectangle
-local lgp = love.graphics.print
-local lgsc = love.graphics.setColor
 
-local A = Class('Stage_Change', Area)
 
-function A:initialize (x,y)
-  Area.initialize (self,x,y,8,8,'Stage_Change')
+local A = Class('Door', Entity)
+function A:initialize (x,y,w,h,props)
+  Entity.initialize (self,x,y,8,8,'door')
   self.group = 'area'
   self.solid = true
   
   self.sprite = Sprite:new('door sprite','door',16,16,0,4)
-  self.sprite:add_animation('closed',{1},1)
-  self.sprite:add_animation('open',{2},1)
-  self.sprite:set_animation("closed")
+  self.sprite:add_animation('locked',{1},1)
+  self.sprite:add_animation('opened',{2},1)
+  self.sprite:set_animation("opened")
   
-  self:set_collision_filter('player',nil)
+  self:set_state("opened")
+  
+  if props.locked then self:set_state("locked") end
+
 end
 
-function A:on_update_last(dt)
-  if G.get_coins() >= 3 then
-    self:set_collision_filter('player','cross')
-    self.sprite:set_animation("open")
-  end
-  self.sprite:update(dt)
-end
 
-function A:on_draw()
-  local sx,sy,x,y, alph
-  alph = self.alpha or 255
-  sy = 1
-  x,y = self:get_pos()
-  self.sprite:draw(1,sy,x,y,alph)
-  if G.debug then self:draw_bounding_box() end
-end
 
 function A:on_collision ()
   G.reset_player_spawn()
   G.load_next_stage()
 end
 
-function A:draw_bounding_box()
-  --draws a yellow box of self.size at self.position
-  local x,y,w,h, vel
-  x = self.pos.x
-  y = self.pos.y
-  w = self.size.x
-  h = self.size.y
+--------------------------------------------------------------------------
+-- STATES --
+--------------------------------------------------------------------------
 
-  lgsc(255, 64, 156, 128)
-  lgr("fill", x, y, w, h)
-  lgsc(255, 255, 0,255)
-  lgr("line", x, y, w, h)
-  lgsc(255, 255, 255,255)
+function A:init_state (s)
+  if s == "opened" then 
+    self.sprite:set_animation("opened")
+    self:set_collision_filter('player','cross')
+  end
+
+  if s == "locked" then 
+    self.sprite:set_animation("locked")
+    self:set_collision_filter('player',nil)
+  end
+end
+
+function A:locked()
+  if G.get_coins() >= 3 then self:set_state("opened") end
+end
+
+function A:opened()
 end
 
 return A

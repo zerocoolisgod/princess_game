@@ -80,8 +80,6 @@ function Player:initialize (x,y)
 
   if G.checkpoint then self.pos = G.checkpoint end
   G.set_player_health(G.get_player_health_max())
-  --G.set_subweapon("none")
-  --print(G.get_bubble)
 end
 
 -------------------------------------------------------------------------------

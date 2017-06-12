@@ -109,7 +109,10 @@ function Sprite:set_sprite_origin (x,y)
 end
 
 function Sprite:set_animation (animation_id)
-  if not self.playing then self.playing = animation_id end
+  --if not self.playing then self.playing = animation_id end
+  if not self.animations[animation_id] then 
+    G.error("SPRITE: \""..self.id.."\"\nHAS NO ANIMATION: "..animation_id)
+  end
   self.next_animation = animation_id
 end
 
@@ -126,6 +129,7 @@ function Sprite:get_frame ()
 end
 
 function Sprite:add_animation(id,frames,fps)
+  self.playing = id
   self.animations[id] = {
     frames=frames,
     fps=fps,

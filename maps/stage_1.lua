@@ -150,8 +150,8 @@ return {
       objects = {
         {
           id = 21,
-          name = "at_door",
-          type = "",
+          name = "da door",
+          type = "at_door",
           shape = "rectangle",
           x = 272,
           y = 152,
@@ -160,12 +160,14 @@ return {
           rotation = 0,
           gid = 51,
           visible = true,
-          properties = {}
+          properties = {
+            ["locked"] = true
+          }
         },
         {
           id = 23,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 104,
           y = 128,
@@ -179,7 +181,7 @@ return {
         {
           id = 24,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 160,
           y = 112,
@@ -193,7 +195,7 @@ return {
         {
           id = 25,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 218,
           y = 128,
@@ -207,7 +209,7 @@ return {
         {
           id = 27,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 160,
           y = 128,
@@ -221,7 +223,7 @@ return {
         {
           id = 26,
           name = "ent_player",
-          type = "",
+          type = "ent_player",
           shape = "rectangle",
           x = 24,
           y = 136,

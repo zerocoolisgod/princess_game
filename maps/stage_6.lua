@@ -8,7 +8,7 @@ return {
   height = 50,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 48,
+  nextobjectid = 53,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -209,8 +209,8 @@ return {
           name = "Player Start",
           type = "ent_player",
           shape = "rectangle",
-          x = 832,
-          y = 350,
+          x = 552,
+          y = 204,
           width = 8,
           height = 8,
           rotation = 0,
@@ -221,16 +221,18 @@ return {
         {
           id = 29,
           name = "Exit",
-          type = "at_next_stage",
+          type = "at_door",
           shape = "rectangle",
-          x = 1304,
-          y = 376,
+          x = 1040,
+          y = 368,
           width = 8,
           height = 8,
           rotation = 0,
           gid = 74,
           visible = true,
-          properties = {}
+          properties = {
+            ["locked"] = true
+          }
         },
         {
           id = 30,
@@ -278,36 +280,6 @@ return {
           visible = true,
           properties = {
             ["spawn"] = "ent_duck_shoot"
-          }
-        },
-        {
-          id = 39,
-          name = "Check Point",
-          type = "at_respawn",
-          shape = "rectangle",
-          x = 928,
-          y = 366,
-          width = 22,
-          height = 54,
-          rotation = 0,
-          gid = 70,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 42,
-          name = "Hop Duck",
-          type = "spn_enemy",
-          shape = "rectangle",
-          x = 952,
-          y = 352,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 77,
-          visible = true,
-          properties = {
-            ["spawn"] = "ent_duck_hop"
           }
         },
         {
@@ -389,6 +361,61 @@ return {
           properties = {
             ["spawn"] = "ent_duck_shoot"
           }
+        },
+        {
+          id = 48,
+          name = "Key",
+          type = "ent_coin",
+          shape = "rectangle",
+          x = 908,
+          y = 356,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 63,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 49,
+          name = "Key",
+          type = "ent_coin",
+          shape = "rectangle",
+          x = 930,
+          y = 344,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 63,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 50,
+          name = "Key",
+          type = "ent_coin",
+          shape = "rectangle",
+          x = 956,
+          y = 356,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 63,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "test",
+          type = "at_respawn",
+          shape = "rectangle",
+          x = 904,
+          y = 280,
+          width = 64,
+          height = 88,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

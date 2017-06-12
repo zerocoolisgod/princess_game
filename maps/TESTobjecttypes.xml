@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="ent_player" color="#4eadff"/>
+ <objecttype name="at_door" color="#05e11f">
+  <property name="locked" type="bool" default="false"/>
+ </objecttype>
+ <objecttype name="ent_coin" color="#eace2b"/>
+ <objecttype name="ent_heart" color="#ff00dd"/>
+</objecttypes>

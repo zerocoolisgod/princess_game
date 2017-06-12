@@ -149,37 +149,9 @@ return {
       properties = {},
       objects = {
         {
-          id = 22,
-          name = "ent_duck_run",
-          type = "",
-          shape = "rectangle",
-          x = 360,
-          y = 220,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 51,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 23,
-          name = "ent_duck_fly",
-          type = "",
-          shape = "rectangle",
-          x = 360,
-          y = 238,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 51,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 44,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1440,
           y = 80,
@@ -193,7 +165,7 @@ return {
         {
           id = 45,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1528,
           y = 80,
@@ -207,7 +179,7 @@ return {
         {
           id = 47,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1624,
           y = 88,
@@ -221,7 +193,7 @@ return {
         {
           id = 48,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1696,
           y = 70,
@@ -235,7 +207,7 @@ return {
         {
           id = 49,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1776,
           y = 104,
@@ -249,7 +221,7 @@ return {
         {
           id = 50,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1056,
           y = 128,
@@ -263,7 +235,7 @@ return {
         {
           id = 51,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1144,
           y = 128,
@@ -277,7 +249,7 @@ return {
         {
           id = 52,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1104,
           y = 88,
@@ -291,7 +263,7 @@ return {
         {
           id = 53,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 936,
           y = 88,
@@ -305,7 +277,7 @@ return {
         {
           id = 54,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1288,
           y = 80,
@@ -319,7 +291,7 @@ return {
         {
           id = 55,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1184,
           y = 72,
@@ -333,7 +305,7 @@ return {
         {
           id = 56,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1224,
           y = 136,
@@ -347,7 +319,7 @@ return {
         {
           id = 57,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 1368,
           y = 124,
@@ -361,7 +333,7 @@ return {
         {
           id = 58,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 708,
           y = 72,
@@ -375,7 +347,7 @@ return {
         {
           id = 59,
           name = "ent_stopper",
-          type = "",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 844,
           y = 72,
@@ -389,7 +361,7 @@ return {
         {
           id = 64,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 512,
           y = 80,
@@ -403,7 +375,7 @@ return {
         {
           id = 65,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 680,
           y = 80,
@@ -417,7 +389,7 @@ return {
         {
           id = 66,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 888,
           y = 80,
@@ -431,7 +403,7 @@ return {
         {
           id = 67,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 1040,
           y = 80,
@@ -445,7 +417,7 @@ return {
         {
           id = 68,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 1160,
           y = 88,
@@ -459,7 +431,7 @@ return {
         {
           id = 69,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 1304,
           y = 136,
@@ -473,7 +445,7 @@ return {
         {
           id = 70,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 1512,
           y = 80,
@@ -487,7 +459,7 @@ return {
         {
           id = 71,
           name = "ent_dfly",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 1432,
           y = 104,
@@ -501,7 +473,7 @@ return {
         {
           id = 72,
           name = "ent_dfly_sub_fire",
-          type = "",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 232,
           y = 128,
@@ -515,7 +487,7 @@ return {
         {
           id = 74,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 520,
           y = 88,
@@ -524,12 +496,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 75,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 632,
           y = 104,
@@ -538,12 +512,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 76,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 716,
           y = 88,
@@ -552,12 +528,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 77,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 796,
           y = 80,
@@ -566,12 +544,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 78,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 824,
           y = 88,
@@ -580,12 +560,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 79,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 912,
           y = 88,
@@ -594,12 +576,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 80,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1440,
           y = 112,
@@ -608,12 +592,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 81,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1600,
           y = 88,
@@ -622,12 +608,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 82,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1672,
           y = 104,
@@ -636,12 +624,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 83,
           name = "spn_duck_run",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1704,
           y = 104,
@@ -650,12 +640,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 84,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 782,
           y = 56,
@@ -664,12 +656,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 85,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1024,
           y = 80,
@@ -678,12 +672,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 86,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1096,
           y = 128,
@@ -692,12 +688,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 87,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1224,
           y = 64,
@@ -706,12 +704,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 88,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1328,
           y = 112,
@@ -720,12 +720,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 89,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1480,
           y = 72,
@@ -734,12 +736,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 90,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1576,
           y = 48,
@@ -748,12 +752,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 91,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1664,
           y = 48,
@@ -762,12 +768,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 92,
           name = "spn_duck_fly",
-          type = "",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 1664,
           y = 88,
@@ -776,12 +784,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 93,
-          name = "at_next_stage",
-          type = "",
+          name = "Door",
+          type = "at_door",
           shape = "rectangle",
           x = 1880,
           y = 136,
@@ -795,7 +805,7 @@ return {
         {
           id = 73,
           name = "ent_player",
-          type = "",
+          type = "ent_player",
           shape = "rectangle",
           x = 24,
           y = 144,

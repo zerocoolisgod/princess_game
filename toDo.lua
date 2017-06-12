@@ -55,6 +55,8 @@
       "teleports form platform to platform"
       "summons run ducks"
 
+"UPDATE MAPS TO NEW SYSTEM"
+
 
 
 Act_1 = {

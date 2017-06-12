@@ -12,7 +12,7 @@ function A:initialize (x,y,w,h)
 end
 
 function A:on_collision ()
-  G.set_player_spawn(self:get_true_pos())
+  G.set_player_spawn(self:get_pos())
 end
 
 return A

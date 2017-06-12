@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="60">
+<map version="1.0.0" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="60">
  <tileset firstgid="1" name="tilesheet_forest" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_forest.png" width="120" height="50"/>
  </tileset>
@@ -59,42 +59,97 @@
 </data>
  </layer>
  <objectgroup name="obj">
-  <object id="13" name="ent_stopper" gid="49" x="352" y="136" width="8" height="132"/>
-  <object id="14" name="ent_stopper" gid="49" x="552" y="120" width="8" height="118"/>
-  <object id="15" name="ent_stopper" gid="49" x="832" y="166" width="8" height="166"/>
-  <object id="16" name="ent_stopper" gid="49" x="696" y="154" width="8" height="154"/>
-  <object id="24" name="ent_stopper" gid="49" x="944" y="168" width="8" height="166"/>
-  <object id="25" name="ent_stopper" gid="49" x="1040" y="168" width="8" height="166"/>
-  <object id="26" name="ent_stopper" gid="49" x="1192" y="166" width="8" height="166"/>
-  <object id="31" name="spn_duck_run" gid="76" x="272" y="136" width="8" height="8"/>
-  <object id="32" name="spn_duck_run" gid="76" x="464" y="136" width="8" height="8"/>
-  <object id="33" name="at_next_stage" gid="74" x="1240" y="168" width="8" height="8"/>
-  <object id="34" name="spn_duck_shoot" gid="78" x="1144" y="84" width="8" height="8"/>
-  <object id="35" name="spn_duck_shoot" gid="78" x="1120" y="42" width="8" height="8"/>
-  <object id="36" name="spn_duck_shoot" gid="78" x="974" y="46" width="8" height="8"/>
-  <object id="37" name="spn_duck_shoot" gid="78" x="886" y="62" width="8" height="8"/>
-  <object id="38" name="spn_duck_run" gid="76" x="756" y="46" width="8" height="8"/>
-  <object id="39" name="spn_duck_run" gid="76" x="1064" y="86" width="8" height="8"/>
-  <object id="40" name="spn_duck_shoot" gid="78" x="512" y="134" width="8" height="8"/>
-  <object id="41" name="spn_duck_fly" gid="79" x="462" y="102" width="8" height="8"/>
-  <object id="42" name="spn_duck_shoot" gid="78" x="182" y="118" width="8" height="8"/>
-  <object id="43" name="spn_duck_fly" gid="79" x="806" y="112" width="8" height="8"/>
-  <object id="44" name="spn_duck_fly" gid="79" x="1006" y="28" width="8" height="8"/>
-  <object id="45" name="spn_duck_fly" gid="79" x="1094" y="64" width="8" height="8"/>
-  <object id="46" name="ent_dfly_sub_fire" gid="69" x="646" y="102" width="8" height="8"/>
-  <object id="47" name="ent_dfly" gid="68" x="224" y="104" width="8" height="8"/>
-  <object id="48" name="ent_dfly" gid="68" x="408" y="104" width="8" height="8"/>
-  <object id="49" name="ent_dfly" gid="68" x="774" y="74" width="8" height="8"/>
-  <object id="50" name="ent_dfly" gid="68" x="910" y="60" width="8" height="8"/>
-  <object id="51" name="ent_dfly" gid="68" x="1064" y="80" width="8" height="8"/>
-  <object id="52" name="ent_spikes" x="728" y="172" width="472" height="4"/>
-  <object id="53" name="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
-  <object id="54" name="ent_dfly_sub_boot" gid="81" x="88" y="128" width="8" height="8"/>
-  <object id="55" name="ent_bubble_jar" gid="73" x="104" y="80" width="8" height="8"/>
-  <object id="56" name="ent_bubble_jar" gid="73" x="132" y="82" width="8" height="8"/>
-  <object id="57" name="ent_bubble_jar" gid="73" x="136" y="86" width="8" height="8"/>
-  <object id="58" name="ent_bubble_jar" gid="73" x="126" y="104" width="8" height="8"/>
-  <object id="59" name="ent_bubble_jar" gid="73" x="108" y="90" width="8" height="8"/>
+  <object id="13" name="ent_stopper" type="ent_stopper" gid="49" x="352" y="136" width="8" height="132"/>
+  <object id="14" name="ent_stopper" type="ent_stopper" gid="49" x="552" y="120" width="8" height="118"/>
+  <object id="15" name="ent_stopper" type="ent_stopper" gid="49" x="832" y="166" width="8" height="166"/>
+  <object id="16" name="ent_stopper" type="ent_stopper" gid="49" x="696" y="154" width="8" height="154"/>
+  <object id="24" name="ent_stopper" type="ent_stopper" gid="49" x="944" y="168" width="8" height="166"/>
+  <object id="25" name="ent_stopper" type="ent_stopper" gid="49" x="1040" y="168" width="8" height="166"/>
+  <object id="26" name="ent_stopper" type="ent_stopper" gid="49" x="1192" y="166" width="8" height="166"/>
+  <object id="31" name="spn_duck_run" type="spn_enemy" gid="76" x="272" y="136" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_run"/>
+   </properties>
+  </object>
+  <object id="32" name="spn_duck_run" type="spn_enemy" gid="76" x="464" y="136" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_run"/>
+   </properties>
+  </object>
+  <object id="33" name="at_next_stage" type="at_door" gid="74" x="1240" y="168" width="8" height="8">
+   <properties>
+    <property name="locked" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="34" name="spn_duck_shoot" type="spn_enemy" gid="78" x="1144" y="84" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="35" name="spn_duck_shoot" type="spn_enemy" gid="78" x="1120" y="42" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="36" name="spn_duck_shoot" type="spn_enemy" gid="78" x="974" y="46" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="37" name="spn_duck_shoot" type="spn_enemy" gid="78" x="886" y="62" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="38" name="spn_duck_run" type="spn_enemy" gid="76" x="756" y="46" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_run"/>
+   </properties>
+  </object>
+  <object id="39" name="spn_duck_run" type="spn_enemy" gid="76" x="1064" y="86" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_run"/>
+   </properties>
+  </object>
+  <object id="40" name="spn_duck_shoot" type="spn_enemy" gid="78" x="512" y="134" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="41" name="spn_duck_fly" type="spn_enemy" gid="79" x="462" y="102" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_fly"/>
+   </properties>
+  </object>
+  <object id="42" name="spn_duck_shoot" type="spn_enemy" gid="78" x="182" y="118" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="43" name="spn_duck_fly" type="spn_enemy" gid="79" x="806" y="112" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_fly"/>
+   </properties>
+  </object>
+  <object id="44" name="spn_duck_fly" type="spn_enemy" gid="79" x="1006" y="28" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_fly"/>
+   </properties>
+  </object>
+  <object id="45" name="spn_duck_fly" type="spn_enemy" gid="79" x="1094" y="64" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_fly"/>
+   </properties>
+  </object>
+  <object id="46" name="ent_dfly_sub_fire" type="ent_dfly_sub_fire" gid="69" x="646" y="102" width="8" height="8"/>
+  <object id="47" name="ent_dfly" type="ent_dfly" gid="68" x="224" y="104" width="8" height="8"/>
+  <object id="48" name="ent_dfly" type="ent_dfly" gid="68" x="408" y="104" width="8" height="8"/>
+  <object id="49" name="ent_dfly" type="ent_dfly" gid="68" x="774" y="74" width="8" height="8"/>
+  <object id="50" name="ent_dfly" type="ent_dfly" gid="68" x="910" y="60" width="8" height="8"/>
+  <object id="51" name="ent_dfly" type="ent_dfly" gid="68" x="1064" y="80" width="8" height="8"/>
+  <object id="52" name="ent_spikes" type="ent_spikes" x="728" y="168" width="472" height="8"/>
+  <object id="53" name="ent_player" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
+  <object id="54" name="ent_dfly_sub_boot" type="ent_dfly_sub_boot" gid="81" x="88" y="128" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="160" height="22">
   <data encoding="csv">

@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 34,
+  nextobjectid = 37,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -151,7 +151,7 @@ return {
         {
           id = 23,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 32,
           y = 64,
@@ -165,7 +165,7 @@ return {
         {
           id = 24,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 200,
           y = 64,
@@ -179,7 +179,7 @@ return {
         {
           id = 25,
           name = "ent_coin",
-          type = "",
+          type = "ent_coin",
           shape = "rectangle",
           x = 256,
           y = 88,
@@ -191,37 +191,9 @@ return {
           properties = {}
         },
         {
-          id = 28,
-          name = "ent_duck_run",
-          type = "",
-          shape = "rectangle",
-          x = 106,
-          y = 72,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 64,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 30,
-          name = "at_door",
-          type = "",
-          shape = "rectangle",
-          x = 256,
-          y = 152,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 62,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 29,
           name = "ent_player",
-          type = "",
+          type = "ent_player",
           shape = "rectangle",
           x = 24,
           y = 144,
@@ -233,32 +205,52 @@ return {
           properties = {}
         },
         {
-          id = 32,
-          name = "ent_dfly_sub_fire",
-          type = "",
+          id = 34,
+          name = "door",
+          type = "at_door",
           shape = "rectangle",
-          x = 120,
-          y = 120,
+          x = 256,
+          y = 152,
           width = 8,
           height = 8,
           rotation = 0,
-          gid = 80,
+          gid = 74,
           visible = true,
-          properties = {}
+          properties = {
+            ["locked"] = true
+          }
         },
         {
-          id = 33,
-          name = "ent_dfly_sub_boot",
-          type = "",
+          id = 35,
+          name = "Runner",
+          type = "spn_enemy",
           shape = "rectangle",
-          x = 160,
+          x = 120,
+          y = 72,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 76,
+          visible = true,
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
+        },
+        {
+          id = 36,
+          name = "Random  Dragonfly",
+          type = "ent_dfly",
+          shape = "rectangle",
+          x = 128,
           y = 120,
           width = 8,
           height = 8,
           rotation = 0,
-          gid = 81,
+          gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "boot"
+          }
         }
       }
     },

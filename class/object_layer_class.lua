@@ -28,12 +28,18 @@ function Object_Layer:load(objects)
   for o = 1, #objects do
     local map_obj = objects[o]
 
-    -- Tiled is wierd and sets objects origin to bottom left
-    local x,y = map_obj.x, map_obj.y - map_obj.height
+    local x,y = map_obj.x, map_obj.y
+    if map_obj.gid then
+      -- Tiled is wierd and sets tile objects origin to bottom left
+      y = map_obj.y - map_obj.height
+    end
+    
     local w,h = map_obj.width, map_obj.height
     local props = map_obj.properties
     local obj = G.resource_manager:get_new_object(map_obj.type, x, y, w, h, props)
-    if not obj then G.error(map_obj.name.." is not a valid Entity type.") end
+    if not obj then 
+      G.error(map_obj.name.." DOES NOT HAVE A VALID type\ntype set was: \""..map_obj.type.."\"") 
+    end
     if obj.load then obj:load() end
     if obj.camera_focus then G.set_camera_focus(obj) end
     -- This is where the spawn point shit should happen!!

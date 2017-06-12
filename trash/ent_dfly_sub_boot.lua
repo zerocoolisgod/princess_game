@@ -21,13 +21,8 @@ end
 
 
 function p:on_collision()
-  if G.get_subweapon() ~= "fire" then
-    local x,y = self:get_true_pos()
-    G.add_object( G.resource_manager:get_new_object("ent_sub_fire", x, y) )
-  else
-    G.spawn_random_pickup (self:get_true_pos())
-  end
-  self.remove = true
+  
 end
+
 
 return p

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="28">
+<map version="1.0.0" orientation="orthogonal" renderorder="right-down" width="40" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="28">
  <tileset firstgid="1" name="tilesheet_plains" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_plains.png" width="120" height="50"/>
  </tileset>
@@ -59,12 +59,16 @@
 </data>
  </layer>
  <objectgroup name="obj">
-  <object id="21" name="at_door" gid="51" x="272" y="152" width="8" height="8"/>
-  <object id="23" name="ent_coin" gid="63" x="104" y="128" width="8" height="8"/>
-  <object id="24" name="ent_coin" gid="63" x="160" y="112" width="8" height="8"/>
-  <object id="25" name="ent_coin" gid="63" x="218" y="128" width="8" height="8"/>
-  <object id="27" name="ent_dfly" gid="68" x="160" y="128" width="8" height="8"/>
-  <object id="26" name="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
+  <object id="21" name="da door" type="at_door" gid="51" x="272" y="152" width="8" height="8">
+   <properties>
+    <property name="locked" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="23" name="ent_coin" type="ent_coin" gid="63" x="104" y="128" width="8" height="8"/>
+  <object id="24" name="ent_coin" type="ent_coin" gid="63" x="160" y="112" width="8" height="8"/>
+  <object id="25" name="ent_coin" type="ent_coin" gid="63" x="218" y="128" width="8" height="8"/>
+  <object id="27" name="ent_dfly" type="ent_dfly" gid="68" x="160" y="128" width="8" height="8"/>
+  <object id="26" name="ent_player" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="40" height="22">
   <data encoding="csv">
