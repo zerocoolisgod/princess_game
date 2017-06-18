@@ -1,7 +1,8 @@
 -- Do I Have To Be The Princess?
--- First Linux commit
+
 
 _BUILD_FOR_PI = false
+_BUILD_FOR_LAPPY = true
 
 -- Localized
 local volume = 0

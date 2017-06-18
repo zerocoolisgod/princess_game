@@ -1,14 +1,14 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.0",
+  tiledversion = "1.0.1",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 80,
   height = 45,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 30,
+  nextobjectid = 31,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -20,6 +20,30 @@ return {
       spacing = 2,
       margin = 1,
       image = "../res/img/tilesheet_plains.png",
+      imagewidth = 120,
+      imageheight = 50,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 60,
+      tiles = {}
+    },
+    {
+      name = "objects",
+      firstgid = 61,
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 2,
+      margin = 1,
+      image = "../res/img/tilesheet_objects.png",
       imagewidth = 120,
       imageheight = 50,
       tileoffset = {
@@ -172,8 +196,8 @@ return {
       objects = {
         {
           id = 21,
-          name = "at_door",
-          type = "",
+          name = "End",
+          type = "at_door",
           shape = "rectangle",
           x = 402,
           y = 328,
@@ -186,8 +210,8 @@ return {
         },
         {
           id = 12,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 28,
           y = 318,
@@ -199,23 +223,9 @@ return {
           properties = {}
         },
         {
-          id = 1,
-          name = "ent_player",
-          type = "",
-          shape = "rectangle",
-          x = 398,
-          y = 320,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 50,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 18,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 540,
           y = 92,
@@ -228,8 +238,8 @@ return {
         },
         {
           id = 19,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 344,
           y = 192,
@@ -242,8 +252,8 @@ return {
         },
         {
           id = 22,
-          name = "ent_duck_run",
-          type = "",
+          name = "Duck Run",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 288,
           y = 200,
@@ -252,26 +262,14 @@ return {
           rotation = 0,
           gid = 51,
           visible = true,
-          properties = {}
-        },
-        {
-          id = 23,
-          name = "ent_duck_fly",
-          type = "",
-          shape = "rectangle",
-          x = 608,
-          y = 224,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 51,
-          visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 24,
-          name = "ent_duck_run",
-          type = "",
+          name = "Duck Run",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 64,
           y = 336,
@@ -280,12 +278,30 @@ return {
           rotation = 0,
           gid = 51,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
+        },
+        {
+          id = 23,
+          name = "Duck Fly",
+          type = "spn_enemy",
+          shape = "rectangle",
+          x = 608,
+          y = 224,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 51,
+          visible = true,
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 25,
-          name = "ent_duck_fly",
-          type = "",
+          name = "Duck Fly",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 404,
           y = 56,
@@ -294,12 +310,14 @@ return {
           rotation = 0,
           gid = 51,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 26,
-          name = "ent_stopper",
-          type = "",
+          name = "Stopper",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 304,
           y = 56,
@@ -312,8 +330,8 @@ return {
         },
         {
           id = 29,
-          name = "ent_stopper",
-          type = "",
+          name = "Stopper",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 450,
           y = 56,
@@ -321,6 +339,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 49,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 1,
+          name = "Start",
+          type = "ent_player",
+          shape = "rectangle",
+          x = 398,
+          y = 320,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 50,
           visible = true,
           properties = {}
         }

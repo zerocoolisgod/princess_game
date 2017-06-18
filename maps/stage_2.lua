@@ -1,14 +1,14 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.0",
+  tiledversion = "1.0.1",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 40,
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 37,
+  nextobjectid = 39,
   backgroundcolor = { 150, 230, 255 },
   properties = {},
   tilesets = {
@@ -149,8 +149,24 @@ return {
       properties = {},
       objects = {
         {
+          id = 34,
+          name = "End",
+          type = "at_door",
+          shape = "rectangle",
+          x = 256,
+          y = 152,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 74,
+          visible = true,
+          properties = {
+            ["locked"] = true
+          }
+        },
+        {
           id = 23,
-          name = "ent_coin",
+          name = "Key",
           type = "ent_coin",
           shape = "rectangle",
           x = 32,
@@ -164,7 +180,7 @@ return {
         },
         {
           id = 24,
-          name = "ent_coin",
+          name = "Key",
           type = "ent_coin",
           shape = "rectangle",
           x = 200,
@@ -178,7 +194,7 @@ return {
         },
         {
           id = 25,
-          name = "ent_coin",
+          name = "Key",
           type = "ent_coin",
           shape = "rectangle",
           x = 256,
@@ -189,36 +205,6 @@ return {
           gid = 63,
           visible = true,
           properties = {}
-        },
-        {
-          id = 29,
-          name = "ent_player",
-          type = "ent_player",
-          shape = "rectangle",
-          x = 24,
-          y = 144,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 61,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 34,
-          name = "door",
-          type = "at_door",
-          shape = "rectangle",
-          x = 256,
-          y = 152,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 74,
-          visible = true,
-          properties = {
-            ["locked"] = true
-          }
         },
         {
           id = 35,
@@ -238,19 +224,65 @@ return {
         },
         {
           id = 36,
-          name = "Random  Dragonfly",
+          name = "Fire",
           type = "ent_dfly",
           shape = "rectangle",
-          x = 128,
-          y = 120,
+          x = 120,
+          y = 128,
           width = 8,
           height = 8,
           rotation = 0,
           gid = 68,
           visible = true,
           properties = {
-            ["pickup_type"] = "boot"
+            ["pickup_type"] = "fire"
           }
+        },
+        {
+          id = 37,
+          name = "Random  Dragonfly",
+          type = "ent_dfly",
+          shape = "rectangle",
+          x = 200,
+          y = 72,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 68,
+          visible = true,
+          properties = {
+            ["pickup_type"] = "default"
+          }
+        },
+        {
+          id = 38,
+          name = "Random  Dragonfly",
+          type = "ent_dfly",
+          shape = "rectangle",
+          x = 256,
+          y = 104,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 68,
+          visible = true,
+          properties = {
+            ["pickup_type"] = "default"
+          }
+        },
+        {
+          id = 29,
+          name = "Start",
+          type = "ent_player",
+          shape = "rectangle",
+          x = 24,
+          y = 144,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 61,
+          visible = true,
+          properties = {}
         }
       }
     },

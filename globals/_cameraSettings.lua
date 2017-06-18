@@ -16,6 +16,9 @@ if _BUILD_FOR_PI then
   w = "s1024x768"
   f = "s1024x768"
 end
+if _BUILD_FOR_LAPPY then
+  f = "w1360x768"
+end
 
 C_SIZE = C_RES[w].base
 

@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.0",
+  tiledversion = "1.0.1",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 60,
@@ -194,8 +194,8 @@ return {
       objects = {
         {
           id = 51,
-          name = "at_door",
-          type = "",
+          name = "End",
+          type = "at_door",
           shape = "rectangle",
           x = 444,
           y = 176,
@@ -204,12 +204,14 @@ return {
           rotation = 0,
           gid = 62,
           visible = true,
-          properties = {}
+          properties = {
+            ["locked"] = true
+          }
         },
         {
           id = 24,
-          name = "ent_spikes",
-          type = "",
+          name = "Spikes",
+          type = "ent_spikes",
           shape = "rectangle",
           x = 192,
           y = 340,
@@ -221,8 +223,8 @@ return {
         },
         {
           id = 34,
-          name = "ent_stopper",
-          type = "",
+          name = "Stopper",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 172,
           y = 296,
@@ -235,8 +237,8 @@ return {
         },
         {
           id = 36,
-          name = "ent_stopper",
-          type = "",
+          name = "Stopper",
+          type = "ent_stopper",
           shape = "rectangle",
           x = 358,
           y = 294,
@@ -249,8 +251,8 @@ return {
         },
         {
           id = 39,
-          name = "spn_duck_run",
-          type = "",
+          name = "Duck Run",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 188,
           y = 284,
@@ -259,12 +261,14 @@ return {
           rotation = 0,
           gid = 76,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_run"
+          }
         },
         {
           id = 40,
-          name = "spn_duck_shoot",
-          type = "",
+          name = "Duck Shoot",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 424,
           y = 254,
@@ -273,12 +277,14 @@ return {
           rotation = 0,
           gid = 78,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_shoot"
+          }
         },
         {
           id = 41,
-          name = "spn_duck_shoot",
-          type = "",
+          name = "Duck Shoot",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 52,
           y = 222,
@@ -287,12 +293,14 @@ return {
           rotation = 0,
           gid = 78,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_shoot"
+          }
         },
         {
           id = 42,
-          name = "spn_duck_shoot",
-          type = "",
+          name = "Duck Shoot",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 44,
           y = 62,
@@ -301,12 +309,14 @@ return {
           rotation = 0,
           gid = 78,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_shoot"
+          }
         },
         {
           id = 43,
-          name = "spn_duck_shoot",
-          type = "",
+          name = "Duck Shoot",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 264,
           y = 118,
@@ -315,12 +325,14 @@ return {
           rotation = 0,
           gid = 78,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_shoot"
+          }
         },
         {
           id = 44,
-          name = "spn_duck_fly",
-          type = "",
+          name = "Duck Fly",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 416,
           y = 138,
@@ -329,12 +341,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 45,
-          name = "spn_duck_fly",
-          type = "",
+          name = "Duck Fly",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 88,
           y = 174,
@@ -343,12 +357,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 46,
-          name = "spn_duck_fly",
-          type = "",
+          name = "Duck Fly",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 258,
           y = 190,
@@ -357,12 +373,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 47,
-          name = "spn_duck_fly",
-          type = "",
+          name = "Duck Fly",
+          type = "spn_enemy",
           shape = "rectangle",
           x = 216,
           y = 94,
@@ -371,12 +389,14 @@ return {
           rotation = 0,
           gid = 79,
           visible = true,
-          properties = {}
+          properties = {
+            ["spawn"] = "ent_duck_fly"
+          }
         },
         {
           id = 48,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 26,
           y = 220,
@@ -389,8 +409,8 @@ return {
         },
         {
           id = 49,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 442,
           y = 242,
@@ -403,8 +423,8 @@ return {
         },
         {
           id = 50,
-          name = "ent_coin",
-          type = "",
+          name = "Key",
+          type = "ent_coin",
           shape = "rectangle",
           x = 20,
           y = 60,
@@ -417,8 +437,8 @@ return {
         },
         {
           id = 54,
-          name = "ent_dfly_sub_fire",
-          type = "",
+          name = "Fire",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 152,
           y = 176,
@@ -427,12 +447,14 @@ return {
           rotation = 0,
           gid = 69,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "run"
+          }
         },
         {
           id = 55,
-          name = "ent_dfly",
-          type = "",
+          name = "Pickup",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 256,
           y = 256,
@@ -441,12 +463,14 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 56,
-          name = "ent_dfly",
-          type = "",
+          name = "Pickup",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 408,
           y = 296,
@@ -455,12 +479,14 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 57,
-          name = "ent_dfly",
-          type = "",
+          name = "Pickup",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 104,
           y = 96,
@@ -469,12 +495,14 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 58,
-          name = "ent_dfly",
-          type = "",
+          name = "Pickup",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 288,
           y = 112,
@@ -483,11 +511,13 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 38,
-          name = "ent_player",
+          name = "Start",
           type = "ent_player",
           shape = "rectangle",
           x = 22,
