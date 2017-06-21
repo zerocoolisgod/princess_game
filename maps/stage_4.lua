@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.1",
+  tiledversion = "1.0.0",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 160,
@@ -141,7 +141,7 @@ return {
     {
       type = "objectgroup",
       name = "obj",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -637,22 +637,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        },
-        {
-          id = 33,
-          name = "at_next_stage",
-          type = "at_door",
-          shape = "rectangle",
-          x = 1240,
-          y = 168,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 74,
-          visible = true,
-          properties = {
-            ["locked"] = false
-          }
         }
       }
     },
@@ -701,7 +685,7 @@ return {
       y = 0,
       width = 160,
       height = 22,
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -739,7 +723,7 @@ return {
       y = 0,
       width = 160,
       height = 22,
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
