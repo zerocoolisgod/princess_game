@@ -207,25 +207,6 @@ return {
           properties = {}
         },
         {
-<<<<<<< HEAD
-          id = 27,
-          name = "ent_dfly",
-          type = "ent_dfly",
-          shape = "rectangle",
-          x = 160,
-          y = 128,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 68,
-          visible = true,
-          properties = {
-            ["pickup_type"] = "default"
-          }
-        },
-        {
-=======
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           id = 26,
           name = "ent_player",
           type = "ent_player",

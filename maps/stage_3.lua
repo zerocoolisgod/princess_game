@@ -421,11 +421,7 @@ return {
           gid = 68,
           visible = true,
           properties = {
-<<<<<<< HEAD
-            ["pickup_type"] = "default"
-=======
             ["pickup_type"] = "fire"
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           }
         },
         {
@@ -489,11 +485,7 @@ return {
           gid = 69,
           visible = true,
           properties = {
-<<<<<<< HEAD
-            ["pickup_type"] = "fire"
-=======
             ["pickup_type"] = "boot"
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           }
         },
         {
@@ -801,15 +793,9 @@ return {
           }
         },
         {
-<<<<<<< HEAD
-          id = 73,
-          name = "ent_player",
-          type = "ent_player",
-=======
           id = 93,
           name = "End",
           type = "at_door",
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           shape = "rectangle",
           x = 24,
           y = 144,
@@ -821,15 +807,9 @@ return {
           properties = {}
         },
         {
-<<<<<<< HEAD
-          id = 93,
-          name = "Door",
-          type = "at_door",
-=======
           id = 73,
           name = "Start",
           type = "ent_player",
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           shape = "rectangle",
           x = 1880,
           y = 136,

@@ -295,10 +295,6 @@ return {
           }
         },
         {
-<<<<<<< HEAD
-          id = 34,
-          name = "spn_duck_shoot",
-=======
           id = 36,
           name = "Duck Shoot",
           type = "spn_enemy",
@@ -317,7 +313,6 @@ return {
         {
           id = 37,
           name = "Duck Shoot",
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           type = "spn_enemy",
           shape = "rectangle",
           x = 886,
@@ -509,11 +504,7 @@ return {
         },
         {
           id = 46,
-<<<<<<< HEAD
-          name = "ent_dfly_sub_fire",
-=======
           name = "Fire",
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
           type = "ent_dfly",
           shape = "rectangle",
           x = 646,

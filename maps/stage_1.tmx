@@ -67,14 +67,6 @@
   <object id="23" name="ent_coin" type="ent_coin" gid="63" x="104" y="128" width="8" height="8"/>
   <object id="24" name="ent_coin" type="ent_coin" gid="63" x="160" y="112" width="8" height="8"/>
   <object id="25" name="ent_coin" type="ent_coin" gid="63" x="218" y="128" width="8" height="8"/>
-<<<<<<< HEAD
-  <object id="27" name="ent_dfly" type="ent_dfly" gid="68" x="160" y="128" width="8" height="8">
-   <properties>
-    <property name="pickup_type" value="default"/>
-   </properties>
-  </object>
-=======
->>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
   <object id="26" name="ent_player" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
  </objectgroup>
  <layer name="fg2" width="40" height="22">
