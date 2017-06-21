@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0.0" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="60">
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="160" height="22" tilewidth="8" tileheight="8" backgroundcolor="#008a95" nextobjectid="61">
  <tileset firstgid="1" name="tilesheet_forest" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_forest.png" width="120" height="50"/>
  </tileset>
@@ -58,84 +58,94 @@
 37,38,25,26,27,39,37,38,39,37,25,26,27,38,39,37,38,39,25,27,27,37,25,26,27,38,39,37,27,39,37,38,39,25,26,27,37,38,39,37,25,25,27,38,39,37,26,39,37,25,39,37,38,39,37,38,39,25,26,27,37,38,39,0,37,37,38,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,38,39,0,0,37,38,39,0,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,9,10,10,0,0,0,0,0,0,0,0,0,15
 </data>
  </layer>
- <objectgroup name="obj">
-  <object id="13" name="ent_stopper" type="ent_stopper" gid="49" x="352" y="136" width="8" height="132"/>
-  <object id="14" name="ent_stopper" type="ent_stopper" gid="49" x="552" y="120" width="8" height="118"/>
-  <object id="15" name="ent_stopper" type="ent_stopper" gid="49" x="832" y="166" width="8" height="166"/>
-  <object id="16" name="ent_stopper" type="ent_stopper" gid="49" x="696" y="154" width="8" height="154"/>
-  <object id="24" name="ent_stopper" type="ent_stopper" gid="49" x="944" y="168" width="8" height="166"/>
-  <object id="25" name="ent_stopper" type="ent_stopper" gid="49" x="1040" y="168" width="8" height="166"/>
-  <object id="26" name="ent_stopper" type="ent_stopper" gid="49" x="1192" y="166" width="8" height="166"/>
-  <object id="31" name="spn_duck_run" type="spn_enemy" gid="76" x="272" y="136" width="8" height="8">
+ <objectgroup name="obj" visible="0">
+  <object id="33" name="End" type="at_door" gid="74" x="1240" y="168" width="8" height="8">
    <properties>
-    <property name="spawn" value="ent_duck_run"/>
+    <property name="locked" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="32" name="spn_duck_run" type="spn_enemy" gid="76" x="464" y="136" width="8" height="8">
+  <object id="13" name="Stopper" type="ent_stopper" gid="49" x="352" y="136" width="8" height="132"/>
+  <object id="14" name="Stopper" type="ent_stopper" gid="49" x="552" y="120" width="8" height="118"/>
+  <object id="15" name="Stopper" type="ent_stopper" gid="49" x="832" y="166" width="8" height="166"/>
+  <object id="16" name="Stopper" type="ent_stopper" gid="49" x="696" y="154" width="8" height="154"/>
+  <object id="24" name="Stopper" type="ent_stopper" gid="49" x="944" y="168" width="8" height="166"/>
+  <object id="25" name="Stopper" type="ent_stopper" gid="49" x="1040" y="168" width="8" height="166"/>
+  <object id="26" name="Stopper" type="ent_stopper" gid="49" x="1192" y="166" width="8" height="166"/>
+  <object id="34" name="Duck Shoot" type="spn_enemy" gid="78" x="1144" y="84" width="8" height="8">
    <properties>
-    <property name="spawn" value="ent_duck_run"/>
+    <property name="spawn" value="ent_duck_shoot"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="34" name="spn_duck_shoot" type="spn_enemy" gid="78" x="1144" y="84" width="8" height="8">
+=======
+  <object id="35" name="Duck Shoot" type="spn_enemy" gid="78" x="1120" y="42" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_shoot"/>
    </properties>
   </object>
-  <object id="35" name="spn_duck_shoot" type="spn_enemy" gid="78" x="1120" y="42" width="8" height="8">
+  <object id="36" name="Duck Shoot" type="spn_enemy" gid="78" x="974" y="46" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="spawn" value="ent_duck_shoot"/>
    </properties>
   </object>
-  <object id="36" name="spn_duck_shoot" type="spn_enemy" gid="78" x="974" y="46" width="8" height="8">
+  <object id="37" name="Duck Shoot" type="spn_enemy" gid="78" x="886" y="62" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_shoot"/>
    </properties>
   </object>
-  <object id="37" name="spn_duck_shoot" type="spn_enemy" gid="78" x="886" y="62" width="8" height="8">
+  <object id="40" name="Duck Shoot" type="spn_enemy" gid="78" x="512" y="134" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_shoot"/>
    </properties>
   </object>
-  <object id="38" name="spn_duck_run" type="spn_enemy" gid="76" x="756" y="46" width="8" height="8">
+  <object id="42" name="Duck Shoot" type="spn_enemy" gid="78" x="182" y="118" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_shoot"/>
+   </properties>
+  </object>
+  <object id="31" name="Duck Run" type="spn_enemy" gid="76" x="272" y="136" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="39" name="spn_duck_run" type="spn_enemy" gid="76" x="1064" y="86" width="8" height="8">
+  <object id="32" name="Duck Run" type="spn_enemy" gid="76" x="464" y="136" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="40" name="spn_duck_shoot" type="spn_enemy" gid="78" x="512" y="134" width="8" height="8">
+  <object id="38" name="Duck Run" type="spn_enemy" gid="76" x="756" y="46" width="8" height="8">
    <properties>
-    <property name="spawn" value="ent_duck_shoot"/>
+    <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="41" name="spn_duck_fly" type="spn_enemy" gid="79" x="462" y="102" width="8" height="8">
+  <object id="39" name="Duck Run" type="spn_enemy" gid="76" x="1064" y="86" width="8" height="8">
    <properties>
-    <property name="spawn" value="ent_duck_fly"/>
+    <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="42" name="spn_duck_shoot" type="spn_enemy" gid="78" x="182" y="118" width="8" height="8">
-   <properties>
-    <property name="spawn" value="ent_duck_shoot"/>
-   </properties>
-  </object>
-  <object id="43" name="spn_duck_fly" type="spn_enemy" gid="79" x="806" y="112" width="8" height="8">
+  <object id="41" name="Duck Fly" type="spn_enemy" gid="79" x="462" y="102" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="44" name="spn_duck_fly" type="spn_enemy" gid="79" x="1006" y="28" width="8" height="8">
+  <object id="43" name="Duck Fly" type="spn_enemy" gid="79" x="806" y="112" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="45" name="spn_duck_fly" type="spn_enemy" gid="79" x="1094" y="64" width="8" height="8">
+  <object id="44" name="Duck Fly" type="spn_enemy" gid="79" x="1006" y="28" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
+  <object id="45" name="Duck Fly" type="spn_enemy" gid="79" x="1094" y="64" width="8" height="8">
+   <properties>
+    <property name="spawn" value="ent_duck_fly"/>
+   </properties>
+  </object>
+<<<<<<< HEAD
   <object id="46" name="ent_dfly_sub_fire" type="ent_dfly" gid="69" x="646" y="102" width="8" height="8">
    <properties>
     <property name="pickup_type" value="fire"/>
@@ -147,25 +157,51 @@
    </properties>
   </object>
   <object id="48" name="ent_dfly" type="ent_dfly" gid="68" x="408" y="104" width="8" height="8">
+=======
+  <object id="54" name="Boot" type="ent_dfly" gid="81" x="88" y="128" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="boot"/>
+   </properties>
+  </object>
+  <object id="46" name="Fire" type="ent_dfly" gid="69" x="646" y="102" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="fire"/>
+   </properties>
+  </object>
+  <object id="47" name="Pickup" type="ent_dfly" gid="68" x="224" y="104" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="49" name="ent_dfly" type="ent_dfly" gid="68" x="774" y="74" width="8" height="8">
+=======
+  <object id="48" name="Pickup" type="ent_dfly" gid="68" x="408" y="104" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="50" name="ent_dfly" type="ent_dfly" gid="68" x="910" y="60" width="8" height="8">
+=======
+  <object id="49" name="Pickup" type="ent_dfly" gid="68" x="774" y="74" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="51" name="ent_dfly" type="ent_dfly" gid="68" x="1064" y="80" width="8" height="8">
+=======
+  <object id="50" name="Pickup" type="ent_dfly" gid="68" x="910" y="60" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="52" name="ent_spikes" type="ent_spikes" x="728" y="168" width="472" height="8"/>
   <object id="53" name="ent_player" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
   <object id="54" name="ent_dfly_sub_boot" type="ent_dfly_sub_boot" gid="81" x="88" y="128" width="8" height="8"/>
@@ -174,6 +210,16 @@
     <property name="locked" type="bool" value="false"/>
    </properties>
   </object>
+=======
+  <object id="51" name="Pickup" type="ent_dfly" gid="68" x="1064" y="80" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
+  <object id="52" name="Spikes" type="ent_spikes" x="728" y="168" width="472" height="8"/>
+  <object id="53" name="Start" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
+  <object id="60" name="Check Point" type="at_respawn" x="632" y="24" width="24" height="96"/>
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
  </objectgroup>
  <layer name="fg2" width="160" height="22">
   <data encoding="csv">
@@ -201,7 +247,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,22,23,21,22,23,21,22,23,21,22,23,21,22,23,21,22,23,21,22,23,22,22,22,22,22,22,22,22,21,22,22,22,22,22,22,21,22,22,22,22,21,22,22,22,22,22,21,22,22,22,22,22,22,21,22,22,22,22,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="owp" width="160" height="22">
+ <layer name="owp" width="160" height="22" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -227,7 +273,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="solid" width="160" height="22">
+ <layer name="solid" width="160" height="22" visible="0">
   <data encoding="csv">
 49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
 49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,

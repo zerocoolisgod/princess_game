@@ -7,7 +7,7 @@
   -- "dragonfly to spawn bottles and what not"
   "more sub weapons"
     --"keep sub through stage transition, lose after death"
-    "set sub energy to a sain amount after death, and on initial spawn"
+    --"set sub energy to a sain amount after death, and on initial spawn"
     "boomerang bubble"
     "holy water equivalent"
     --"iron boots (bring back the head boop)"
@@ -55,7 +55,7 @@
       "teleports form platform to platform"
       "summons run ducks"
 
-"UPDATE MAPS TO NEW SYSTEM"
+--"UPDATE MAPS TO NEW SYSTEM"
 
 
 
@@ -65,8 +65,6 @@ Act_1 = {
     Tileset = "tilesheet_plains",
     Style = "keyed",
     Enemies = {
-      "duck_run", --*
-      "duck_fly"  --*
     },
     Hazards = {}
   },
@@ -75,8 +73,7 @@ Act_1 = {
     Tileset = "tilesheet_plains",
     Style = "keyed",
     Enemies = {
-      "duck_run",
-      "duck_fly"
+      "duck_run" --*
     },
     Hazards = {}
   },
@@ -86,7 +83,7 @@ Act_1 = {
     Style = "long",
     Enemies = {
       "duck_run", 
-      "duck_fly"
+      "duck_fly"--*
     },
     Hazards = {pits}
   }

@@ -27,7 +27,7 @@ G.bubble_power_cost = {
 
 local bubble_power = {
   normal = G.bubble_power_max,
-  sub = 0 --G.sub_power_max
+  sub = 10 --G.sub_power_max
 }
 
 -- the sub being held
@@ -41,7 +41,7 @@ G.subweapon_bottles = 0
 
 
 function G.clear_subweapon()
-  bubble_power.sub = G.sub_power_max
+  bubble_power.sub = 10
   G.bubble_type = "normal"
   G.active_subweapon = "none"
 end

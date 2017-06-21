@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0.0" orientation="orthogonal" renderorder="right-down" width="240" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="94">
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="240" height="22" tilewidth="8" tileheight="8" backgroundcolor="#96e6ff" nextobjectid="95">
  <tileset firstgid="1" name="tilesheet_plains" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_plains.png" width="120" height="50"/>
  </tileset>
@@ -59,6 +59,7 @@
 </data>
  </layer>
  <objectgroup name="obj">
+<<<<<<< HEAD
   <object id="44" name="ent_stopper" type="ent_stopper" gid="49" x="1440" y="80" width="8" height="60"/>
   <object id="45" name="ent_stopper" type="ent_stopper" gid="49" x="1528" y="80" width="8" height="52"/>
   <object id="47" name="ent_stopper" type="ent_stopper" gid="49" x="1624" y="88" width="8" height="68"/>
@@ -75,147 +76,208 @@
   <object id="58" name="ent_stopper" type="ent_stopper" gid="49" x="708" y="72" width="8" height="48"/>
   <object id="59" name="ent_stopper" type="ent_stopper" gid="49" x="844" y="72" width="8" height="40"/>
   <object id="64" name="ent_dfly" type="ent_dfly" gid="68" x="512" y="80" width="8" height="8">
+=======
+  <object id="44" name="Stopper" type="ent_stopper" gid="49" x="1440" y="104" width="8" height="80"/>
+  <object id="45" name="Stopper" type="ent_stopper" gid="49" x="1528" y="120" width="8" height="80"/>
+  <object id="47" name="Stopper" type="ent_stopper" gid="49" x="1624" y="128" width="8" height="104"/>
+  <object id="48" name="Stopper" type="ent_stopper" gid="49" x="1720" y="128" width="8" height="88"/>
+  <object id="50" name="Stopper" type="ent_stopper" gid="49" x="1056" y="144" width="8" height="40"/>
+  <object id="51" name="Stopper" type="ent_stopper" gid="49" x="1144" y="144" width="8" height="40"/>
+  <object id="52" name="Stopper" type="ent_stopper" gid="49" x="1104" y="88" width="8" height="40"/>
+  <object id="53" name="Stopper" type="ent_stopper" gid="49" x="968" y="96" width="8" height="40"/>
+  <object id="54" name="Stopper" type="ent_stopper" gid="49" x="1288" y="80" width="8" height="40"/>
+  <object id="55" name="Stopper" type="ent_stopper" gid="49" x="1184" y="72" width="8" height="48"/>
+  <object id="56" name="Stopper" type="ent_stopper" gid="49" x="1224" y="136" width="8" height="40"/>
+  <object id="57" name="Stopper" type="ent_stopper" gid="49" x="1368" y="124" width="8" height="52"/>
+  <object id="58" name="Stopper" type="ent_stopper" gid="49" x="704" y="104" width="8" height="96"/>
+  <object id="59" name="Stopper" type="ent_stopper" gid="49" x="840" y="104" width="8" height="96"/>
+  <object id="64" name="Pickup" type="ent_dfly" gid="68" x="512" y="80" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="65" name="ent_dfly" type="ent_dfly" gid="68" x="680" y="80" width="8" height="8">
+=======
+  <object id="65" name="Pickup" type="ent_dfly" gid="68" x="680" y="80" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="66" name="ent_dfly" type="ent_dfly" gid="68" x="888" y="80" width="8" height="8">
+=======
+  <object id="66" name="Pickup" type="ent_dfly" gid="68" x="888" y="80" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="67" name="ent_dfly" type="ent_dfly" gid="68" x="1040" y="80" width="8" height="8">
+=======
+  <object id="67" name="Pickup" type="ent_dfly" gid="68" x="1040" y="80" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="68" name="ent_dfly" type="ent_dfly" gid="68" x="1160" y="88" width="8" height="8">
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
   <object id="69" name="ent_dfly" type="ent_dfly" gid="68" x="1304" y="136" width="8" height="8">
+=======
+  <object id="68" name="Fire" type="ent_dfly" gid="68" x="1160" y="88" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="fire"/>
+   </properties>
+  </object>
+  <object id="69" name="Pickup" type="ent_dfly" gid="68" x="1304" y="136" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="70" name="ent_dfly" type="ent_dfly" gid="68" x="1512" y="80" width="8" height="8">
+=======
+  <object id="70" name="Pickup" type="ent_dfly" gid="68" x="1512" y="80" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="71" name="ent_dfly" type="ent_dfly" gid="68" x="1432" y="104" width="8" height="8">
+=======
+  <object id="71" name="Pickup" type="ent_dfly" gid="68" x="1432" y="104" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="pickup_type" value="default"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="72" name="ent_dfly_sub_fire" type="ent_dfly" gid="69" x="232" y="128" width="8" height="8">
    <properties>
     <property name="pickup_type" value="fire"/>
    </properties>
   </object>
   <object id="74" name="spn_duck_run" type="spn_enemy" gid="76" x="520" y="88" width="8" height="8">
+=======
+  <object id="72" name="boot" type="ent_dfly" gid="69" x="232" y="128" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="boot"/>
+   </properties>
+  </object>
+  <object id="74" name="Duck Run" type="spn_enemy" gid="76" x="520" y="88" width="8" height="8">
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="75" name="spn_duck_run" type="spn_enemy" gid="76" x="632" y="104" width="8" height="8">
+  <object id="75" name="Duck Run" type="spn_enemy" gid="76" x="632" y="104" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="76" name="spn_duck_run" type="spn_enemy" gid="76" x="716" y="88" width="8" height="8">
+  <object id="76" name="Duck Run" type="spn_enemy" gid="76" x="716" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="77" name="spn_duck_run" type="spn_enemy" gid="76" x="796" y="80" width="8" height="8">
+  <object id="77" name="Duck Run" type="spn_enemy" gid="76" x="796" y="80" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="78" name="spn_duck_run" type="spn_enemy" gid="76" x="824" y="88" width="8" height="8">
+  <object id="78" name="Duck Run" type="spn_enemy" gid="76" x="824" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="79" name="spn_duck_run" type="spn_enemy" gid="76" x="912" y="88" width="8" height="8">
+  <object id="79" name="Duck Run" type="spn_enemy" gid="76" x="912" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="80" name="spn_duck_run" type="spn_enemy" gid="76" x="1440" y="112" width="8" height="8">
+  <object id="80" name="Duck Run" type="spn_enemy" gid="76" x="1440" y="112" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="81" name="spn_duck_run" type="spn_enemy" gid="76" x="1600" y="88" width="8" height="8">
+  <object id="81" name="Duck Run" type="spn_enemy" gid="76" x="1600" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="82" name="spn_duck_run" type="spn_enemy" gid="76" x="1672" y="104" width="8" height="8">
+  <object id="82" name="Duck Run" type="spn_enemy" gid="76" x="1672" y="104" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="83" name="spn_duck_run" type="spn_enemy" gid="76" x="1704" y="104" width="8" height="8">
+  <object id="83" name="Duck Run" type="spn_enemy" gid="76" x="1704" y="104" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="84" name="spn_duck_fly" type="spn_enemy" gid="79" x="782" y="56" width="8" height="8">
+  <object id="84" name="Duck Fly" type="spn_enemy" gid="79" x="784" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="85" name="spn_duck_fly" type="spn_enemy" gid="79" x="1024" y="80" width="8" height="8">
+  <object id="85" name="Duck Fly" type="spn_enemy" gid="79" x="1024" y="80" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="86" name="spn_duck_fly" type="spn_enemy" gid="79" x="1096" y="128" width="8" height="8">
+  <object id="86" name="Duck Fly" type="spn_enemy" gid="79" x="1096" y="128" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="87" name="spn_duck_fly" type="spn_enemy" gid="79" x="1224" y="64" width="8" height="8">
+  <object id="87" name="Duck Fly" type="spn_enemy" gid="79" x="1224" y="64" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="88" name="spn_duck_fly" type="spn_enemy" gid="79" x="1328" y="112" width="8" height="8">
+  <object id="88" name="Duck Fly" type="spn_enemy" gid="79" x="1328" y="112" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="89" name="spn_duck_fly" type="spn_enemy" gid="79" x="1480" y="72" width="8" height="8">
+  <object id="89" name="Duck Fly" type="spn_enemy" gid="79" x="1480" y="72" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="90" name="spn_duck_fly" type="spn_enemy" gid="79" x="1576" y="48" width="8" height="8">
+  <object id="90" name="Duck Fly" type="spn_enemy" gid="79" x="1584" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="91" name="spn_duck_fly" type="spn_enemy" gid="79" x="1664" y="48" width="8" height="8">
+  <object id="91" name="Duck Fly" type="spn_enemy" gid="79" x="1688" y="88" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="92" name="spn_duck_fly" type="spn_enemy" gid="79" x="1664" y="88" width="8" height="8">
+  <object id="92" name="Duck Fly" type="spn_enemy" gid="79" x="1664" y="112" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
+<<<<<<< HEAD
   <object id="73" name="ent_player" type="ent_player" gid="61" x="24" y="144" width="8" height="8"/>
   <object id="93" name="Door" type="at_door" gid="74" x="1880" y="136" width="8" height="8"/>
+=======
+  <object id="93" name="End" type="at_door" gid="74" x="1880" y="136" width="8" height="8"/>
+  <object id="73" name="Start" type="ent_player" gid="61" x="24" y="144" width="8" height="8"/>
+  <object id="94" name="Check Point" type="at_respawn" x="936" y="16" width="24" height="96"/>
+>>>>>>> 67b2ee05526a551a729a72bbbc475048f28872f5
  </objectgroup>
  <layer name="fg2" width="240" height="22">
   <data encoding="csv">

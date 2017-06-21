@@ -13,6 +13,10 @@ function e:initialize (x,y)
   self.sprite:add_animation('fly',{1,2,3,2},16)
   self.sprite:add_animation('death',{4,5},15)
   self.sprite:set_animation('fly')
+  
+  
+  self:set_collision_filter('solid',nil)
+  self:set_collision_filter('onewayplatform',nil)
 
   self:set_state("fly")
 
@@ -23,7 +27,7 @@ function e:initialize (x,y)
   
   -- sine wave setup
   self.start_y = y
-  self.frequency = 10
+  self.frequency = 5
   self.pitch = 8
 
   self.health = 1
@@ -44,7 +48,7 @@ function e:fly(dt)
   --self.pos.y = self.start_y + math.cos(self.pos.x/16)*15
   self.pos.y = self.start_y + math.cos(G.gametime * self.frequency) * self.pitch
 
-  if self:check_face() or self:check_face("onewayplatform") or self:check_face("stopper") then
+  if self:check_face("stopper") then
 	  self.direction.x = self.direction.x * -1
   end
 
