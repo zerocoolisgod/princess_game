@@ -279,22 +279,6 @@ return {
           }
         },
         {
-          id = 33,
-          name = "at_next_stage",
-          type = "at_door",
-          shape = "rectangle",
-          x = 1240,
-          y = 168,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 74,
-          visible = true,
-          properties = {
-            ["locked"] = false
-          }
-        },
-        {
           id = 34,
           name = "spn_duck_shoot",
           type = "spn_enemy",
@@ -489,7 +473,7 @@ return {
         {
           id = 46,
           name = "ent_dfly_sub_fire",
-          type = "ent_dfly_sub_fire",
+          type = "ent_dfly",
           shape = "rectangle",
           x = 646,
           y = 102,
@@ -498,7 +482,9 @@ return {
           rotation = 0,
           gid = 69,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "fire"
+          }
         },
         {
           id = 47,
@@ -512,7 +498,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 48,
@@ -526,7 +514,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 49,
@@ -540,7 +530,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 50,
@@ -554,7 +546,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 51,
@@ -568,7 +562,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 52,
@@ -610,6 +606,22 @@ return {
           gid = 81,
           visible = true,
           properties = {}
+        },
+        {
+          id = 33,
+          name = "at_next_stage",
+          type = "at_door",
+          shape = "rectangle",
+          x = 1240,
+          y = 168,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 74,
+          visible = true,
+          properties = {
+            ["locked"] = false
+          }
         }
       }
     },

@@ -218,7 +218,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 26,

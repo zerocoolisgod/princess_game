@@ -370,7 +370,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 65,
@@ -384,7 +386,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 66,
@@ -398,7 +402,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 67,
@@ -412,7 +418,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 68,
@@ -426,7 +434,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 69,
@@ -440,7 +450,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 70,
@@ -454,7 +466,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 71,
@@ -468,7 +482,9 @@ return {
           rotation = 0,
           gid = 68,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "default"
+          }
         },
         {
           id = 72,
@@ -482,7 +498,9 @@ return {
           rotation = 0,
           gid = 69,
           visible = true,
-          properties = {}
+          properties = {
+            ["pickup_type"] = "fire"
+          }
         },
         {
           id = 74,
@@ -789,20 +807,6 @@ return {
           }
         },
         {
-          id = 93,
-          name = "Door",
-          type = "at_door",
-          shape = "rectangle",
-          x = 1880,
-          y = 136,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 74,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 73,
           name = "ent_player",
           type = "ent_player",
@@ -813,6 +817,20 @@ return {
           height = 8,
           rotation = 0,
           gid = 61,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 93,
+          name = "Door",
+          type = "at_door",
+          shape = "rectangle",
+          x = 1880,
+          y = 136,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 74,
           visible = true,
           properties = {}
         }

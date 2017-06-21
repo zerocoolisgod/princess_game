@@ -76,11 +76,6 @@
     <property name="spawn" value="ent_duck_run"/>
    </properties>
   </object>
-  <object id="33" name="at_next_stage" type="at_door" gid="74" x="1240" y="168" width="8" height="8">
-   <properties>
-    <property name="locked" type="bool" value="false"/>
-   </properties>
-  </object>
   <object id="34" name="spn_duck_shoot" type="spn_enemy" gid="78" x="1144" y="84" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_shoot"/>
@@ -141,15 +136,44 @@
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="46" name="ent_dfly_sub_fire" type="ent_dfly_sub_fire" gid="69" x="646" y="102" width="8" height="8"/>
-  <object id="47" name="ent_dfly" type="ent_dfly" gid="68" x="224" y="104" width="8" height="8"/>
-  <object id="48" name="ent_dfly" type="ent_dfly" gid="68" x="408" y="104" width="8" height="8"/>
-  <object id="49" name="ent_dfly" type="ent_dfly" gid="68" x="774" y="74" width="8" height="8"/>
-  <object id="50" name="ent_dfly" type="ent_dfly" gid="68" x="910" y="60" width="8" height="8"/>
-  <object id="51" name="ent_dfly" type="ent_dfly" gid="68" x="1064" y="80" width="8" height="8"/>
+  <object id="46" name="ent_dfly_sub_fire" type="ent_dfly" gid="69" x="646" y="102" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="fire"/>
+   </properties>
+  </object>
+  <object id="47" name="ent_dfly" type="ent_dfly" gid="68" x="224" y="104" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
+  <object id="48" name="ent_dfly" type="ent_dfly" gid="68" x="408" y="104" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
+  <object id="49" name="ent_dfly" type="ent_dfly" gid="68" x="774" y="74" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
+  <object id="50" name="ent_dfly" type="ent_dfly" gid="68" x="910" y="60" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
+  <object id="51" name="ent_dfly" type="ent_dfly" gid="68" x="1064" y="80" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value="default"/>
+   </properties>
+  </object>
   <object id="52" name="ent_spikes" type="ent_spikes" x="728" y="168" width="472" height="8"/>
   <object id="53" name="ent_player" type="ent_player" gid="61" x="24" y="136" width="8" height="8"/>
   <object id="54" name="ent_dfly_sub_boot" type="ent_dfly_sub_boot" gid="81" x="88" y="128" width="8" height="8"/>
+  <object id="33" name="at_next_stage" type="at_door" gid="74" x="1240" y="168" width="8" height="8">
+   <properties>
+    <property name="locked" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="fg2" width="160" height="22">
   <data encoding="csv">
