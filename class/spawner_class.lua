@@ -16,21 +16,20 @@ function e:initialize (x,y,type)
   self.solid = false
   self.spawn_type = type
   self.spawn_delay = 5
-  self.timers.respawn = 5
-  self.first_spawn = true
+  self.timers.respawn = 0.2
+  self.first_spawn = false
   self.ent = nil
 end
 
 function e:on_update_first(dt)
-  if self.first_spawn then
-    self.first_spawn = false
-    self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
-    G.add_object(self.ent)
-  end
-  if self.ent then
-    if self.ent.remove then self.ent = nil end
-    self.timers.respawn = self.spawn_delay
-  end
+  -- if self.first_spawn then
+  --   self.first_spawn = false
+  --   self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
+  --   G.add_object(self.ent)
+  -- end
+
+  if self.ent and self.ent.remove then self.ent = nil end
+  self.timers.respawn = self.spawn_delay
 end
 
 function e:on_update_last(dt)
@@ -38,19 +37,24 @@ function e:on_update_last(dt)
 end
 
 function e:off_screen_update (dt)
-  if not self.ent and self.timers.respawn <=0 then
-    self.timers.respawn = self.spawn_delay
+  -- if not self.ent and self.timers.respawn <=0 then
+  --   self.timers.respawn = self.spawn_delay
+  --   self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
+  --   G.add_object(self.ent)
+  -- end
+  self:update_timers(dt)
+  if not self.ent and (self.timers.respawn <= 0) then
     self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
     G.add_object(self.ent)
   end
 end
 
-function e:on_draw_first()
-end
+-- function e:on_draw_first()
+-- end
 
-function e:on_collision ()
+-- function e:on_collision ()
   
-end
+-- end
 
 function e:draw_bounding_box()
   --draws a yellow box of self.size at self.position

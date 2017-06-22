@@ -7,11 +7,12 @@
  <objecttype name="ent_coin" color="#eace2b"/>
  <objecttype name="ent_heart" color="#ff00dd"/>
  <objecttype name="at_respawn" color="#55ff7f"/>
- <objecttype name="spn_enemy" color="#ff0000">
+ <objecttype name="spn_enemy" color="#9a0000">
   <property name="spawn" type="string" default=""/>
  </objecttype>
  <objecttype name="ent_dfly" color="#8a23a4">
   <property name="pickup_type" type="string" default="default"/>
  </objecttype>
  <objecttype name="ent_spikes" color="#a42c2c"/>
+ <objecttype name="ent_stopper" color="#ff0000"/>
 </objecttypes>

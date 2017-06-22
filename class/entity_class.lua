@@ -44,9 +44,6 @@ end
 ---
 -- If you need something other than the default
 -- simply override load, update and draw in the object
-
-
-
 function ENT:update (dt)
   if self.on_update_first then self:on_update_first(dt) end
   
