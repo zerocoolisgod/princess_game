@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="8" tileheight="8" nextobjectid="54">
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="8" tileheight="8" nextobjectid="54">
  <tileset firstgid="1" name="objects" tilewidth="8" tileheight="8" spacing="2" margin="1" tilecount="60" columns="12">
   <image source="../res/img/tilesheet_objects.png" width="120" height="50"/>
  </tileset>
@@ -48,7 +48,11 @@
   <object id="25" name="Health Pick UP" type="ent_heart" gid="15" x="8" y="112" width="8" height="8"/>
   <object id="26" name="Fire Subweapon" type="ent_sub_fire" gid="20" x="8" y="128" width="8" height="8"/>
   <object id="27" name="Bubble Jar Pick UP" type="ent_bubble_jar" gid="13" x="8" y="144" width="8" height="8"/>
-  <object id="28" name="Random  Dragonfly" type="ent_dfly" gid="8" x="64" y="156" width="8" height="8"/>
+  <object id="28" name="Random  Dragonfly" type="ent_dfly" gid="8" x="64" y="156" width="8" height="8">
+   <properties>
+    <property name="pickup_type" value=""/>
+   </properties>
+  </object>
   <object id="31" name="Boot Sub  Dragonfly" type="ent_dfly_sub_boot" gid="21" x="64" y="192" width="8" height="8"/>
   <object id="32" name="Fire Sub Dragonfly" type="ent_dfly_sub_fire" gid="20" x="64" y="176" width="8" height="8"/>
   <object id="35" name="Spikes" type="ent_spikes" gid="11" x="104" y="24" width="8" height="8"/>

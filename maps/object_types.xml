@@ -11,7 +11,7 @@
   <property name="spawn" type="string" default=""/>
  </objecttype>
  <objecttype name="ent_dfly" color="#8a23a4">
-  <property name="pickup_type" type="string" default="default"/>
+  <property name="pickup_type" type="string" default=""/>
  </objecttype>
  <objecttype name="ent_spikes" color="#a42c2c"/>
  <objecttype name="ent_stopper" color="#ff0000"/>
