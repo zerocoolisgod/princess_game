@@ -11,9 +11,9 @@ G.inputs.down   = InputDir:new('down','s',2,1)
 G.inputs.left   = InputDir:new( 'left','a',1,-1)
 G.inputs.right  = InputDir:new('right','d',1,1)
 G.inputs.jump   = Input:new('jump', 'k', 2)
-G.inputs.act_1  = Input:new('act_1','j', 3)
-G.inputs.start  = Input:new('start','space', 10)
-G.inputs.select = Input:new('select','tab', 9)
+G.inputs.act_1  = Input:new('act_1','j', 1)
+G.inputs.start  = Input:new('start','space', 8)
+G.inputs.select = Input:new('select','tab', 7)
 
 --Non bindable
 G.inputs.fullscreen = Input:new('fullscreen','f11')
