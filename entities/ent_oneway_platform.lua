@@ -16,20 +16,7 @@ function owp:initialize (x,y,w,h,q)
 end
 
 function owp:on_update_first (dt)
-  local pw,ph = G.player:get_size()
-  local px,py = G.player:get_true_pos()
-  local sx,sy = self:get_true_pos()
-  local g = "passable"
-  
-  if py <= (sy - ph) then
-    g = "solid"
-  end
 
-  if G.inputs.down:down() and G.inputs.jump:pressed() then
-    g = "passable"
-  end
-
-  self.group = g
 end
 
 

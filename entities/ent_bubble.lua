@@ -94,6 +94,7 @@ end
 --------------------------------------------------------------------------
 function bbl:init_state (s)
   if s == "pop" then
+    G.resource_manager:play_sound('pop')
     self.damage = 0
     G.remove_hitbox(self)
     self.timers.pop = .75

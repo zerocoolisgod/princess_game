@@ -1,0 +1,16 @@
+This is a set of 12 sound effects that are fit for retro platformer games.  These sound effects were made in BFXR, and the sound library file is included in the zip, so you can tweak them to your liking.
+
+Includes:
+
+2 explosions
+2 laser guns (pewpew!)
+jump
+coin
+powerup
+UI "blip" sound (for selecting menu items)
+4 random sounds (Randomize3.wav is particularly cool IMO)
+a .bfxrlibrary file, so you can edit these sounds yourself
+ 
+
+Copyright/Attribution Notice: 
+8-bit Platformer SFX commissioned by Mark McCorkle for OpenGameArt.org ( http://opengameart.org )

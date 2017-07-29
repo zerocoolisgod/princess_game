@@ -15,7 +15,7 @@ function PDS:initialize()
 end
 
 function PDS:on_enter ()
-  G.resource_manager:play_music('song_01', .3)
+  --G.resource_manager:play_music('song_01', .3)
   self.delay_end = self.delay + G.gametime
   love.graphics.setBackgroundColor(0, 0, 0)
   G.camera:set_pos(0,0)
@@ -25,7 +25,7 @@ function PDS:update(dt)
   if G.gametime > self.delay_end then
     G.restart_stage()
     --G.change_state('play_state')
-    G.resource_manager:play_music('song_00', .3)
+    --G.resource_manager:play_music('song_00', .3)
   end
 end
 

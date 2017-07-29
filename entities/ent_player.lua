@@ -224,7 +224,7 @@ function Player:collide_pickup (other)
   if other.id == 'sub boot' then G.set_subweapon("boot") end
 
   other.remove = true
-  G.resource_manager:play_sound('ge_pickup')
+  G.resource_manager:play_sound('Pickup_Coin')
 end
 
 
@@ -241,7 +241,7 @@ function Player:head_bonce (other)
     else
       self.on_ground = false
       self.velocity.y = -(self.jump_force / 2)
-      G.resource_manager:play_sound('jump')
+      G.resource_manager:play_sound('Jump')
       self:set_state('fall')
     end
     G.lower_sub_power(3)
@@ -260,7 +260,7 @@ function Player:take_damage (other)
     if sx > ox then dir = -1 end
     self.direction.x = dir
 
-    G.resource_manager:play_sound('hit')
+    G.resource_manager:play_sound('Randomize2')
     health = health - other.damage
 
     if health <= 0 then
@@ -298,7 +298,7 @@ function Player:init_state (s)
     self.timers.can_jump=0
     self.on_ground = false
     self.velocity.y = -jump_force
-    G.resource_manager:play_sound('jump')
+    G.resource_manager:play_sound('Jump')
   elseif s == 'hit' then
     local d = -self.direction.x
     self.timers.hit = 1.5

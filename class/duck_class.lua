@@ -71,7 +71,7 @@ end
 
 function e:killed_by_bubble (other)
   local x,y = self:get_pos()
-  local o = G.resource_manager:get_new_object('ent_bubbled_enemy',x,y)
+  local o = G.resource_manager:get_new_object('ent_bubbled_enemy', x, y)
   local respawn = "ent_"..self.id
   o:owner_init(self, self.direction.x, 1,respawn)
   G.add_object(o)
@@ -92,23 +92,24 @@ end
 ----------
 -- ENEMY
 function e:collide_enemy(other)
-  local d,cx,cy,dx,dy
+  local d, cx, cy, dx, dy
   d = self.direction.x * -1
   cx,cy = self:get_true_pos()
   dx = cx + 3 * d
   dy = cy
   self.direction.x = d
-  self:set_true_pos(dx,dy)
+  self:set_true_pos(dx, dy)
 end
 
 function e:take_damage (o)
   G.resource_manager:play_sound('hit')
 
   if self.timers.hit <= 0 then
-    self.timers.hit= .1
+    self.timers.hit = .1
     self.timers.flicker = .3
     self.health = self.health - o.damage
   end
+
   if (self.health <= 0) then self:set_state('death') end
 end
 

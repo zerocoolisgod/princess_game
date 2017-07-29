@@ -18,7 +18,7 @@ end
 function ts:on_enter ()
   love.graphics.setBackgroundColor(0, 0, 0)
   G.current_map = nil
-  G.resource_manager:play_music('song_01', .5)
+  --G.resource_manager:play_music('song_01', .5)
   G.camera:reset_pos()
 end
 
@@ -27,7 +27,7 @@ function ts:update(dt)
   local select = G.inputs.select:pressed()
     local fade_rate = 300
   if start then
-    G.resource_manager:play_music('song_00', .3)
+    --G.resource_manager:play_music('song_00', .3)
     -- reset our color fuckery
     lgsc(255,255,255,255)
     G.load_next_stage()

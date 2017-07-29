@@ -12,7 +12,7 @@ function SLS:initialize()
 end
 
 function SLS:on_enter ()
-  G.resource_manager:play_music('song_03', .5)
+  --G.resource_manager:play_music('song_03', .5)
   self.font = love.graphics.getFont()
   self.text = love.graphics.newText(self.font, G.current_map.name)
   self.delay_end = G.current_map.delay + G.gametime
@@ -26,7 +26,7 @@ function SLS:update(dt)
     local map = G.current_map
     -- G.load_next_stage()
     G.change_state('play_state')
-    G.resource_manager:play_music(map.music, .3)
+    --G.resource_manager:play_music(map.music, .3)
   end
 end
 

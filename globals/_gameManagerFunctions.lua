@@ -124,9 +124,10 @@ local function add_random_pickup(bottle, health, subweapon, nothing, x, y)
   gen_itms("ent_bubble_jar", bottle)
   gen_itms("ent_heart", health)
   gen_itms("ent_sub_fire", subweapon)
+  gen_itms("ent_sub_boot", subweapon)
   gen_itms("", nothing)
 
-  local roll = love.math.random(100)
+  local roll = love.math.random(#obj_table)
   local obj_type = obj_table[roll]
   
   if obj_type ~= "" then 
@@ -156,13 +157,14 @@ function G.spawn_random_pickup (x, y)
   local bottle, health, subweapon, nothing = 0,10,5,0
   local low_health = G.get_player_health() < (G.get_player_health_max() / 2)
   local low_sub_enrg = G.get_bubble_power("sub") < (G.get_bubble_power("sub") / 10)
-  local no_sub =  G.get_subweapon() == nil
+  local no_sub =  G.get_subweapon() == "none"
+  
     
   if low_health then health = 30 end
-  --if no_sub then subweapon = 25 end
+  if no_sub then subweapon = 250 end
   
   bottle = 100 - (health + subweapon + nothing)
-
+  if bottle < 0 then bottle = 0 end
   add_random_pickup(bottle, health, subweapon, nothing, x, y)
 end
 

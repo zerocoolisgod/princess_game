@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
+ <objecttype name="player" color="#4eadff"/>
+ <objecttype name="ent_wall" color="#ff0004"/>
+ <objecttype name="oneWayPlat" color="#ffee00"/>
  <objecttype name="ent_player" color="#4eadff"/>
  <objecttype name="at_door" color="#05e11f">
   <property name="locked" type="bool" default="false"/>
@@ -10,9 +13,16 @@
  <objecttype name="spn_enemy" color="#9a0000">
   <property name="spawn" type="string" default=""/>
  </objecttype>
- <objecttype name="ent_dfly" color="#8a23a4">
+ <objecttype name="ent_dfly" color="#aa00ff">
   <property name="pickup_type" type="string" default=""/>
  </objecttype>
- <objecttype name="ent_spikes" color="#a42c2c"/>
- <objecttype name="ent_stopper" color="#ff0000"/>
+ <objecttype name="ent_spikes" color="#ffa200"/>
+ <objecttype name="ent_stopper" color="#5500ff"/>
+ <objecttype name="ent_duck_run" color="#ffaaff"/>
+ <objecttype name="ent_duck_hop" color="#ffaaff"/>
+ <objecttype name="ent_duck_shoot" color="#ffaaff"/>
+ <objecttype name="ent_duck_fly" color="#ffaaff"/>
+ <objecttype name="ent_dfly_sub_fire" color="#aa00ff"/>
+ <objecttype name="ent_dfly_sub_boot" color="#aa00ff"/>
+ <objecttype name="ent_oneway_platform" color="#ffff00"/>
 </objecttypes>

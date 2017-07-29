@@ -5,8 +5,7 @@ _BUILD_FOR_PI = false
 _BUILD_FOR_LAPPY = true
 
 -- Localized
-local volume = 0
-
+local volume = 0.1
 
 -------------------------------------------------------------------------------
 -- Load Function
@@ -77,11 +76,9 @@ end
 
 function love.joystickpressed(joystick, button)
   G.game_manager:joystickpressed(joystick, button)
-  print(button)
 end
 
 
 function love.joystickaxis(joystick, axis, value)
   G.game_manager:joystickaxis(joystick, axis, value)
-  print(axis.." "..value)
 end
