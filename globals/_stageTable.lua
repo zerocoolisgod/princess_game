@@ -15,20 +15,20 @@ G.stage = {
   {name="", file="stage_7", type="stage", music="song_00", delay=0.5},
   {name="", file="stage_8", type="stage", music="song_00", delay=0.5},
 
-  {name="Act 3 The Caves", file="stage_9", type="stage", music="song_00", delay=2},
-  {name="", file="stage_10", type="stage", music="song_00", delay=0.5},
-  {name="", file="stage_11", type="stage", music="song_00", delay=0.5},
-  {name="", file="stage_12", type="stage", music="song_00", delay=0.5},
+  -- {name="Act 3 The Caves", file="stage_9", type="stage", music="song_00", delay=2},
+  -- {name="", file="stage_10", type="stage", music="song_00", delay=0.5},
+  -- {name="", file="stage_11", type="stage", music="song_00", delay=0.5},
+  -- {name="", file="stage_12", type="stage", music="song_00", delay=0.5},
 
-  {name="Act 4 The Tower", file="stage_13", type="stage", music="song_00", delay=2},
-  {name="", file="stage_14", type="stage", music="song_00", delay=0.5},
-  {name="", file="stage_15", type="stage", music="song_00", delay=0.5},
-  {name="", file="stage_16", type="stage", music="song_00", delay=0.5},
+  -- {name="Act 4 The Tower", file="stage_13", type="stage", music="song_00", delay=2},
+  -- {name="", file="stage_14", type="stage", music="song_00", delay=0.5},
+  -- {name="", file="stage_15", type="stage", music="song_00", delay=0.5},
+  -- {name="", file="stage_16", type="stage", music="song_00", delay=0.5},
 
-  {name="The Duck Wizard", file="boss_dw", type="stage", music="song_00", delay=5},
+  -- {name="The Duck Wizard", file="boss_dw", type="stage", music="song_00", delay=5},
   
   
-  {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1}
+  -- {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1}
 }
 
 function G.load_stage_list (l)

@@ -19,7 +19,7 @@ function e:initialize (x,y)
 
   self.direction.x = -1
   self.timers.shoot = 2
-  self.health = 2
+  self.health = 1
   self.damage = 1
 end
 

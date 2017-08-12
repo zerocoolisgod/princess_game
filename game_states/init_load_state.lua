@@ -16,6 +16,7 @@ function ILS:initialize()
   self.start_time = G.gametime or 0
   self.delay = 10
   self.delay = self.delay + self.start_time
+  G.current_stage_number = 0
 end
 
 function ILS:on_enter ()
