@@ -2,7 +2,7 @@
 
 
 _BUILD_FOR_PI = false
-_BUILD_FOR_LAPPY = true
+_BUILD_FOR_LAPPY = false
 
 -- Localized
 local volume = 0.1
