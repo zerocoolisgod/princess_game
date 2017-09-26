@@ -1,11 +1,11 @@
 -- Do I Have To Be The Princess?
 
 
-_BUILD_FOR_PI = false
-_BUILD_FOR_LAPPY = false
+--_BUILD_FOR_PI = true
+--_BUILD_FOR_LAPPY = true
 
 -- Localized
-local volume = 0.1
+local volume = 0.5
 
 -------------------------------------------------------------------------------
 -- Load Function

@@ -18,17 +18,24 @@ end
 
 function e:on_update_first(dt)
   if self.ent and self.ent.remove then self.ent = nil end
-  self.timers.respawn = self.spawn_delay
+  if self.ent then self.timers.respawn = self.spawn_delay end
+  -- comment out to revert to off screen spawning only
+  self:check_for_spawn()
 end
 
 function e:off_screen_update (dt)
   self:update_timers(dt)
+  self:check_for_spawn()
+end
+
+function e:check_for_spawn()
   if not self.ent and (self.timers.respawn <= 0) then
-    self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
+    --self.ent = G.resource_manager:get_new_object(self.spawn_type, self.pos.x, self.pos.y)
+    self.ent = G.resource_manager:get_new_object("spn_cloud", self.pos.x, self.pos.y)
+    self.ent:set_spawn(self.spawn_type)
     G.add_object(self.ent)
   end
 end
-
 
 function e:draw_bounding_box()
   --draws a yellow box of self.size at self.position

@@ -66,7 +66,7 @@
   </object>
   <object id="23" name="Key" type="ent_coin" gid="63" x="584" y="136" width="8" height="8"/>
   <object id="24" name="Key" type="ent_coin" gid="63" x="16" y="136" width="8" height="8"/>
-  <object id="25" name="Key" type="ent_coin" gid="63" x="232" y="48" width="8" height="8"/>
+  <object id="25" name="Key" type="ent_coin" gid="63" x="288" y="64" width="8" height="8"/>
   <object id="35" name="Runner" type="spn_enemy" gid="76" x="32" y="144" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_run"/>
@@ -78,16 +78,16 @@
    </properties>
   </object>
   <object id="29" name="Start" type="ent_player" gid="61" x="348" y="146" width="8" height="8"/>
-  <object id="39" name="stoper" type="ent_stopper" x="234" y="-10" width="2" height="192"/>
-  <object id="40" name="stoper" type="ent_stopper" x="434" y="-12" width="2" height="192"/>
-  <object id="41" name="stoper" type="ent_stopper" x="2" y="-4" width="2" height="192"/>
-  <object id="42" name="stoper" type="ent_stopper" x="636" y="-12" width="2" height="192"/>
-  <object id="44" name="Flyer SPN" type="spn_enemy" gid="79" x="408" y="48" width="8" height="8">
+  <object id="39" name="stoper" type="ent_stopper" x="240" y="0" width="8" height="60"/>
+  <object id="40" name="stoper" type="ent_stopper" x="424" y="0" width="8" height="62"/>
+  <object id="41" name="stoper" type="ent_stopper" x="6" y="0" width="2" height="150"/>
+  <object id="42" name="stoper" type="ent_stopper" x="632" y="0" width="2" height="148"/>
+  <object id="44" name="Flyer SPN" type="spn_enemy" gid="79" x="376" y="48" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
   </object>
-  <object id="46" name="Flyer SPN" type="spn_enemy" gid="79" x="248" y="48" width="8" height="8">
+  <object id="46" name="Flyer SPN" type="spn_enemy" gid="79" x="274" y="48" width="8" height="8">
    <properties>
     <property name="spawn" value="ent_duck_fly"/>
    </properties>
@@ -119,16 +119,16 @@
   <object id="56" type="ent_oneway_platform" x="376" y="128" width="24" height="4"/>
   <object id="57" type="ent_oneway_platform" x="296" y="136" width="24" height="4"/>
   <object id="58" type="ent_oneway_platform" x="176" y="112" width="24" height="4"/>
-  <object id="59" type="ent_wall" x="216" y="64" width="40" height="112"/>
-  <object id="60" type="ent_wall" x="0" y="152" width="216" height="6"/>
-  <object id="61" type="ent_wall" x="0" y="0" width="8" height="152"/>
-  <object id="62" type="ent_wall" x="632" y="0" width="8" height="152"/>
-  <object id="63" type="ent_wall" x="456" y="152" width="184" height="8"/>
-  <object id="64" type="ent_wall" x="416" y="64" width="40" height="112"/>
-  <object id="65" type="ent_wall" x="256" y="160" width="160" height="16"/>
+  <object id="59" type="ent_wall" x="216" y="64" width="40" height="94"/>
+  <object id="60" type="ent_wall" x="0" y="152" width="214" height="6"/>
+  <object id="61" type="ent_wall" x="-4" y="0" width="8" height="150"/>
+  <object id="62" type="ent_wall" x="636" y="0" width="8" height="150"/>
+  <object id="63" type="ent_wall" x="458" y="152" width="182" height="8"/>
+  <object id="64" type="ent_wall" x="416" y="64" width="40" height="94"/>
+  <object id="65" type="ent_wall" x="258" y="160" width="156" height="16"/>
   <object id="66" type="ent_oneway_platform" x="464" y="112" width="32" height="4"/>
   <object id="67" type="ent_oneway_platform" x="488" y="72" width="24" height="4"/>
-  <object id="68" type="ent_oneway_platform" x="192" y="80" width="24" height="4"/>
+  <object id="68" type="ent_oneway_platform" x="192" y="80" width="22" height="4"/>
  </objectgroup>
  <layer name="fg2" width="80" height="22">
   <data encoding="csv">

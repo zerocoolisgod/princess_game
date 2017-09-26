@@ -8,7 +8,7 @@ return {
   height = 22,
   tilewidth = 8,
   tileheight = 8,
-  nextobjectid = 52,
+  nextobjectid = 54,
   backgroundcolor = { 25, 25, 25 },
   properties = {},
   tilesets = {
@@ -359,7 +359,7 @@ return {
           x = 144,
           y = 136,
           width = 24,
-          height = 24,
+          height = 8,
           rotation = 0,
           visible = true,
           properties = {}
@@ -467,6 +467,38 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 52,
+          name = "Random  Dragonfly",
+          type = "ent_dfly",
+          shape = "rectangle",
+          x = 88,
+          y = 112,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 68,
+          visible = true,
+          properties = {
+            ["pickup_type"] = "default"
+          }
+        },
+        {
+          id = 53,
+          name = "Random  Dragonfly",
+          type = "ent_dfly",
+          shape = "rectangle",
+          x = 272,
+          y = 72,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 68,
+          visible = true,
+          properties = {
+            ["pickup_type"] = "default"
+          }
         }
       }
     },

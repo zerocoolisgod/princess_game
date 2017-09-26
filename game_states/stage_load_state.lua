@@ -26,7 +26,7 @@ function SLS:update(dt)
     local map = G.current_map
     -- G.load_next_stage()
     G.change_state('play_state')
-    --G.resource_manager:play_music(map.music, .3)
+    G.resource_manager:play_music(map.music, .8)
   end
 end
 

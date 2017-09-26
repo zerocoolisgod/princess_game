@@ -297,20 +297,6 @@ return {
           properties = {}
         },
         {
-          id = 47,
-          name = "Duck Fly",
-          type = "ent_duck_fly",
-          shape = "rectangle",
-          x = -230,
-          y = 40,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          gid = 67,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 48,
           name = "stoper",
           type = "ent_stopper",
@@ -521,32 +507,6 @@ return {
           properties = {
             ["pickup_type"] = "default"
           }
-        },
-        {
-          id = 73,
-          name = "",
-          type = "ent_oneway_platform",
-          shape = "rectangle",
-          x = -20,
-          y = 164,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 74,
-          name = "",
-          type = "ent_wall",
-          shape = "rectangle",
-          x = -20,
-          y = 184,
-          width = 8,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          properties = {}
         },
         {
           id = 75,
