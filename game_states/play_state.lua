@@ -29,7 +29,7 @@ function mm:load_map (mapname, m_type)
   local map = require("maps/"..mapname)
   local ts_data = map.tilesets[1]
   local tile_seize = {x = ts_data.tilewidth, y = ts_data.tileheight}
-  self.bgc=map.backgroundcolor or{255,255,255}
+  self.bgc = map.backgroundcolor or{255,255,255}
   love.graphics.setBackgroundColor(self.bgc)
   self.layers = {}
   self.world = bump.newWorld(32)

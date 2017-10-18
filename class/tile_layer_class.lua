@@ -108,8 +108,6 @@ end
 
 function Tile_Layer:add_tiles (map,layer)
   local ts_data = map.tilesets[1]
-  local image_width = ts_data.imagewidth
-  local image_height = ts_data.imageheight
   local tile_width = ts_data.tilewidth
   local tile_height = ts_data.tileheight
   local data = map.layers[layer].data
