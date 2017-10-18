@@ -241,7 +241,7 @@ function Player:head_bonce (other)
     else
       self.on_ground = false
       self.velocity.y = -(self.jump_force / 2)
-      G.resource_manager:play_sound('Jump')
+      G.resource_manager:play_sound('jump')
       self:set_state('fall')
     end
     G.lower_sub_power(3)
@@ -298,7 +298,7 @@ function Player:init_state (s)
     self.timers.can_jump=0
     self.on_ground = false
     self.velocity.y = -jump_force
-    G.resource_manager:play_sound('Jump')
+    G.resource_manager:play_sound('jump')
   elseif s == 'hit' then
     local d = -self.direction.x
     self.timers.hit = 1.5
