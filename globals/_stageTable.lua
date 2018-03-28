@@ -3,8 +3,7 @@
 -- One Screen = 40 x 22 tiles in Tiled
 if not G then G = {} end
 
-
-G.stage = {
+local reg_stages = {
   {name="Act 1 The Plains", file="stage_1", type="stage", music="01", delay=2},
   {name="", file="stage_2", type="stage", music="02", delay=0.5},
   {name="", file="stage_3", type="stage", music="03", delay=0.5},
@@ -30,6 +29,8 @@ G.stage = {
   
   {name="DEBUG LEVEL", file="arena", type="stage", music="song_00", delay=.1}
 }
+
+G.stage = reg_stages
 
 function G.load_stage_list (l)
   -- This will be an easy normal hard switch

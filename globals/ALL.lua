@@ -8,7 +8,7 @@ local GameManager = require "class.game_manager_class"
 -- G is the only global value
 G = {}
 
--- Except for Constans, which should never change
+-- Except for Constants, which should never change
 require "globals.CONSTANTS"
 require "globals._inputDefaults"
 require "globals._gameVars"
