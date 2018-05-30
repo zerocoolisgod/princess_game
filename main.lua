@@ -2,10 +2,11 @@
 
 
 --_BUILD_FOR_PI = true
---_BUILD_FOR_LAPPY = true
+_BUILD_FOR_LAPPY = true
+_NO_ZOOM=true
 
 -- Localized fdcsga
-local volume = 0.5
+local volume = 1
 
 -------------------------------------------------------------------------------
 -- Load Function
@@ -25,7 +26,7 @@ function love.load(arg)
 
   require "globals.ALL"
   
-  love.graphics.setBackgroundColor(0, 0, 0, 254)
+  love.graphics.setBackgroundColor(0/254,0/254,0/254,254/254)
 
   -- Debug Manager
   G.debug_manager:load()

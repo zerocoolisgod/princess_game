@@ -35,6 +35,7 @@ function e:initialize (x,y)
   self:set_state("wait")
 end
 
+
 --------------------------------------------------------------------------
 -- STATES --
 --------------------------------------------------------------------------
@@ -49,6 +50,12 @@ function e:init_state (s)
     self.accel.x = 0.1
     self.accel.y = 0.1
     self.timers.wait = self.wait_time
+  end
+  if s == "death" then
+    self.damage = 0
+    G.remove_hitbox(self)
+    self.sprite:set_animation('death')
+    self.timers.death = 1
   end
 end
 

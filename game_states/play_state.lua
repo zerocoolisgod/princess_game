@@ -21,7 +21,7 @@ local mm = Class('play_state',State)
 --Constructor
 function mm:initialize ()
   State.initialize(self,'play_state')
-  self.bgc={200,200,200}
+  self.bgc={2000/254,2000/254,2000/254}
   love.graphics.setBackgroundColor(self.bgc)
 end
 
@@ -29,7 +29,12 @@ function mm:load_map (mapname, m_type)
   local map = require("maps/"..mapname)
   local ts_data = map.tilesets[1]
   local tile_seize = {x = ts_data.tilewidth, y = ts_data.tileheight}
-  self.bgc = map.backgroundcolor or{255,255,255}
+  self.bgc = map.backgroundcolor or {1,1,1}
+
+  self.bgc[1] = self.bgc[1] / 254
+  self.bgc[2] = self.bgc[2] / 254
+  self.bgc[3] = self.bgc[3] / 254
+  
   love.graphics.setBackgroundColor(self.bgc)
   self.layers = {}
   self.world = bump.newWorld(32)

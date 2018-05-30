@@ -11,7 +11,7 @@ local key_down = love.keyboard.isDown
 function input:initialize (id, key, button, joystick)
   self.id = id or 'generic input'
   self.kb = {}
-  self.kb.id = key or ''
+  self.kb.id = key or 'www'
   self.kb.last_state = false
   self.kb.current_state = false
 

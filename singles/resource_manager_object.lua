@@ -78,8 +78,7 @@ end
 
 
 function rsm:add_aud (resource,id)
-  
-  self.res.aud[id] = new_sound(resource)
+  self.res.aud[id] = new_sound(resource,"static")
 end
 
 

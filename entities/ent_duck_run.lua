@@ -52,6 +52,7 @@ function e:init_state(s)
     G.remove_hitbox(self)
     self.sprite:set_animation('death')
     self.timers.death = 1
+    
   end
 end
 

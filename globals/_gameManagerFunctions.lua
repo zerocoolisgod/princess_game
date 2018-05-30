@@ -11,12 +11,12 @@ end
 -- Deal with command line switches
 -------------------------------------------------------------------------------
 function G.cl_switch (arg)  
-  local a = arg[2]
+  local a = arg[1]
   print("cmd arg: "..a)
-  print("file arg: "..arg[3])
+  print("file arg: "..arg[2])
   
   if a == "-loadmap" then
-    local map_path = arg[3]
+    local map_path = arg[2]
     
     local dir, file = map_path:match'(.*/)(.*)'
     if not file then dir, file = map_path:match'(.*\\)(.*)' end

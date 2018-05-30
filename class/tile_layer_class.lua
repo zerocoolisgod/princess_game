@@ -34,7 +34,7 @@ function Tile_Layer:load (map, layer)
   self.map_size = {x=0,y=0}
   self.tile_sheet = G.resource_manager:get_image(ts_data.name)
   self.tile_batch = lg.newSpriteBatch(self.tile_sheet)
-  self.tile_batch:setBufferSize(2048)
+  --self.tile_batch:setBufferSize(2048)
   self.map_size.y = map.height
   self.map_size.x = map.width
   self.tile_quads = G.cut_quads(self.tile_sheet,tile_seize,buffer,margin)
